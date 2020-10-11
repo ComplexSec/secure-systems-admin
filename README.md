@@ -4,6 +4,8 @@ Year 2 University module all about Linux - specifically RHEL
 <details><summary>Module 1 - Accessing the Command Line</summary>
 <p>	
 	
+![](/images/linux.png)
+	
 * The Linux command line is provided by a program called the __shell__
 * Default shell for users in RHEL is the __GNU Bourne-Again Shell (bash)__
 * `$` indicates a normal user, `#` indicates the root user
