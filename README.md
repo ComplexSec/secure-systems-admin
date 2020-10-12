@@ -5,9 +5,13 @@
 <details><summary>Module 1 - Accessing the Command Line</summary>
 <p>	
 	
+# Table of Contents
+
+1. [The BASH Shell](#BASH)
+
 ![](/images/linux.png)
 
-## The BASH Shell
+## The BASH Shell <a name="BASH"></a>
 	
 * The Linux command line is provided by a program called the __shell__
 * Default shell for users in RHEL is the __GNU Bourne-Again Shell (bash)__
