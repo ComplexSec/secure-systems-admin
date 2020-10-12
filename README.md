@@ -30,10 +30,10 @@ Most commands have a __--help__ or __-h__ option. Usage statements have a few ba
 
 Symbols | Description
 ------------ | -------------
-[] | Surround optional items
-.. | represents an arbitrary length list of items of that type
-item 1 | item 2 | Means only __one__ of them can be specified
-<> | Represents variable data
+`[]` | Surround optional items
+`<something>..` | represents an arbitrary length list of items of that type
+`item 1 | item 2` | Means only __one__ of them can be specified
+`<filename>` | Represents variable data
 
 </p>
 </details>
