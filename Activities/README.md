@@ -4,6 +4,8 @@
 
 NB. The `desktopX` machine is referred to as the `Workstation` machine on NetLab - both have student users
 
+Once done, click [here](https://github.com/ComplexSec/secure-systems-admin) to go back to the notes section
+
 <details><summary>Module 1 - Lab 1 (Changing Password)</summary>
 <p>
 
