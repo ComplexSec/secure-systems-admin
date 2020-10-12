@@ -48,7 +48,24 @@ The hardware display and keyboard used to interact with a system | Physical cons
 One of multiple logical consoles that can each support an independent login session | Virtual console
 An interface that provides a display for output and a keyboard for input to a shell session | Terminal
 
+The desktop environment is the GUI on a Linux system. Default desktop environment in RHEL 7 is provided by __GNOME 3__ - provided by __X Windows System__
 
+By default, RHEL 7  uses the __GNOME Classic__ theme for __gnome-shell__. Help can be quickly started by pressing `F1` in gnome-shell, by selecting __Applications --> Documentation --> Help__ or by running the `yelp` command
 
+__Workspaces__ are seperate desktop screens which have different application windows. Three methods for switching between them:
+
+	* Clicking the indicator in the right corner of the window list
+	* `CTRL+ALT+UpArrow` or `CTRL+ALT+DownArrow`
+	* Switch to Activities Overview
+
+Advantage of __Activities Overview__ - windows can be clicked and dragged between
+
+To get a shell prompt in GNOME, start a terminal application such as GNOME terminal. Three most commonly used methods:
+
+	* Applications --> Utilities --> Terminal
+	* Right-click and select Open in Terminal from context menu
+	* From Activities Overview, select Terminal from the dash
+
+To lock the screen, select __(User) --> Lock__ or press __CTRL+ALT+L__
 </p>
 </details>
