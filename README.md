@@ -168,14 +168,14 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 <details><summary>Module 2 - Managing Files from the Command Line</summary>
 <p>
 	
-# Table of Contents <a name="INDEX"></a>
+# Table of Contents <a name="INDEX2"></a>
 
-1. [The BASH Shell](#BASH)
-2. [Virtual Consoles](#VCONS)
-3. [Shell Basics](#SHELL)
-4. [Terminology](#TERM)
-5. [The GNOME Desktop Environment](#GNOME)
-6. [Workspaces](#WORK)
+1. [The File System Hierarchy](#HEIR)
+2. [File System Hierarchy Review](#REV)
+3. [Absolute Paths and Relative Paths](#ABS)
+4. [Navigating Paths](#PATHS)
+5. [Paths Review](#PAREV)
+6. [Command-Line File Management](#CLFM)
 7. [Starting a Terminal](#START)
 8. [Locking the Screen/Shutting Down](#LOG)
 9. [Lab 1 - Changing Password](#LAB)
@@ -187,7 +187,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 ![](/images/linux2.png)
 
-## The File System Hierarchy
+## The File System Hierarchy <a name="HEIR"></a> ([Back to Index](#INDEX2))
 
 All files on Linux are stored on file systems which are organized into a single __inverted tree__ known as a __file system hierarchy__. The root of the tree is at the __top__ and the branches stretch __below__
 
@@ -223,7 +223,7 @@ In RHEL 7, four older directories in `/` now have identical contents as their co
 
 In older versions of RHEL, these were distinct directories containing different sets of files. In RHEL 7, the directories in `/` are symbolic links to the matching directories in __/usr__
 
-## File System Hierarchy Review
+## File System Hierarchy Review <a name="REV"></a> ([Back to Index](#INDEX2))
 
 Directory Purpose | Location
 ------------ | -------------
@@ -238,7 +238,7 @@ Temporary files are stored here | /tmp
 Contains dynamic, non-persistent application runtime data | /run
 Contains installed software programms and libraries | /usr
 
-## Absolute Paths and Relative Paths
+## Absolute Paths and Relative Paths <a name="ABS"></a> ([Back to Index](#INDEX2))
 
 The path of a file or directory specifies its unique file system location
 
@@ -252,7 +252,7 @@ For standard Linux file systems, the path name of a file, including all `/` char
 
 Linux file systems - ext4, XFS, BTRGS, GFS2 and GlusterFS - are __case sensitive__ in terms of filenames. The VFAT file system is NOT case-sensitive. However, VFAT along with Microsoft's NTFS and Apple's HFS+ has __case preserving__ behaviour
 
-## Navigating Paths
+## Navigating Paths <a name="PATHS"></a> ([Back to Index](#INDEX2))
 
 The `pwd` command displays the full path name of the current location. The `ls` command lists directory contents for specified or current directory
 
@@ -270,7 +270,7 @@ File names beginning with a dot indicate files __hidden__ from normal view using
 
 The `cd` command has many options. The `cd -` command changes to the previous directory. The `cd ..` command uses the `..` hidden directory to move up one level to the parent directory
 
-## Paths Review
+## Paths Review <a name="PAREV"></a> ([Back to Index](#INDEX2))
 
 Action to accomplish | Command
 ------------ | -------------
@@ -284,7 +284,7 @@ Move to the binaries location, from any current location | cd /bin
 Move up to the parent of the current location | cd ..
 Move to the binaries location, from the root directory | cd bin 
 
-## Command-Line File Management
+## Command-Line File Management <a name="CLFM"></a> ([Back to Index](#INDEX2))
 
 File management involves creating, deleting, copying and moving files. Additionally, directories can be created, deleted, copied and moved to help organize files logically
 
