@@ -309,7 +309,15 @@ SuperScript | Note
 <sup>(5)</sup> | Use caution with "force" option; you will NOT be prompted to confirm your action 
 <sup>(6)</sup> | Use caution with "create parent" option; typing errors are NOT caught
 
+The `mkdir` command creates one or more directories - generates errors if file name already exists. The `-p` option creates missing parent directories for requested destination - accidental spelling errors create unintended directories without error messages
 
+![](/images/mkdir.png)
+
+The `cp` command copies one or more files to become new, independent files. Can copy existing file to new file in current/other directory or copy multiple files into another directory. If new file name is NOT unique, it overwrites existing file. When copying multiple files with one command, last argument MUST be a directory. Multiple `cp` commands ignore directories specified as a source. Copying non-empty directories, with contents, requires the `-r` option
+
+The `mv` command renames files or relocates files. Files moved to different file system require creating new file by copying source file, and deleting source file. 
+
+The `rm` deletes files but NOT directories. To delete directories, use the `-r` option. Using `-i` interactively prompts for each deletion. The `rmdir` command deletes empty directories.
 
 </p>
 </details>
