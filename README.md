@@ -176,14 +176,6 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 4. [Navigating Paths](#PATHS)
 5. [Paths Review](#PAREV)
 6. [Command-Line File Management](#CLFM)
-7. [Starting a Terminal](#START)
-8. [Locking the Screen/Shutting Down](#LOG)
-9. [Lab 1 - Changing Password](#LAB)
-10. [Basic Command Syntax](#SYN)
-11. [Examples of Simple Commands](#SIMP)
-12. [Command History](#HIST)
-13. [Editing the Command Line](#EDIT)
-14. [Lab 2 - Using Commands](#LAB2)
 
 ![](/images/linux2.png)
 
