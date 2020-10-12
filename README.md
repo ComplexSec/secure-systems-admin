@@ -73,5 +73,21 @@ To unlock the screen, press __Enter__ or __Space__
 To shut down, select __(User) --> Power Off__ or press __CTRL+ALT+DEL__
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the first lab
+
+#### Basic Command Syntax
+
+The GNU Bourne-Again Shell(__BASH__) is a program that interprets commands typed in by the user. Each command is typed on a separate line and the output from each displays before the shell displays a prompt. To type more than one command on a line, use the `;`symbol as a __command separator__
+
+The semicolon is in a class of characters called __metacharacters__ that has special meanings for BASH
+
+#### Examples of Simple Commands
+
+The __date__ command displays current date and time - used by root to set the system clock. An argument that begins with `+` specifies a format string for date
+
+![](/images/date.png)
+
+The __passwd__ command changes a user's own password. Root can use the __passwd__ command to change other user's passwords
+
+Linux 
 </p>
 </details>
