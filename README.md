@@ -1,5 +1,6 @@
 # Secure Systems Administration
-Year 2 University module all about Linux - specifically RHEL
+
+## Year 2 University module all about Linux - specifically RHEL
 
 <details><summary>Module 1 - Accessing the Command Line</summary>
 <p>	
