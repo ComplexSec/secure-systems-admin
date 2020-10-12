@@ -5,7 +5,7 @@
 <details><summary>Module 1 - Accessing the Command Line</summary>
 <p>	
 	
-# Table of Contents
+# Table of Contents <a name="INDEX"></a>
 
 1. [The BASH Shell](#BASH)
 2. [Virtual Consoles](#VCONS)
@@ -24,7 +24,7 @@
 
 ![](/images/linux.png)
 
-## The BASH Shell <a name="BASH"></a>
+## The BASH Shell <a name="BASH"></a> [Index](#INDEX)
 	
 * The Linux command line is provided by a program called the __shell__
 * Default shell for users in RHEL is the __GNU Bourne-Again Shell (bash)__
@@ -158,7 +158,7 @@ Shortcut | Description
 `CTRL+RIGHT` | Jump to end of next word on CL
 `CTRL+R` | Search history of commands for pattern
 
-## Lab 2 - Using Commands <a name="LAB2"></a>
+## Lab 2 - Using Commands <a name="LAB2"></a> [Index](#INDEX)
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
