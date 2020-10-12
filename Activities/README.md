@@ -4,7 +4,7 @@
 
 NB. The `desktopX` machine is referred to as the `Workstation` machine on NetLab - both have student users
 
-<details><summary>Module 1</summary>
+<details><summary>Module 1 - Lab 1 (Changing Password)</summary>
 <p>
 
 ### Step 1: Change the password for student to 55TurnK3y
