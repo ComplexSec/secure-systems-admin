@@ -22,6 +22,18 @@ Year 2 University module all about Linux - specifically RHEL
 	* Options to adjust the behaviour of the command
 	* Arguments which are typically targets of the command
 
+The __command__ is the name of the program to run. Might be followed by one or more __options__. Options adjust the behaviour of the command - normally start with one or two dashes
+
+Arguments often indicate a target that the command should operate on
+
+Most commands have a __--help__ or __-h__ option. Usage statements have a few basic conventions
+
+Symbols | Description
+------------ | -------------
+[] | Surround optional items
+<something>.. | represents an arbitrary length list of items of that type
+item 1 | item 2 | Means only __one__ of them can be specified
+<data> | Represents variable data
 
 </p>
 </details>
