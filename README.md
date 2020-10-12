@@ -71,6 +71,6 @@ To unlock the screen, press __Enter__ or __Space__
 
 To shut down, select __(User) --> Power Off__ or press __CTRL+ALT+DEL__
 
-Please refer to [Activities]() for the first lab
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the first lab
 </p>
 </details>
