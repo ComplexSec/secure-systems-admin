@@ -186,5 +186,33 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 14. [Lab 2 - Using Commands](#LAB2)
 
 ![](/images/linux2.png)
+
+## The File System Hierarchy
+
+All files on Linux are stored on file systems which are organized into a single __inverted tree__ known as a __file system hierarchy__. The root of the tree is at the __top__ and the branches stretch __below__
+
+![](/images/filesys.png)
+
+The top directory is the root (/) directory. Subdirectories of `/` are used for standardized purposes to organize files by type and purpose. The following terms are encountered in describing file system directory contents:
+
+* __Static__ is content that remains unchanged until explicitly edited or reconfigured
+* __Dynamic__ or __variable__ is content typically modified or appended by active processes
+* __Persistent__ is content, particularly configuration settings, that remain after a reboot
+* __Runtime__ is a process or system specific content or attributes cleared during reboot
+
+The following table lists some of the most important directories on the system by name and purpose:
+
+Location | Purpose
+------------ | -------------
+/usr | Installed software, shared libraries, include files, and static read-only program data. Important subdirectories are `/usr/bin` which contains __user commands__, `/usr/sbin` which contains __system administration commands__ and `/usr/local` which contains __locally customized software__.
+/etc | Configuration files specific to this system
+/var | Variable data specific to this system that should persist between boots. Files that dynamically change (e.g. databases, cache directories, log files, printer-spooled documents and website content) may be found here
+/run | Runtime data for processes started since the last boot. This includes process ID files and lock files, among other things. The contents of this directory are recreated on reboot
+/home | __Home directories__ where regular users store their personal data and configuration files
+/root | Home directory for the administrative superuser, root
+/tmp | A world-writable space for temporary files. Files which have not been accessed, changed or modified for 10 days are deleted from here automatically. Another temporary directory exists `/var/tmp` in which files that have not been accessed, changed, or modified in more than 30 days are deleted automatically
+/boot | Files needed in order to start the boot process
+/dev | Contains special device files which are used by the system to access hardware
+
 </p>
 </details>
