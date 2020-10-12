@@ -298,12 +298,16 @@ Copy directory | cp -r dir1 dir2 <sup>(2)</sup> | cp -r dir1 dir2 dir3 dir4 <sup
 Move directory | mv dir1 dir2 <sup>(3)</sup> | mv dir1 dir2 dir3 dir4 <sup>(4)</sup>
 Remove directory | rm -r dir1 <sup>(2)</sup> | rm -rf dir1 dir2 dir3 <sup>(5)</sup>
 Remove empty directory | rmdir dir1 | rmdir -p dir1/dir2/dir3
-Note: | <sup>(1)</sup> The result is a rename | 
-| <sup>(2)</sup> The "recursive" option is required to process a source directory |
-| <sup>(3)</sup> If dir2 exists, the result is a move. If dir2 doesn't exist, the result is a rename |
-| <sup>(4)</sup> The last argument must be a directory |  
-| <sup>(5)</sup> Use caution with "force" option; you will NOT be prompted to confirm your action |  
-| <sup>(6)</sup> Use caution with "create parent" option; typing errors are NOT caught |  
+
+
+SuperScript | Note
+------------ | -------------
+<sup>(1)</sup> | The result is a rename
+<sup>(2)</sup> | The "recursive" option is required to process a source directory
+<sup>(3)</sup> | If dir2 exists, the result is a move. If dir2 doesn't exist, the result is a rename
+<sup>(4)</sup> | The last argument must be a directory
+<sup>(5)</sup> | Use caution with "force" option; you will NOT be prompted to confirm your action 
+<sup>(6)</sup> | Use caution with "create parent" option; typing errors are NOT caught
 
 
 
