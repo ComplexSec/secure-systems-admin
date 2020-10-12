@@ -290,7 +290,7 @@ File management involves creating, deleting, copying and moving files. Additiona
 
 Activity | Single Source | Multiple Sources
 ------------ | ------------- | -------------
-Copy File | cp file1 file2 | cp file1 file2 file3 dir<sup>4</sup>
+Copy File | cp file1 file2 | cp file1 file2 file3 dir <sup>(4)</sup>
 Move File | mv file1 file2 | mv file1 file2 file3 dir
 Remove File | rm file1 | rm -f file1 file2 file3
 Create directory | mkdir dir | mkdir -p par1/par2/dir
