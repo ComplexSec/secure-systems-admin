@@ -163,3 +163,11 @@ Simply type `exit` into the shell to exit both the SSH connection and the normal
 
 </p>
 </details>
+
+<details><summary>Module 2 - Lab 1 (File Management)</summary>
+<p>
+	
+
+	
+</p>
+</details>
