@@ -10,6 +10,11 @@
 1. [The BASH Shell](#BASH)
 2. [Virtual Consoles](#VCONS)
 3. [Shell Basics](#SHELL)
+4. [Terminology](#TERM)
+5. [The GNOME Desktop Environment](#GNOME)
+6. [Workspaces](#WORK)
+7. [Starting a Terminal](#START)
+8. [Locking the Screen/Shutting Down](#LOG)
 
 ![](/images/linux.png)
 
@@ -50,7 +55,7 @@ item 1 __pipe__ item 2 | Means only __one__ of them can be specified
 
 When a user is finished using the shell, use the `exit` command to terminate the current shell session or press `CTRL+D` 
 
-## Terminology
+## Terminology <a name="TERM"></a>
 
 Description | Term
 ------------ | -------------
@@ -63,13 +68,13 @@ The hardware display and keyboard used to interact with a system | Physical cons
 One of multiple logical consoles that can each support an independent login session | Virtual console
 An interface that provides a display for output and a keyboard for input to a shell session | Terminal
 
-## The GNOME Desktop Environment
+## The GNOME Desktop Environment <a name="GNOME"></a>
 
 The desktop environment is the GUI on a Linux system. Default desktop environment in RHEL 7 is provided by __GNOME 3__ - provided by __X Windows System__
 
 By default, RHEL 7  uses the __GNOME Classic__ theme for __gnome-shell__. Help can be quickly started by pressing `F1` in gnome-shell, by selecting __Applications --> Documentation --> Help__ or by running the `yelp` command
 
-## Workspaces
+## Workspaces <a name="WORK"></a>
 
 __Workspaces__ are seperate desktop screens which have different application windows. Three methods for switching between them:
 
@@ -79,7 +84,7 @@ __Workspaces__ are seperate desktop screens which have different application win
 
 Advantage of __Activities Overview__ - windows can be clicked and dragged between
 
-## Starting a Terminal
+## Starting a Terminal <a name="START"></a>
 
 To get a shell prompt in GNOME, start a terminal application such as GNOME terminal. Three most commonly used methods:
 
@@ -87,7 +92,7 @@ To get a shell prompt in GNOME, start a terminal application such as GNOME termi
 	2. Right-click and select Open in Terminal from context menu
 	3. From Activities Overview, select Terminal from the dash
 
-## Locking the Screen/Shutting Down
+## Locking the Screen/Shutting Down <a name="LOG"></a>
 To lock the screen, select __(User) --> Lock__ or press __CTRL+ALT+L__
 To unlock the screen, press __Enter__ or __Space__
 
