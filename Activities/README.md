@@ -79,17 +79,85 @@ To identify what type of file it is, simply use the `file` command along with th
 
 ### Step 5 - Use the wc command and bash shortcuts to display the size of /usr/bin/clean-binary-files
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `wc` command on the file specified. If the previous command has been typed, you can shorten this to using the `Esc+.` shortcut to print the last string of the last command
+
+![](/images/binary.png)
+
+</p>
+</details>
+
 ### Step 6 - Display the first 10 lines of /usr/bin/clean-binary-files
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `head` command to display the first 10 lines of a file by default - no need to specify via the `-n` argument
+
+![](/images/first.png)
+
+</p>
+</details>
 
 ### Step 7 - Display the last 10 lines at the bottom of /usr/bin/clean-binary-files
 
+<details><summary>Solution</summary>
+<p>
+	
+Use the `tail` command to display the last 10 lines of a file by default - no specification needed
+
+![](/images/last.png)
+
+</p>
+</details>
+
 ### Step 8 - Repeat the previous command but use the `-n 20` option to display the last 20 lines in the file
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the Up Arrow to use the previous command and simply add the `-n 20` option
+
+![](/images/20.png)
+
+</p>
+</details>
 
 ### Step 9 - Execute the date command without any arguments to display current date and time
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `date` into the command line
+
+![](/images/date4.png)
+
+</p>
+</details>
+
 ### Step 10 - Use bash history to display just the time
 
+<details><summary>Solution</summary>
+<p>
+	
+![](/images/41.png)
+
+</p>
+</details>
+
 ### Step 11 - Finish the BASH session
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `exit` into the shell to exit both the SSH connection and the normal terminal
+
+![](/images/exit.png)
+
+</p>
+</details>
 
 </p>
 </details>
