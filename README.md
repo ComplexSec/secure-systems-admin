@@ -8,6 +8,8 @@
 # Table of Contents
 
 1. [The BASH Shell](#BASH)
+2. [Virtual Consoles](#VCONS)
+3. [Shell Basics](#SHELL)
 
 ![](/images/linux.png)
 
@@ -18,7 +20,7 @@
 * `$` indicates a normal user, `#` indicates the root user
 * Bash provides a scripting language - supports automation of tasks
 
-## Virtual Consoles
+## Virtual Consoles <a name="VCONS"></a>
 
 * Users access the __bash__ shell via __terminal__
 * Terminal provides keyboard for input and display for output. Can be configured through serial ports
@@ -26,7 +28,7 @@
 * If GUI is available, it runs on the __first__ virtual console on RHEL 7
 * With GUI running, access a text login prompt on a virtual console by pressing __Ctrl+Alt__ and pressing a function key
 
-## Shell Basics
+## Shell Basics <a name="SHELL"></a>
 
 * Commands entered at the shell prompt have three basic parts:
 	* Command to run
