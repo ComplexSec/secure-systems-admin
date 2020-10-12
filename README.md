@@ -15,6 +15,9 @@
 6. [Workspaces](#WORK)
 7. [Starting a Terminal](#START)
 8. [Locking the Screen/Shutting Down](#LOG)
+9. [Lab 1 - Changing Password](#LAB)
+10. [Basic Command Syntax](#SYN)
+11. [Examples of Simple Commands](#SIMP)
 
 ![](/images/linux.png)
 
@@ -98,17 +101,17 @@ To unlock the screen, press __Enter__ or __Space__
 
 To shut down, select __(User) --> Power Off__ or press __CTRL+ALT+DEL__
 
-## Lab 1 - Changing Password
+## Lab 1 - Changing Password <a name="LAB"></a>
 
-Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the first lab
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Basic Command Syntax
+## Basic Command Syntax <a name="SYN"></a>
 
 The GNU Bourne-Again Shell(__BASH__) is a program that interprets commands typed in by the user. Each command is typed on a separate line and the output from each displays before the shell displays a prompt. To type more than one command on a line, use the `;`symbol as a __command separator__
 
 The semicolon is in a class of characters called __metacharacters__ that has special meanings for BASH
 
-## Examples of Simple Commands
+## Examples of Simple Commands <a name="SIMP"></a>
 
 The __date__ command displays current date and time - used by root to set the system clock. An argument that begins with `+` specifies a format string for date
 
@@ -116,6 +119,45 @@ The __date__ command displays current date and time - used by root to set the sy
 
 The __passwd__ command changes a user's own password. Root can use the __passwd__ command to change other user's passwords
 
-Linux 
+Linux does not require file name extensions to classify files. The `file` command scans the beginning of a file's content and displays what type it is
+
+![](/images/file.png)
+
+The `head` command displays the top 10 lines automatically. The `tail` command displays the bottom 10 lines. Both have the `-n` option to specify a number of lines
+
+![](/images/tail.png)
+
+The `wc` comand counts lines, words and chars in a file. Takes a `-l`, `-w` or `-c` option to display only lines, words and chars respectively
+
+![](/images/wc.png)
+
+Arguments and options can be matched with tab completion for MANY commands. The `useradd` command is used by root to create additional users on the system. It has many options. Tab completion following a partial option can be utilized
+
+![](/images/useradd.png)
+
+## Command History
+
+The `history` command displays a list of previously executed commands prefixed via number. The `!` character is used to expand previous commands without retyping. The `!3` command would run the 3rd last command entered. The `!ls` command would expand to the most recent command that begins with `ls`
+
+![](/images/history.png)
+
+Can also use arrow keys to navigate previous commands. The `Esc+.` key combination causes the shell to copy the last word of the previous command.
+
+## Editing the Command Line
+
+Shortcut | Description
+------------ | -------------
+`CTRL+A` | Jump to beginning of command
+`CTRL+E` | Jump to end of command
+`CTRL+U` | Clear from cursor to the beginning of command
+`CTRL+K` | Clear from cursor to end of command
+`CTRL+LEFT` | Jump to beginning of previous word on CL
+`CTRL+RIGHT` | Jump to end of next word on CL
+`CTRL+R` | Search history of commands for pattern
+
+## Lab 2 - Using Commands
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
 </p>
 </details>
