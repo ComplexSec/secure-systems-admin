@@ -164,3 +164,11 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 </p>
 </details>
+
+<details><summary>Module 2 - Managing Files from the Command Line</summary>
+<p>
+	
+
+
+</p>
+</details>
