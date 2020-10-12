@@ -32,8 +32,23 @@ Symbols | Description
 ------------ | -------------
 `[]` | Surround optional items
 `<something>..` | represents an arbitrary length list of items of that type
-<item 1 item 2> | Means only __one__ of them can be specified
+item 1 __pipe__ item 2 | Means only __one__ of them can be specified
 `<filename>` | Represents variable data
+
+When a user is finished using the shell, use the `exit` command to terminate the current shell session or press `CTRL+D` 
+
+Description | Term
+------------ | -------------
+The interpreter that executes commands typed as strings | Shell
+The visual cue that indicates an interactive shell is waiting for the user to type a command | Prompt
+The name of a program to run | Command
+The part of the command line that adjusts the behaviour of a command | Option
+The part of the command line that specifies the target that the command should operate on | Argument
+The hardware display and keyboard used to interact with a system | Physical console
+One of multiple logical consoles that can each support an independent login session | Virtual console
+An interface that provides a display for output and a keyboard for input to a shell session | Terminal
+
+
 
 </p>
 </details>
