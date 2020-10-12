@@ -24,7 +24,7 @@ You should now be able to log out and back in via the "55TurnK3y" password
 </p>
 </details>
 
-<details><summary>Lab 2 - Using Commands</summary>
+<details><summary>Module 1 - Lab 2 (Using Commands)</summary>
 <p>
 	
 ### Step 1 - Change student's password to T3st1ngT1me
