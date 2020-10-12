@@ -54,18 +54,23 @@ By default, RHEL 7  uses the __GNOME Classic__ theme for __gnome-shell__. Help c
 
 __Workspaces__ are seperate desktop screens which have different application windows. Three methods for switching between them:
 
-	* Clicking the indicator in the right corner of the window list
-	* `CTRL+ALT+UpArrow` or `CTRL+ALT+DownArrow`
-	* Switch to Activities Overview
+	1. Clicking the indicator in the right corner of the window list
+	2. CTRL+ALT+UpArrow` or `CTRL+ALT+DownArrow
+	3. Switch to Activities Overview
 
 Advantage of __Activities Overview__ - windows can be clicked and dragged between
 
 To get a shell prompt in GNOME, start a terminal application such as GNOME terminal. Three most commonly used methods:
 
-	* Applications --> Utilities --> Terminal
-	* Right-click and select Open in Terminal from context menu
-	* From Activities Overview, select Terminal from the dash
+	1. Applications --> Utilities --> Terminal
+	2. Right-click and select Open in Terminal from context menu
+	3. From Activities Overview, select Terminal from the dash
 
 To lock the screen, select __(User) --> Lock__ or press __CTRL+ALT+L__
+To unlock the screen, press __Enter__ or __Space__
+
+To shut down, select __(User) --> Power Off__ or press __CTRL+ALT+DEL__
+
+Please refer to [Activities]() for the first lab
 </p>
 </details>
