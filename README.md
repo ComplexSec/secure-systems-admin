@@ -214,5 +214,83 @@ Location | Purpose
 /boot | Files needed in order to start the boot process
 /dev | Contains special device files which are used by the system to access hardware
 
+In RHEL 7, four older directories in `/` now have identical contents as their counterparts located in /usr:
+
+* __/bin__ and __/usr/bin__
+* __/sbin__ and __/usr/sbin__
+* __/lib__ and __/usr/lib__
+* __/lib64__ and __/usr/lib64__
+
+In older versions of RHEL, these were distinct directories containing different sets of files. In RHEL 7, the directories in `/` are symbolic links to the matching directories in __/usr__
+
+## File System Hierarchy Review
+
+Directory Purpose | Location
+------------ | -------------
+This directory contains static, persistent system configuration data | /etc
+This is the system's root directory | /
+User home directories are located under this directory | / home 
+This is the root account's home directory | /root
+This directory contains dynamic configuration data such as FTP and websites | /var
+Regular user commands and utilities are located here | /usr/bin 
+System administration binaries, for root user, are here | /usr/sbin
+Temporary files are stored here | /tmp
+Contains dynamic, non-persistent application runtime data | /run
+Contains installed software programms and libraries | /usr
+
+## Absolute Paths and Relative Paths
+
+The path of a file or directory specifies its unique file system location
+
+An __absolute path__ is a fully qualified name, beginning at the root directory and specifying each subdirectory traversed. Every __absolute path__ will start with `/`. When a user logs in and opens a terminal, the initial location is normally the user's home directory. System processes also have an initial directory
+
+Users and processes navigate to other directories as needed; the terms __working directory__ or __current working directory__ refer to their __current__ location
+
+A __relative path__ identifies a unique file, specifying only the path necessary to reach the file from the working directory
+
+For standard Linux file systems, the path name of a file, including all `/` characters may be no more than 4095 bytes long. Each component of the path name seperated may be no more than __255 bytes long__. File names can use any UTF-8 encoded Unicode chararacter __EXCEPT__ `/` and the `NUL` character
+
+Linux file systems - ext4, XFS, BTRGS, GFS2 and GlusterFS - are __case sensitive__ in terms of filenames. The VFAT file system is NOT case-sensitive. However, VFAT along with Microsoft's NTFS and Apple's HFS+ has __case preserving__ behaviour
+
+## Navigating Paths
+
+The `pwd` command displays the full path name of the current location. The `ls` command lists directory contents for specified or current directory
+
+![](/images/pwdls.png)
+
+Use the `cd` command to change directories. Can use absolute or relative paths
+
+![](/images/cd.png)
+
+At any time, return to the user's home directory using `cd` without any destination
+
+The `touch` command normally updates a file's timestamp to the current data and time without otherwise modifying it. Useful for creating empty files. The `ls` command has multiple options for displaying attributes on files - most common being `-l` for long listing, `-a` for including hidden files, and `-R` for recursive to include contents of all subdirs
+
+File names beginning with a dot indicate files __hidden__ from normal view using `ls` and other commands. Hidden files keep necessary user configuration files from cluttering home directories. Many commands process hidden files only with specific command-line options, preventing one user's configuration from being accidentally copied to other directories
+
+The `cd` command has many options. The `cd -` command changes to the previous directory. The `cd ..` command uses the `..` hidden directory to move up one level to the parent directory
+
+## Paths Review
+
+Action to accomplish | Command
+------------ | -------------
+List the current user's home directory (long format) in simplest syntax, when it is not the current location | ls - l ~
+Return to the current user's home directory | cd
+Determine the absolute path name of the current location | pwd
+Return to the most previous working directory | cd -
+Move up two levels from the current location | cd ../..
+List the current location (long format) with hidden files | ls -al
+Move to the binaries location, from any current location | cd /bin
+Move up to the parent of the current location | cd ..
+Move to the binaries location, from the root directory | cd bin 
+
+## Command-Line File Management
+
+File management involves creating, deleting, copying and moving files. Additionally, directories can be created, deleted, copied and moved to help organize files logically
+
+Activity | Single Source | Multiple Sources
+------------ | ------------- | -------------
+test | test | test
+
 </p>
 </details>
