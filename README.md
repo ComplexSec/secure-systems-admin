@@ -18,6 +18,9 @@
 9. [Lab 1 - Changing Password](#LAB)
 10. [Basic Command Syntax](#SYN)
 11. [Examples of Simple Commands](#SIMP)
+12. [Command History](#HIST)
+13. [Editing the Command Line](#EDIT)
+14. [Lab 2 - Using Commands](#LAB2)
 
 ![](/images/linux.png)
 
@@ -135,7 +138,7 @@ Arguments and options can be matched with tab completion for MANY commands. The 
 
 ![](/images/useradd.png)
 
-## Command History
+## Command History <a name="HIST"></a>
 
 The `history` command displays a list of previously executed commands prefixed via number. The `!` character is used to expand previous commands without retyping. The `!3` command would run the 3rd last command entered. The `!ls` command would expand to the most recent command that begins with `ls`
 
@@ -143,7 +146,7 @@ The `history` command displays a list of previously executed commands prefixed v
 
 Can also use arrow keys to navigate previous commands. The `Esc+.` key combination causes the shell to copy the last word of the previous command.
 
-## Editing the Command Line
+## Editing the Command Line <a name="EDIT"></a>
 
 Shortcut | Description
 ------------ | -------------
@@ -155,7 +158,7 @@ Shortcut | Description
 `CTRL+RIGHT` | Jump to end of next word on CL
 `CTRL+R` | Search history of commands for pattern
 
-## Lab 2 - Using Commands
+## Lab 2 - Using Commands <a name="LAB2"></a>
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
