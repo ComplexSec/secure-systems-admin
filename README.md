@@ -32,7 +32,7 @@ Symbols | Description
 ------------ | -------------
 `[]` | Surround optional items
 `<something>..` | represents an arbitrary length list of items of that type
-`item 1 | item 2` | Means only __one__ of them can be specified
+item 1 | item 2 | Means only __one__ of them can be specified
 `<filename>` | Represents variable data
 
 </p>
