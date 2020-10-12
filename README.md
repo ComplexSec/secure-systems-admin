@@ -168,7 +168,23 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 <details><summary>Module 2 - Managing Files from the Command Line</summary>
 <p>
 	
+# Table of Contents <a name="INDEX"></a>
 
+1. [The BASH Shell](#BASH)
+2. [Virtual Consoles](#VCONS)
+3. [Shell Basics](#SHELL)
+4. [Terminology](#TERM)
+5. [The GNOME Desktop Environment](#GNOME)
+6. [Workspaces](#WORK)
+7. [Starting a Terminal](#START)
+8. [Locking the Screen/Shutting Down](#LOG)
+9. [Lab 1 - Changing Password](#LAB)
+10. [Basic Command Syntax](#SYN)
+11. [Examples of Simple Commands](#SIMP)
+12. [Command History](#HIST)
+13. [Editing the Command Line](#EDIT)
+14. [Lab 2 - Using Commands](#LAB2)
 
+![](/images/linux2.png)
 </p>
 </details>
