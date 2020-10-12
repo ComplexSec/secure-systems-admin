@@ -176,6 +176,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 4. [Navigating Paths](#PATHS)
 5. [Paths Review](#PAREV)
 6. [Command-Line File Management](#CLFM)
+7. [Lab 3 - File Management](#LAB3)
 
 ![](/images/linux2.png)
 
@@ -310,6 +311,10 @@ The `cp` command copies one or more files to become new, independent files. Can 
 The `mv` command renames files or relocates files. Files moved to different file system require creating new file by copying source file, and deleting source file. 
 
 The `rm` deletes files but NOT directories. To delete directories, use the `-r` option. Using `-i` interactively prompts for each deletion. The `rmdir` command deletes empty directories.
+
+## Lab 3 - File Management <a name="LAB3"></a> ([Back to Index](#INDEX))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
 </p>
 </details>
