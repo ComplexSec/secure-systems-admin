@@ -167,7 +167,113 @@ Simply type `exit` into the shell to exit both the SSH connection and the normal
 <details><summary>Module 2 - Lab 1 (File Management)</summary>
 <p>
 	
+## Step 1 - Creat sets of empty files (song1-6.mp3, snap1-6.jpg & film1-6.avi)
 
+<details><summary>Solution</summary>
+<p>
 	
+Simply use the touch command to create all mp3, jpg and avi files in the home directory - using three commands
+
+![](/images/touch.png)
+
+</p>
+</details>
+
+## Step 2 - Move songs into Music, snaps into Pictures and films into Videos
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `mv` command with the * after song, snap and film to move all correpsonding files into their respective directory
+
+![](/images/mv.png)
+
+</p>
+</details>
+
+## Step 3 - Make three directories (friends, family, work) in your home directory
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `mkdir` command along with the directory names
+
+![](/images/friends.png)
+
+</p>
+</details>
+
+## Step 4 - Copy all files containing numbers 1 and 2 to friends folder and all files containing 3 and 4 to the family folder
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `cp` command along with first, the files you want to copy and lastly their destination
+
+![](/images/family.png)
+
+</p>
+</details>
+
+## Step 5 - Copy all files containing numbers 5 and 6 to work folder
+
+<details><summary>Solution</summary>
+<p>
+	
+Do the previous command but change it to 5 and 6 and the destination to `~/work`
+
+![](/images/work.png)
+
+</p>
+</details>
+	
+## Step 6 - Attempt to remove the `family` and `friends` directories via `rmdir`
+
+<details><summary>Solution</summary>
+<p>
+	
+Try and remove the directories using the `rmdir family/ friends/` command and you will get an error as they are not empty directories
+
+![](/images/rmdir.png)
+
+</p>
+</details>
+
+## step 7 - Use another command that succeeds in deleting the folders
+
+<details><summary>Solution</summary>
+<p>
+	
+To successfully delete directories that contain files, use the `rm -r` command followed by the directories you want to delete
+
+![](/images/delete.png)
+
+</p>
+</details>
+
+## Step 8 - Delete all files in work project, but but do not delete the directory
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `rm ~/work/*` command to delete all files in the work directory
+
+![](/images/work2.png)
+
+</p>
+</details>
+
+## Step 9 - From home directory, use the `rmdir` command to delete the work directory
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `rmdir` command on the work directory
+
+![](/images/rmdirwork.png)
+
+</p>
+</details>
+
 </p>
 </details>
