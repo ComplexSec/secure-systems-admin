@@ -326,20 +326,20 @@ Globbing is a __shell command-parsing operation__ that expands a wildcard patter
 Pattern | Matches
 ------------ | -------------
 `*` | Any string of zero or more characters
-? | Any single character 
-~ | The current user's home directory
-~username  | User's home directory
-~+  | The current working directory
-~-  | The previous working directory
-[abc...]  | Any one character in the enclosed class
-[!abc...]  | Any one character NOT in the enclosed class
-[^abc...]  | Any one character NOT in the enclosed class
-[[:alpha:]] | Any alphabetic character
-[[:lower:]] | Any lower-case character
-[[:upper:]] | Any upper-case character
-[[:alnum:]] | Any alphabetic character or digit
-[[:punct:]] | Any printable character not a space or alphanumeric
-[[:digit:]] | Any digit 0-9
-[[:space:]] | Any one whitespace character (tabs, newline, carriage returns, space)
-Note | pre-set POSIX character class; adjusts for current locale
+`?` | Any single character 
+`~` | The current user's home directory
+`~username` | User's home directory
+`~+`  | The current working directory
+`~-`  | The previous working directory
+`[abc...]`  | Any one character in the enclosed class
+`[!abc...]`  | Any one character NOT in the enclosed class
+`[^abc...]`  | Any one character NOT in the enclosed class
+`[[:alpha:]]` | Any alphabetic character
+`[[:lower:]]` | Any lower-case character
+`[[:upper:]]` | Any upper-case character
+`[[:alnum:]]` | Any alphabetic character or digit
+`[[:punct:]]` | Any printable character not a space or alphanumeric
+`[[:digit:]]` | Any digit 0-9
+`[[:space:]]` | Any one whitespace character (tabs, newline, carriage returns, space)
+`Note` | pre-set POSIX character class; adjusts for current locale
 </details>
