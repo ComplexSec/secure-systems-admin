@@ -342,4 +342,44 @@ Pattern | Matches
 `[[:digit:]]` | Any digit 0-9
 `[[:space:]]` | Any one whitespace character (tabs, newline, carriage returns, space)
 `Note` | pre-set POSIX character class; adjusts for current locale
+
+![](/images/glob.png)
+
+The tilde character (`~`) when followed by a slash delimiter matches the current user's home directory. When followed by a string of characters up to a slash, it is interpreted as the username
+
+![](/images/echoglob.png)
+
+Brace expansion is used to generate discretionary strings of characters. Braces contain a comma-separated list of strings, or a sequence expression. Brace expansions may be nested one inside another
+
+![](/images/brace.png)
+
+Command substitution allows the output of a command to replace the command itself. Occurs when command is enclosed with beginning dollar sign and brackets or with backticks
+
+The backticks have two disadvantages - easy to visually confused and cannot be nested inside backticks
+
+![](/images/command.png)
+
+Many characters have special meaning in the BASH shell. To ignore special meanings, __quoting__ and __escaping__ can be used. The `/` is an escape character protecting the single character following it from special interpretation.
+
+To protect longer strings, single or double quotes can be used. Using double quotes still allows command and variable substitution. Variable substitution is conceptually identical to command substitution but may use optional brace syntax
+
+![](/images/user.png)
+
+Use single quotes to interpret __all__ text literally. Besides suppressing globbing and shell expansion, quotations direct the shell to additionally suppress command and variable substitution. The question mark is a meta-character that also needed protection from expansion
+
+![](/images/single.png)
+
+## File Globbing Review <a name="FILEREV"></a> ([Back to Index](#INDEX))
+
+Requested match to find | Patterns
+------------ | -------------
+Only filenames beginning with b | `b*`
+Only filenames ending in b | `*b`
+Only filenames containing a b | `*b*` 
+Only filenames where first character is not b | `[!b]*`
+Only filenames at least 3 characters in length | `???`
+Only filenames that contain a number | `*[[:digit:]]*`
+Only filenames that begin with an upper-case letter | `[[:upper:]]*`  
+
+</p>
 </details>
