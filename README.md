@@ -177,6 +177,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 5. [Paths Review](#PAREV)
 6. [Command-Line File Management](#CLFM)
 7. [Lab 3 - File Management](#LAB3)
+8. [File Globbing: Path Name Expansion](#FILE)
 
 ![](/images/linux2.png)
 
@@ -316,5 +317,29 @@ The `rm` deletes files but NOT directories. To delete directories, use the `-r` 
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-</p>
+## File globbing - Path Name Expansion <a name="FILE"></a> ([Back to Index](#INDEX))
+
+BASH has a path name-matching capability historically called __globbing__ which makes managing large numbers of files easier by using meta-characters that expand to match file and path names being sought
+
+Globbing is a __shell command-parsing operation__ that expands a wildcard pattern into a list of matching path names. Patterns - especially square-bracketed character classes - that do not return matches display the original pattern request as literal text
+
+Pattern | Matches
+------------ | -------------
+* | Any string of zero or more characters
+? | Any single character 
+~ | The current user's home directory
+~username  | User's home directory
+~+  | The current working directory
+~-  | The previous working directory
+[abc...]  | Any one character in the enclosed class
+[!abc...]  | Any one character NOT in the enclosed class
+[^abc...]  | Any one character NOT in the enclosed class
+[[:alpha:]] | Any alphabetic character
+[[:lower:]] | Any lower-case character
+[[:upper:]] | Any upper-case character
+[[:alnum:]] | Any alphabetic character or digit
+[[:punct:]] | Any printable character not a space or alphanumeric
+[[:digit:]] | Any digit 0-9
+[[:space:]] | Any one whitespace character (tabs, newline, carriage returns, space)
+Note | pre-set POSIX character class; adjusts for current locale
 </details>
