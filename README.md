@@ -382,5 +382,9 @@ Only filenames at least 3 characters in length | `???`
 Only filenames that contain a number | `*[[:digit:]]*`
 Only filenames that begin with an upper-case letter | `[[:upper:]]*`  
 
+## Lab 4 - Managing Files with Shell Expansion <a name="LAB4"></a> ([Back to Index](#INDEX2))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
 </p>
 </details>

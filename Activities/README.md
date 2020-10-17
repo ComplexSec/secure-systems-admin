@@ -277,3 +277,36 @@ Simply use the `rmdir` command on the work directory
 
 </p>
 </details>
+
+<details><summary>Module 2 - Lab 2 (Managing Files with Shell Expansion)</summary>
+<p>
+
+## Step 1 - Create files called `tv_seasonX_episodeY.ogg` and replace X with season number and Y with episode number - two seasons of six episodes each
+
+## Step 2 - Create eight files with names `mystery_chapterX.odf` and replace X with numbers 1 through 8
+
+## Step 3 - Create two directories named `season1` and `season2` under the Videos directory
+
+## Step 4 - Move the appropriate TV episodes into the season subdirectories using two commands only
+
+## Step 5 - Create two level directory hierarchy with one command. Create `my_bestseller` under the Documents directory and `chapters` beneath the new `my_bestseller` directory
+
+## Step 6 - Using one command, create 3 more subdirectories directly under `my_bestseller` directory. Name these `editor`, `plot_change` and `vacation`
+
+## Step 7 - Change to chapters directory. Move all book chapters into the `chapters` directory using the simplest syntax
+
+## Step 8 - Move the first two chapters to the `editor` directory using relative syntax
+
+## Step 9 - Move chapters 8 and 9 to the vacation folder using one command without wildcard characters
+
+## Step 10 - With one command, change directory to season 2 TV episodes location, then copy the first episode to the vacation directory
+
+## Step 11 - With one command, change the working directory to `vacation` then list files. Return to the season 2 directory using the `previous working directory` shortcut. Copy the episode 2 file into `vacation`. Return to `vacation` using the shortcut again
+
+## Step 12 - Copy chapters 5 and 6 into `plot_change` then move up one directory to `vacation` parent directory then use one command from there
+
+## Step 13 - Make three backups of chapter 5. Move to `plot_change` directory and copy chapter5 as a new file name to include the full date. Make another copy appending the current timestamp to ensure a unique file name. Also make a copy appending the current user to the file name
+
+## Step 14 - Delete the `plot_change` directory by first deleting all of the files inside and removing it by first trying the rm command and then the rmdir command
+
+## Step 15 - Delete the `vacation` directory using the rm command with the recursive option then return to home directory
