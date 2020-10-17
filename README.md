@@ -325,7 +325,7 @@ Globbing is a __shell command-parsing operation__ that expands a wildcard patter
 
 Pattern | Matches
 ------------ | -------------
-* | Any string of zero or more characters
+`*` | Any string of zero or more characters
 ? | Any single character 
 ~ | The current user's home directory
 ~username  | User's home directory
