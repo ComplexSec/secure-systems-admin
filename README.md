@@ -314,11 +314,11 @@ The `mv` command renames files or relocates files. Files moved to different file
 
 The `rm` deletes files but NOT directories. To delete directories, use the `-r` option. Using `-i` interactively prompts for each deletion. The `rmdir` command deletes empty directories.
 
-## Lab 3 - File Management <a name="LAB3"></a> ([Back to Index](#INDEX))
+## Lab 3 - File Management <a name="LAB3"></a> ([Back to Index](#INDEX2))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## File globbing - Path Name Expansion <a name="FILE"></a> ([Back to Index](#INDEX))
+## File globbing - Path Name Expansion <a name="FILE"></a> ([Back to Index](#INDEX2))
 
 BASH has a path name-matching capability historically called __globbing__ which makes managing large numbers of files easier by using meta-characters that expand to match file and path names being sought
 
@@ -370,7 +370,7 @@ Use single quotes to interpret __all__ text literally. Besides suppressing globb
 
 ![](/images/single.png)
 
-## File Globbing Review <a name="FILEREV"></a> ([Back to Index](#INDEX))
+## File Globbing Review <a name="FILEREV"></a> ([Back to Index](#INDEX2))
 
 Requested match to find | Patterns
 ------------ | -------------
