@@ -461,6 +461,9 @@ Use the `rm -r` command to recursive delete the vacation folder and all files in
 </p>
 </details>
 
+</p>
+</details>
+
 <details><summary>Module 3 - Lab 1 (Finding Relevant Information Using Man)</summary>
 <p>
 	
