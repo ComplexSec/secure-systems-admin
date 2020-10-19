@@ -460,3 +460,152 @@ Use the `rm -r` command to recursive delete the vacation folder and all files in
 	
 </p>
 </details>
+
+<details><summary>Module 3 - Lab 1 (Finding Relevant Information Using Man)</summary>
+<p>
+	
+## Step 1 - View the gedit(1) man page
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `man 1 gedit` to open the relevant man page 
+
+![](/images/man1.png)
+
+</p>
+</details>
+
+## Step 2 - Research how to edit a specific file using gedit
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply look through the gedit man page and you will find it
+
+![](/images/filename.png)
+	
+</p>
+</details>
+
+## Step 3 - Research the gedit option used to begin an editing session with the cursor at the end
+
+<details><summary>Solution</summary>
+<p>
+	
+Again, look through the man page and you will find the relevant option
+
+![](/images/line.png)
+	
+</p>
+</details>
+
+## Step 4 - Research the su(1) man page
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the same command we did for gedit using the 1 option
+
+![](/images/mansu.png)
+	
+</p>
+</details>
+
+## Step 5 - Research what su does when username argument is omitted
+
+<details><summary>Solution</summary>
+<p>
+	
+You will find this answer by reading the man page
+	
+![](/images/su2.png)
+
+</p>
+</details>
+
+## Step 6 - Research how su behaves when a single dash option is used
+
+<details><summary>Solution</summary>
+<p>
+	
+![](/images/root.png)
+	
+</p>
+</details>
+
+## Step 7 - Consult the passwd(1) man page and determine the options that lock and unlock an account
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply open the man page and look through it
+
+![](/images/lock.png)
+	
+</p>
+</details>
+
+## Step 8 - Locate the two principles to remember according to passwd man page
+
+<details><summary>Solution</summary>
+<p>
+	
+Using the `/principle` command inside the man page, we find the two principles via the string search
+
+![](/images/princ.png)
+
+</p>
+</details>
+
+## Step 9 - Consult the man page documenting the syntax of the /etc/passwd file and find out what the third field means
+
+<details><summary>Solution</summary>
+<p>
+	
+To see the syntax documenting the syntax of passwd file instead of the passwd command, we use section 5 when searching for passwd
+
+![](/images/sec5.png)
+	
+</p>
+</details>
+
+## Step 10 - Which command will list detailed information about a zip archive?
+
+<details><summary>Solution</summary>
+<p>
+	
+Using the `man -k zip` command, we can see man pages relating to zips
+
+![](/images/zipinfo.png)
+	
+</p>
+</details>
+
+## Step 11 - Which man page contains a list of parameters that can be pased to the kernel at boot?
+
+<details><summary>Solution</summary>
+<p>
+	
+Again, using the `man -k` command, we can search for the keyword of boot
+
+![](/images/boot.png)
+	
+</p>
+</details>
+
+## Step 12 - Which command is used to tune ext4 file system parameters?
+
+<details><summary>Solution</summary>
+<p>
+	
+Finally, for the third time, use the `man -k` command with the keyword ext4
+
+![](/images/tune2fs.png)
+	
+</p>
+</details>
+
+
+</p>
+</details>
