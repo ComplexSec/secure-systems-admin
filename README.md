@@ -406,7 +406,10 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 9. [Research Documentation under /usr/share/doc](#LAB7)
 10. [Using redhat-support-tool to Search Knowledge Base](#REDHAT)
 11. [Directly Access Knowledge Base Articles by Document ID](#DIRECT)
-
+12. [Using redhat-support-tool to Manage Support Cases](#SUPPORT)
+13. [Managing A Bug Report with redhat-support-tool](#BUG)
+14. [Including Diagnostic Information by Attaching a SoS Report Archive](#SOSREP)
+15. [Lab 8 - Using __sosreport__ Command to Generate a SoS Report](#SOS)
 
 ![](/images/4.png)
 
@@ -537,7 +540,7 @@ Locate online articles directly by using the tool's `kb` command with the docume
 
 Documents retrieved in unpaginated format are easy to print, convert to PDF or others or to redirect output
 
-## Using redhat-support-tool to Manage Support Cases
+## Using redhat-support-tool to Manage Support Cases <a name="SUPPORT"></a> ([Back to Index](#INDEX3))
 
 Before contacting Red Hat Support, gather relevant info for a bug report:
 
@@ -559,5 +562,34 @@ Urgent (Severity 1) | A problem that severely impacts your use of the software i
 High (Severity 2) | A problem where the software is functioning but your use in a production environment is severely reduced. The situation is causing a high impact to portions of your business operations and no procedural workaround exists
 Medium (Severity 3) | A problem that involves partial, non-critical loss of use of the software in a production environment or development environment. For production environments, there is a medium-to-low impact on your business, but your business continues to function, including by using a procedural workaround. For development environments, where the situation is causing your project to no longer continue or migrate into production
 Low (Severity 4) | A general usage question, reporting of a documentation error, or recommendation for a future product enhancement or modification. For production environments, there is low-to-no impact on your business or the performance or functionality of your system. For development environments, there is a medium-to-low impact on your business, but your business continues to function, including by using a procedural workaround. 
+
+## Managing A Bug Report with redhat-support-tool <a name="BUG"></a> ([Back to Index](#INDEX3))
+
+Subscribers may create, view modify and close Red Hat Support cases using redhat-support-tool. When support cases are opened users may include files or documentation such as diagnostic reports. The tool uploads and attaches files to online cases.
+
+Case details including product, version, summary, description, severity and case group may be assigned with command options or letting the tool prompt for required information
+
+![](/images/cases.png)
+
+## Including Diagnostic Information by Attaching a SoS Report Archive <a name="SOSREP"></a> ([Back to Index](#INDEX3))
+
+Including diagnostic information when a support case is first created contributes to quicker problem resolution. The __sosreport__ command generates a compressed tar archive of diagnostic information gathered from the running system. The __redhat-support-tool__ prompts to include one if an archive has been created previously
+
+![](/images/sos.png)
+
+If a curren SoS report is not already prepared, an admin can generate and attach one later, using the tool's __addattachment__ command as advised previously
+
+Support cases can also be viewed modified and closed by you as the subscriber
+
+![](/images/listcases.png)
+
+The Red Hat Support Tool has advanced application diagnostic and analytic capabilities. Using kernel crash dump core files, __redhat-support-tool__ can create and extract a backtrace - a report of the active stack frames at the point of a crash dump
+
+The tool also provides log file analysis. Using the tool's __analyze__ command, log files of many types including OS, JBoss, Python, Tomcat, oVirt and others can be parsed to reconggized problem symptoms which can then be viewed and diagnosed indidivualy
+
+## Lab 8 - Using __sosreport__ Command to Generate a SoS Report <a name="SOS"></a> ([Back to Index](#INDEX3))
+
+
+
 </p>
 </details>
