@@ -553,5 +553,11 @@ Things like version and product. Be ready to provide relevant diagnostic informa
 
 Red Hat uses four severity levels - __Urgent__ and __High__ severity problem reports should be followed by a phone call to the relevant local support center
 
+Severity | Description
+------------ | -------------
+Urgent (Severity 1) | A problem that severely impacts your use of the software in a production environment. The situation halts your business operations and no procedural workaround exists
+High (Severity 2) | A problem where the software is functioning but your use in a production environment is severely reduced. The situation is causing a high impact to portions of your business operations and no procedural workaround exists
+Medium (Severity 3) | A problem that involves partial, non-critical loss of use of the software in a production environment or development environment. For production environments, there is a medium-to-low impact on your business, but your business continues to function, including by using a procedural workaround. For development environments, where the situation is causing your project to no longer continue or migrate into production
+Low (Severity 4) | A general usage question, reporting of a documentation error, or recommendation for a future product enhancement or modification. For production environments, there is low-to-no impact on your business or the performance or functionality of your system. For development environments, there is a medium-to-low impact on your business, but your business continues to function, including by using a procedural workaround. 
 </p>
 </details>
