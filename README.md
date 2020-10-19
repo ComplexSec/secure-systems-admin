@@ -589,7 +589,7 @@ The tool also provides log file analysis. Using the tool's __analyze__ command, 
 
 ## Lab 8 - Using __sosreport__ Command to Generate a SoS Report <a name="SOS"></a> ([Back to Index](#INDEX3))
 
-
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
 </p>
 </details>
