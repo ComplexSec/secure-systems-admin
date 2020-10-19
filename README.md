@@ -393,5 +393,18 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 <details><summary>Module 3 - Getting Help in Red Hat Enterprise Linux </summary>
 <p>
 
+1. [The File System Hierarchy](#HEIR)
+2. [File System Hierarchy Review](#REV)
+3. [Absolute Paths and Relative Paths](#ABS)
+4. [Navigating Paths](#PATHS)
+5. [Paths Review](#PAREV)
+6. [Command-Line File Management](#CLFM)
+7. [Lab 3 - File Management](#LAB3)
+8. [File Globbing: Path Name Expansion](#FILE)
+9. [File Globbing Review](#FILEREV)
+10. [Lab 4 - Managing Files with Shell Expansion](#LAB4)
+
+![](/images/4.png)
+
 </p>
 </details>
