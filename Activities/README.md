@@ -837,3 +837,58 @@ Use `yum` to display only those packages that contain -doc, -docs or -documentat
 
 </p>
 </details>
+
+<details><summary>Module 3 - Lab 3 (Using __sosreport__ Command to Generate a SoS Report)</summary>
+<p>
+	
+## Step 1 - If currently working as a non-root user, switch to root
+
+<details><summary>Solution</summary>
+<p>
+	
+To switch to root, simply type `su -` and use the password `redhat`
+
+![](/images/root2.png)
+
+</p>
+</details>
+
+## Step 2 - Run the __sosreport__ command
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `sosreport` command
+
+![](/images/sosreport.png)
+	
+</p>
+</details>
+
+## Step 3 - Change directory to /var/tmp and unpack the archive
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `tar -xvf <filename>` command to unpack it all
+
+![](/images/generate.png)
+
+</p>
+</details>
+
+## Step 4 - Change directory to the resulting subdirectory and browse the files founmd there
+
+
+<details><summary>Solution</summary>
+<p>
+	
+Open files, list directories, and continue to browse to become familiar with the information included in SoS reports. When finished, remove the archive directory and files
+
+![](/images/route.png)
+	
+</p>
+</details>
+
+</p>
+</details>
