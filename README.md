@@ -393,6 +393,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 <details><summary>Module 3 - Getting Help in Red Hat Enterprise Linux </summary>
 <p>
 
+# Table of Contents <a name="INDEX3"></a>
+
 1. [The File System Hierarchy](#HEIR)
 2. [File System Hierarchy Review](#REV)
 3. [Absolute Paths and Relative Paths](#ABS)
