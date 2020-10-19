@@ -179,6 +179,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 7. [Lab 3 - File Management](#LAB3)
 8. [File Globbing: Path Name Expansion](#FILE)
 9. [File Globbing Review](#FILEREV)
+10. [Lab 4 - Managing Files with Shell Expansion](#LAB4)
 
 ![](/images/linux2.png)
 
