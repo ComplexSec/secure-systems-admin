@@ -396,6 +396,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 # Table of Contents <a name="INDEX3"></a>
 
 1. [Introducing the man Command](#MAN)
+2. [Navigate and Search man Pages](#NAVIGATE)
+3. [Searching for man Pages by Keyword](#KEYWORD)
 
 ![](/images/4.png)
 
@@ -419,6 +421,8 @@ Man page references include the section number in parentheses - __passwd(1)__ de
 
 To read specific man pages, use `man <topic>`. Topic contents display one screen at a time. The __man__ command searches manual sections in a configured order - section 1 is displayed first if available - to display a different man page topic, include the section number eg. `man 5 passwd`
 
+## Navigate and Search man Pages <a name="NAVIGATE"></a> ([Back to Index](#INDEX3))
+
 The following table lists basic man navigation commands
 
 Command | Result
@@ -438,6 +442,8 @@ G | Go to end of the man page
 q | Exit __man__ and return to command shell prompt
 
 When performing searches, __string__ allows __regex__ syntax. Regex uses meta-characters for more sophisticated pattern matching
+
+## Searching for man Pages by Keyword <a name="KEYWORD"></a> ([Back to Index](#INDEX3))
 
 A keyword search of man pages is performed using __man -k keyword__ which displays a list of keyword matching man page topics with section numbers
 
