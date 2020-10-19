@@ -609,6 +609,5 @@ Finally, for the third time, use the `man -k` command with the keyword ext4
 </p>
 </details>
 
-
 </p>
 </details>
