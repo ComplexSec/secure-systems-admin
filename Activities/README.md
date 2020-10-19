@@ -771,3 +771,69 @@ Press n to move to the next topic directly instead of going up one node and then
 
 </p>
 </details>
+
+<details><summary>Module 3 - Lab 2 (Research Documentation Under /usr/share/doc)</summary>
+<p>
+	
+## Step 1 - Where can you find the latest news about the vim project?
+
+<details><summary>Solution</summary>
+<p>
+	
+Navigate to the `/usr/share/doc` directory and view the vim-common README
+
+![](/images/vim.png)
+
+</p>
+</details>
+
+## Step 2 - What is the wiki URI for the yum package?
+
+<details><summary>Solution</summary>
+<p>
+	
+It is located under yum-3.4.3 and is contained in a README file
+
+![](/images/yum.png)
+
+</p>
+</details>
+
+## Step 3 - What examples are provided for the command-line bc calculator?
+
+<details><summary>Solution</summary>
+<p>
+	
+Located in the `bc` directory under the README file
+
+![](/images/bc.png)
+
+</p>
+</details>
+
+## Step 4 - How would you read the provided GRUB2 manual?
+
+<details><summary>Solution</summary>
+<p>
+	
+Under the `grub2` directory there is a .html file. Open it with Firefox
+
+![](/images/grub2.png)
+
+</p>
+</details>
+
+## Step 5 - What software provides its document as a separate package?
+
+<details><summary>Solution</summary>
+<p>
+	
+Use `yum` to display only those packages that contain -doc, -docs or -documentation in the package name
+
+![](/images/doc.png)
+
+</p>
+</details>
+
+</p>
+</details>

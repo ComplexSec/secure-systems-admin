@@ -402,6 +402,11 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 5. [Introducing GNU Info](#GNU)
 6. [GNU Info vs. Man Page Navigation](#GNUINFO)
 7. [Lab 6 - Understanding Program Documentation](#LAB6)
+8. [Introducing Package Documentation](#PACKAGE)
+9. [Research Documentation under /usr/share/doc](#LAB7)
+10. [Using redhat-support-tool to Search Knowledge Base](#REDHAT)
+11. [Directly Access Knowledge Base Articles by Document ID](#DIRECT)
+
 
 ![](/images/4.png)
 
@@ -501,6 +506,52 @@ Quit the program | q | q
 ## Lab 6 - Understanding Program Documentation <a name="LAB6"></a> ([Back to Index](#INDEX3))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Introducing Package Documentation <a name="PACKAGE"></a> ([Back to Index](#INDEX3))
+
+Developers may choose to include documentation in their application's RPM distribution package. When the package is installed, files recognized as documentation are moved to `/usr/share/doc/<packagename>`. GNU packages also use /usr/share/doc to supplement info nodes
+
+Most packages include files describing package distribution licensing - some include extensive PDF or HTML based documentation
+
+Some packages come with extensive samples, config file templates, scripts, tutorials or user guides
+
+## Lab 7 - Research Documentation under /usr/share/doc <a name="LAB7"></a> ([Back to Index](#INDEX3))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Using redhat-support-tool to Search Knowledge Base <a name="REDHAT"></a> ([Back to Index](#INDEX3))
+
+The Red Hat Support Tool utility __redhat-support-tool__ provides a text console interface to the subscription-based Red Hat access services - internet access is required and can be used from any terminal or SSH connection
+
+By default, the program launches in shell mode - use the provided __help__ sub-command to see all available commands. Shell mode supports tab completion and the ability to call programs in the parent shell
+
+When first ran, it asks for credentials. It asks to store account info in home directory - __~/.redhat-support-tool/redhat-support-tool.conf__. If a RedHat account is shared, the `--global` option can save account information to `/etc/redhat-support-tool.conf`
+
+The tool allows subscribers to search and display the same knowledge seen when on the RHCP. Knowledge Base permits keyword searches. Users can enter error codes, syntax from log files or any mix of keywords to produce a list of relevant solutions
+
+## Directly Access Knowledge Base Articles by Document ID <a name="DIRECT"></a> ([Back to Index](#INDEX3))
+
+Locate online articles directly by using the tool's `kb` command with the document ID. Returned documents scroll on the screen without pagination allowing a user to redirect the output.
+
+![](/images/kb.png)
+
+Documents retrieved in unpaginated format are easy to print, convert to PDF or others or to redirect output
+
+## Using redhat-support-tool to Manage Support Cases
+
+Before contacting Red Hat Support, gather relevant info for a bug report:
+
+1. Define the problem
+
+Be able to clearly state the problem and its symptoms. Be as specific as possible and detail the steps which will reproduce the problem
+
+2. Gather background information
+
+Things like version and product. Be ready to provide relevant diagnostic information. This can include output of __sosreport__. For kernel problems, this could include the system's __kdump__ crash dump or a digital photo of the kernel backtrace displayed on the monitor of a crashed system
+
+3. Determine the severity level
+
+Red Hat uses four severity levels - __Urgent__ and __High__ severity problem reports should be followed by a phone call to the relevant local support center
 
 </p>
 </details>
