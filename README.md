@@ -395,20 +395,11 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 # Table of Contents <a name="INDEX3"></a>
 
-1. [The File System Hierarchy](#HEIR)
-2. [File System Hierarchy Review](#REV)
-3. [Absolute Paths and Relative Paths](#ABS)
-4. [Navigating Paths](#PATHS)
-5. [Paths Review](#PAREV)
-6. [Command-Line File Management](#CLFM)
-7. [Lab 3 - File Management](#LAB3)
-8. [File Globbing: Path Name Expansion](#FILE)
-9. [File Globbing Review](#FILEREV)
-10. [Lab 4 - Managing Files with Shell Expansion](#LAB4)
+1. [Introducing the man Command](#MAN)
 
 ![](/images/4.png)
 
-## Introducing the man command <a name="MAN"></a> ([Back to Index](#INDEX3))
+## Introducing the man Command <a name="MAN"></a> ([Back to Index](#INDEX3))
 
 The historical __Linux Programmer's Manual__ is where the man page originates. Each contained information for specifiy types of files which have become sections
 
