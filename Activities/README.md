@@ -892,3 +892,31 @@ Open files, list directories, and continue to browse to become familiar with the
 
 </p>
 </details>
+
+<details><summary>Module 3 - Lab 9 (Research Methods Used by Sys Admins)</summary>
+<p>
+	
+## Step 1 - Research man(1) to determine how to prepare a man page for printing
+
+## Step 2 - Create a formatted output file of the paswd man page
+
+## Step 3 - Research using man to learn the commands used for viewing or printing PostScript files after updating the manual page index cache
+
+## Step 4 - Research evince(1) using man to learn how to use the viewer in preview mode
+
+## Step 5 - View your PostScript file using the various evince options you researched
+
+## Step 6 - Using man research lp(1) to determine how to print any document starting on a specific page
+
+## Step 7 - Using pinfo, look for GNU info about the evince viewer
+
+## Step 8 - Use pinfo to locate and browse all document nodes for the coreutils commands and programs
+
+## Step 9 - Using firefox, open the system's package documentation and browse into the man-db package subdirectory
+
+## Step 10 - Using the open Firefox browser, locate and browser into the initscripts package subdirectory and view the sysconfig.txt file
+
+
+
+</p>
+</details>
