@@ -2,7 +2,7 @@
 
 ## Try and solve the labs without looking at the solutions. If you get stuck, the solutions are available
 
-NB. The `desktopX` machine is referred to as the `Workstation` machine on NetLab - both have student users
+NB. The `desktopX` machine is referred to as the `Desktop1` machine on NetLab - both have student users
 
 Once done, click [here](https://github.com/ComplexSec/secure-systems-admin) to go back to the notes section
 
@@ -283,30 +283,170 @@ Simply use the `rmdir` command on the work directory
 
 ## Step 1 - Create files called `tv_seasonX_episodeY.ogg` and replace X with season number and Y with episode number - two seasons of six episodes each
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `touch` command
+
+![](/images/touch2.png)
+
+</p>
+</details>
+
 ## Step 2 - Create eight files with names `mystery_chapterX.odf` and replace X with numbers 1 through 8
+
+<details><summary>Solution</summary>
+<p>
+	
+Using the same command as above - `touch` - create 8 mystery chapters
+
+![](/images/8files.png)
+	
+</p>
+</details>
 
 ## Step 3 - Create two directories named `season1` and `season2` under the Videos directory
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `mkdir` command
+
+![](/images/seasons.png)
+	
+</p>
+</details>
+
 ## Step 4 - Move the appropriate TV episodes into the season subdirectories using two commands only
+
+<details><summary>Solution</summary>
+<p>
+	
+Using the `mv` command and the asterisk, simply move them to their respsective folders
+
+![](/images/moved.png)
+	
+</p>
+</details>
 
 ## Step 5 - Create two level directory hierarchy with one command. Create `my_bestseller` under the Documents directory and `chapters` beneath the new `my_bestseller` directory
 
+<details><summary>Solution</summary>
+<p>
+	
+Use the `mkdir` command once again and create the directories with the `-p` option to create the parents
+
+![](/images/chapters.png)
+
+</p>
+</details>
+
 ## Step 6 - Using one command, create 3 more subdirectories directly under `my_bestseller` directory. Name these `editor`, `plot_change` and `vacation`
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `mkdir` command and create the directories. You do not need the -p option this time as the parent directory already exists
+
+![](/images/three.png)
+
+</p>
+</details>
 
 ## Step 7 - Change to chapters directory. Move all book chapters into the `chapters` directory using the simplest syntax
 
+<details><summary>Solution</summary>
+<p>
+	
+Use the `cd` command and the `mv` command to move the chapters to the current directory using the `.` symbol
+
+![](/images/mystery.png)
+	
+</p>
+</details>
+
 ## Step 8 - Move the first two chapters to the `editor` directory using relative syntax
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `mv` command and relative pathing to move it to the upper directory and the editor directory
+
+![](/images/editor.png)
+	
+</p>
+</details>
 
 ## Step 9 - Move chapters 8 and 9 to the vacation folder using one command without wildcard characters
 
+<details><summary>Solution</summary>
+<p>
+	
+Copy the same command as above but simply change names and directories
+
+![](/images/vacation.png)
+	
+</p>
+</details>
+
 ## Step 10 - With one command, change directory to season 2 TV episodes location, then copy the first episode to the vacation directory
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `cd` command to move into the directory `~/Videos/season2` and use the `cp` command to copy the first episode of season 2 into the vacation directory
+
+![](/images/season2.png)
+	
+</p>
+</details>
 
 ## Step 11 - With one command, change the working directory to `vacation` then list files. Return to the season 2 directory using the `previous working directory` shortcut. Copy the episode 2 file into `vacation`. Return to `vacation` using the shortcut again
 
+<details><summary>Solution</summary>
+<p>
+	
+
+	
+</p>
+</details>
+
 ## Step 12 - Copy chapters 5 and 6 into `plot_change` then move up one directory to `vacation` parent directory then use one command from there
+
+<details><summary>Solution</summary>
+<p>
+	
+
+	
+</p>
+</details>
 
 ## Step 13 - Make three backups of chapter 5. Move to `plot_change` directory and copy chapter5 as a new file name to include the full date. Make another copy appending the current timestamp to ensure a unique file name. Also make a copy appending the current user to the file name
 
+<details><summary>Solution</summary>
+<p>
+	
+
+	
+</p>
+</details>
+
 ## Step 14 - Delete the `plot_change` directory by first deleting all of the files inside and removing it by first trying the rm command and then the rmdir command
 
+<details><summary>Solution</summary>
+<p>
+	
+
+	
+</p>
+</details>
+
 ## Step 15 - Delete the `vacation` directory using the rm command with the recursive option then return to home directory
+
+<details><summary>Solution</summary>
+<p>
+	
+
+	
+</p>
+</details>
