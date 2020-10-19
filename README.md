@@ -399,6 +399,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 2. [Navigate and Search man Pages](#NAVIGATE)
 3. [Searching for man Pages by Keyword](#KEYWORD)
 4. [Lab 5 - Finding Relevant Information Using Man](#LAB5)
+5. [Introducing GNU Info](#GNU)
+6. [GNU Info vs. Man Page Navigation](#GNUINFO)
 
 ![](/images/4.png)
 
