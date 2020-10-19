@@ -401,6 +401,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 4. [Lab 5 - Finding Relevant Information Using Man](#LAB5)
 5. [Introducing GNU Info](#GNU)
 6. [GNU Info vs. Man Page Navigation](#GNUINFO)
+7. [Lab 6 - Understanding Program Documentation](#LAB6)
 
 ![](/images/4.png)
 
@@ -497,7 +498,9 @@ Display previous node in topic | p | -
 Repeat previous search backward | - | N
 Quit the program | q | q
 
+## Lab 6 - Understanding Program Documentation <a name="LAB6"></a> ([Back to Index](#INDEX3))
 
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
 </p>
 </details>

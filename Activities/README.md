@@ -611,3 +611,163 @@ Finally, for the third time, use the `man -k` command with the keyword ext4
 
 </p>
 </details>
+
+<details><summary>Module 3 - Lab 2 (Understanding Program Documentation)</summary>
+<p>
+	
+## Step 1 - Invoke __pinfo__ without arguments
+
+<details><summary>Solution</summary>
+<p>
+
+Simply type `pinfo` into the CLI
+	
+![](/images/pinfo.png)
+
+</p>
+</details>
+
+## Step 2 - Navigate to the __Common Options__ topic
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the Down Arrow to move to Common Options - it will be highlighted red. Once there, hit Enter
+
+![](/images/common.png)
+
+</p>
+</details>
+
+## Step 3 - Browse through this __Info__ topic and learn if long-style options can be abbreviated
+
+<details><summary>Solution</summary>
+<p>
+	
+Read through the documentation and you will find it.
+
+![](/images/common.png)
+
+</p>
+</details>
+
+## Step 4 - Determine what the symbols `--` signify when used as an argument
+
+<details><summary>Solution</summary>
+<p>
+	
+The symbols signify the end of command options and the start of command arguments in complex commands
+
+![](/images/--.png)
+
+</p>
+</details>
+
+## Step 5 - Without exiting __pinfo__ move up to the GNU Coreutils node
+
+<details><summary>Solution</summary>
+<p>
+	
+To go up one node, use the `u` character inside of pinfo
+
+![](/images/u.png)
+
+</p>
+</details>
+
+## Step 6 - Move up again to the top topic
+
+<details><summary>Solution</summary>
+<p>
+	
+Once again, hit the `u` character
+
+![](/images/u2.png)
+
+</p>
+</details>
+
+## Step 7 - Search for the pattern __nano__ and select that topic
+
+<details><summary>Solution</summary>
+<p>
+	
+To search simply hit `/` followed directly by your string and hit Enter
+
+![](/images/nano.png)
+
+</p>
+</details>
+
+## Step 8 - In the Introduction locate and select Command Line Options and browse the topic
+
+<details><summary>Solution</summary>
+<p>
+	
+It is located under Nano -> Introduction -> Command Line Options
+
+![](/images/clop.png)
+
+</p>
+</details>
+
+## Step 9 - Move up one level to return to Introduction and move to the next topic
+
+<details><summary>Solution</summary>
+<p>
+	
+Once read, hit `u` once again to back up one topic and then hit `n`. The new location will be in Editor Basics under nano
+
+![](/images/un.png)
+
+</p>
+</details>
+
+## Step 10 - Exit __pinfo__
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply press `q` to quit pinfo
+
+</p>
+</details>
+
+## Step 11 - Invoke __pinfo__ again specifying nano as the destination topic
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `pinfo nano` to open directly up to the nano topic
+
+![](/images/pnano.png)
+
+</p>
+</details>
+
+## Step 12 - Select the Editor Basics topic
+
+<details><summary>Solution</summary>
+<p>
+	
+Use arrow keys to select the Editor Basics
+
+![](/images/edbas.png)
+
+</p>
+</details>
+
+## Step 13 - Read the Entering Text and Special Functions subtopics
+
+<details><summary>Solution</summary>
+<p>
+	
+Press n to move to the next topic directly instead of going up one node and then back
+
+![](/images/specfunc.png)
+
+</p>
+</details>
+
+</p>
+</details>
