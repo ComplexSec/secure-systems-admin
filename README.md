@@ -415,6 +415,27 @@ Section | Content Type
 8 | System administration and privileged commands (maintenance tasks)
 9 | Linux kernel API (internal kernel calls)
 
+Man page references include the section number in parentheses - __passwd(1)__ describes the command and __passwd(5)__ explains the /etc/passwd file
+
+To read specific man pages, use `man <topic>`. Topic contents display one screen at a time. The __man__ command searches manual sections in a configured order - section 1 is displayed first if available - to display a different man page topic, include the section number eg. `man 5 passwd`
+
+The following table lists basic man navigation commands
+
+Command | Result
+------------ | -------------
+Spacebar | Scroll forward one scree
+PageDown | Scroll forward one screen
+PageUp | Scroll backward one screen
+DownArrow | Scroll forward one line
+UpArrow | Scroll backword one line
+d | Scroll foward one half-screen
+u | Scroll backward one half-screen
+/string | Search forward for __string__ in the man page
+n | Repeat previous search forward in the man page
+N | Repeat previous search backward in the man page
+g | Go to start of the man page
+G | Go to end of the man page
+q | Exit __man__ and return to command shell prompt
 
 </p>
 </details>
