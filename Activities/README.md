@@ -406,7 +406,9 @@ Use the `cd` command to move into the directory `~/Videos/season2` and use the `
 <details><summary>Solution</summary>
 <p>
 	
+Use the `cd`, `cp` commands to carry out this task
 
+![](/images/prev.png)
 	
 </p>
 </details>
@@ -416,7 +418,9 @@ Use the `cd` command to move into the directory `~/Videos/season2` and use the `
 <details><summary>Solution</summary>
 <p>
 	
+Simply use the `cp` command with the `[]` operators to move 5 and 6 at the same time
 
+![](/images/plot.png)
 	
 </p>
 </details>
@@ -426,7 +430,9 @@ Use the `cd` command to move into the directory `~/Videos/season2` and use the `
 <details><summary>Solution</summary>
 <p>
 	
+Simply use the `cp` command to make backups and use the `date` command to add the dates at the end with various modifiers and the `$USER` variable to add the username
 
+![](/images/dates.png)
 	
 </p>
 </details>
@@ -436,8 +442,10 @@ Use the `cd` command to move into the directory `~/Videos/season2` and use the `
 <details><summary>Solution</summary>
 <p>
 	
-
+Use the `rm` command with asterisk to delete all files inside plot change
 	
+![](/images/plotchange.png)
+
 </p>
 </details>
 
@@ -446,7 +454,9 @@ Use the `cd` command to move into the directory `~/Videos/season2` and use the `
 <details><summary>Solution</summary>
 <p>
 	
+Use the `rm -r` command to recursive delete the vacation folder and all files inside
 
+![](/images/vac.png)
 	
 </p>
 </details>
