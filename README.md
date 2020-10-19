@@ -408,5 +408,22 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 ![](/images/4.png)
 
+## Introducing the man command <a name="MAN"></a> ([Back to Index](#INDEX3))
+
+The historical __Linux Programmer's Manual__ is where the man page originates. Each contained information for specifiy types of files which have become sections
+
+Section | Content Type
+------------ | -------------
+1 | User commands (both executable and shell programs)
+2 | System calls (kernel routines invoked from user space) 
+3 | Library functions (provided by program libraries)
+4 | Special files (such as device files)
+5 | File format (for many configurations files and structures)
+6 | Games (historical section for amusing programs)
+7 | Conventions, standards and miscellaneous (protocols, file systems)
+8 | System administration and privileged commands (maintenance tasks)
+9 | Linux kernel API (internal kernel calls)
+
+
 </p>
 </details>
