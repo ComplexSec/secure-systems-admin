@@ -389,3 +389,9 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 </p>
 </details>
+
+<details><summary>Module 3 - Getting Help in Red Hat Enterprise Linux </summary>
+<p>
+
+</p>
+</details>
