@@ -612,6 +612,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 6. [Pipeline, Redirection and Tee](#TEE)
 7. [Pipeline Examples Using the tee Command](#TEEX)
 8. [Pipeline Knowledge Quiz](#QUIZ)
+9. [Editing Files with Vim](#VIM)
+10. [Rearranging Existing Text](#YANK)
 
 ![](/images/5.jpg)
 
@@ -739,3 +741,28 @@ Send output and errors to the same file, but preserve existing content | >>file 
 Run a command, but throw away all possible terminal displays | &>/dev/null
 Send command output to both the screen and a file at the same time | | tee file
 Run command, save output in a file, discard error messages | > file2> /dev/null
+
+## Editing Files with Vim <a name="VIM"></a> ([Back to Index](#INDEX4))
+
+A key design principle of Linux - information is stored in text-based files. Text files include both __flat files__ with rows of similiar information such as configuration files in /etc and __Extensible Markup Language (XML)__ fles which define data structure through text tags seen in application configuration files throughout both /etc and /usr
+
+__Vim__ is highly configurable and efficient - split screen editing, color formatting, and highlighting for editing text
+
+Vim starts up in __command mode__ which is used for navigation, cut and paste, and other text manipulation
+
+Press `i` enters insert mode where all text typed becomes file content - pressing `Esc` returns to command mode
+
+Pressing `v` enters visual mode, where multiple characters may be selected for text manipulation. Use `V` for multi-line and `Ctrl+V` for block selection. The same keystroke used to enter visual mode is used to exit
+
+Pressing `:` begins extended command mode for tasks like writing the file to save it, and quitting the Vim editor
+
+Pressing `u` inside insert mode undoes mistaken edits
+
+Pressing `x` deletes a selection of text
+
+To save or exit, `:w` saves the file and remains in command mode, `:wq` saves and quits Vim and `:q!` quits Vim and discards all file changes
+
+## Rearranging Existing Text <a name="YANK"></a> ([Back to Index](#INDEX4))
+
+In Vim, copy and paste is known as __yank__ and __put__ using command characters `y` and `p`. Begin by positioning the cursor on the first character to be selected and enter visual mode. Use the arrow keys to expand the visual selection. When ready, pres `y` to yank the selection into memory. Position the cursor at the new location, then press `p` to put the selection at the cursor
+
