@@ -409,7 +409,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 12. [Using redhat-support-tool to Manage Support Cases](#SUPPORT)
 13. [Managing A Bug Report with redhat-support-tool](#BUG)
 14. [Including Diagnostic Information by Attaching a SoS Report Archive](#SOSREP)
-15. [Lab 8 - Using __sosreport__ Command to Generate a SoS Report](#SOS)
+15. [Lab 8 - Using __sosreport__ Command to Generate a SoS Report](#LAB8)
 
 ![](/images/4.png)
 
@@ -587,7 +587,11 @@ The Red Hat Support Tool has advanced application diagnostic and analytic capabi
 
 The tool also provides log file analysis. Using the tool's __analyze__ command, log files of many types including OS, JBoss, Python, Tomcat, oVirt and others can be parsed to reconggized problem symptoms which can then be viewed and diagnosed indidivualy
 
-## Lab 8 - Using __sosreport__ Command to Generate a SoS Report <a name="SOS"></a> ([Back to Index](#INDEX3))
+## Lab 8 - Using __sosreport__ Command to Generate a SoS Report <a name="LAB8"></a> ([Back to Index](#INDEX3))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Lab 9 - Research Methods Used by Sys Admins < name="LAB9"></a> ([Back to Index](#INDEX3))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
