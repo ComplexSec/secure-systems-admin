@@ -728,9 +728,9 @@ The following example is more sophisticated - it takes advantage of a special de
 
 `ls -l | tee /dev/pts/0 | mail student@desktop1.example.com`
 
-## Pipeline Knowledge Quiz
+## Pipeline Knowledge Quiz <a name="QUIZ"></a> ([Back to Index](#INDEX4))
 
-Result Needed | Redirection Syntax Used <a name="QUIZ"></a> ([Back to Index](#INDEX4))
+Result Needed | Redirection Syntax Used
 ------------ | -------------
 Display command output to terminal, ignore all errors | 2>/dev/null
 Send command output to file; errors to different file | >file 2>file2
