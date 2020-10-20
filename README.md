@@ -591,7 +591,7 @@ The tool also provides log file analysis. Using the tool's __analyze__ command, 
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Lab 9 - Research Methods Used by Sys Admins < name="LAB9"></a> ([Back to Index](#INDEX3))
+## Lab 9 - Research Methods Used by Sys Admins <a name="LAB9"></a> ([Back to Index](#INDEX3))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
