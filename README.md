@@ -688,3 +688,49 @@ Some people prefer to use the merging redirection operators
 10. Append output and generated errors to an existing file
 
 	`find /etc -name passwd >> /tmp/save-both 2>&1`
+
+## Constructing Pipelines <a name="PIPE"></a> ([Back to Index](#INDEX4))
+
+A __pipeline__ is a sequence of one or more commands separated by the pipe character - it connects standard output to standard input of next command
+
+Pipelines allow the output of a process to be manipulated and formatted by other processes before it is output to the terminal
+
+## Pipeline Examples <a name="PIPELINE"></a> ([Back to Index](#INDEX4))
+
+`ls -l /usr/bin | less` takes the output of ls and uses less to display it on the terminal
+
+`ls | wc -l` takes output of ls and gets piped to wc -l which counts the number of lines 
+
+`ls -t | head -n 10 > /tmp/ten-last-changed-files` takes the output of ls, takes the first 10 lines of that output and redirects the final output to a file
+
+## Pipeline, Redirection and Tee <a name="TEE"></a> ([Back to Index](#INDEX4))
+
+When redirection is combined with a pipeline, the shell first steps up the entire pipeline, then it redirects input/output - this means if output redirection is used in the middle of a pipeline, the output will go to the file and not to the next command in the pipeline
+
+The example `ls > /tmp/saved-output | less` takes the output of the ls command and puts it in the file and less will display nothing on the terminal
+
+The `tee` command is used to work around this - it copies its standard input to its standard output and will redirect its standard output to the files named as arguments
+
+## Pipeline Examples Using the tee Command <a name="TEEX"></a> ([Back to Index](#INDEX4))
+
+`ls -l | tee /tmp/saved-output | less` redirects the output of ls to the file and passes it to less to be displayed on the terminal
+
+If tee is used at the end of a pipeline, the final output of a command can be saved and output to the terminal at the same time
+
+`ls -t | head -n 10 | tee /tmp/ten-last-changed-files` 
+
+The following example is more sophisticated - it takes advantage of a special device file that exists that represents the terminal. The name of the device file for a particular terminal can be determined by running the __tty__ command at its shell prompt. Then __tee__ can be used to redirect output to that file to display it on the terminal window, while standard output can be passed to some other program through a pipe. In this case, mail will email the output
+
+`ls -l | tee /dev/pts/0 | mail student@desktop1.example.com`
+
+## Pipeline Knowledge Quiz
+
+Result Needed | Redirection Syntax Used
+------------ | -------------
+Display command output to terminal, ignore all errors | 2>/dev/null
+Send command output to file; errors to different file | >file 2>file2
+Send output and errors to the same new, empty file | &>file
+Send output and errors to the same file, but preserve existing content | >>file 2>&1
+Run a command, but throw away all possible terminal displays | &>/dev/null
+Send command output to both the screen and a file at the same time | | tee file
+Run command, save output in a file, discard error messages | > file2> /dev/null
