@@ -410,6 +410,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 13. [Managing A Bug Report with redhat-support-tool](#BUG)
 14. [Including Diagnostic Information by Attaching a SoS Report Archive](#SOSREP)
 15. [Lab 8 - Using __sosreport__ Command to Generate a SoS Report](#LAB8)
+16. [Lab 9 - Research Methods Used by Sys Admins](#LAB9)
 
 ![](/images/4.png)
 
