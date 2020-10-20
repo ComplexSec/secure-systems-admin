@@ -607,6 +607,11 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 1. [Standard Input, Standard Output and Standard Erro](#STDIN)
 2. [Redirecting Output to a File](#REDIRECT)
 3. [Example for Output Redirection](#EXAMPLES)
+4. [Constructing Pipelines](#PIPE)
+5. [Pipeline Examples](#PIPELINE)
+6. [Pipeline, Redirection and Tee](#TEE)
+7. [Pipeline Examples Using the tee Command](#TEEX)
+8. [Pipeline Knowledge Quiz](#QUIZ)
 
 ![](/images/5.jpg)
 
@@ -725,7 +730,7 @@ The following example is more sophisticated - it takes advantage of a special de
 
 ## Pipeline Knowledge Quiz
 
-Result Needed | Redirection Syntax Used
+Result Needed | Redirection Syntax Used <a name="QUIZ"></a> ([Back to Index](#INDEX4))
 ------------ | -------------
 Display command output to terminal, ignore all errors | 2>/dev/null
 Send command output to file; errors to different file | >file 2>file2
