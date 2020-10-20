@@ -898,25 +898,134 @@ Open files, list directories, and continue to browse to become familiar with the
 	
 ## Step 1 - Research man(1) to determine how to prepare a man page for printing
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `man man` command to research the man command
+
+![](/images/mant.png)
+
+</p>
+</details>
+
 ## Step 2 - Create a formatted output file of the paswd man page
+
+<details><summary>Solution</summary>
+<p>
+	
+To create this, simply use the `-t` man option with with passwd file and output it to a .ps file
+
+![](/images/pass.png)
+	
+</p>
+</details>
 
 ## Step 3 - Research using man to learn the commands used for viewing or printing PostScript files after updating the manual page index cache
 
+<details><summary>Solution</summary>
+<p>
+	
+Using the `man -k` command and searching for either `postscript` or `viewer` will return man pages matching either word
+
+![](/images/mank.png)
+	
+</p>
+</details>
+
 ## Step 4 - Research evince(1) using man to learn how to use the viewer in preview mode
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use `man evince` command and read through it
+
+![](/images/evince.png)
+	
+</p>
+</details>
 
 ## Step 5 - View your PostScript file using the various evince options you researched
 
+<details><summary>Solution</summary>
+<p>
+	
+First, you can simply use `evince passwd.ps` to view it normally
+
+![](/images/pass1.png)
+
+Secondly, you can use the `-w` option to preview it
+
+![](/images/pass2.png)
+
+Lastly, using the `-i  3` option will open it at page 3 (exact page nmuber)
+
+![](/images/pass3.png)
+	
+</p>
+</details>
+
 ## Step 6 - Using man research lp(1) to determine how to print any document starting on a specific page
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use `man lp` and find out what the syntax would be to print only pages 2 and 3 of the PostScript file
+
+![](/images/pages.png)
+
+Note that the `-P` option specifies pages. The lp command spools to the default printer.
+	
+</p>
+</details>
 
 ## Step 7 - Using pinfo, look for GNU info about the evince viewer
 
+<details><summary>Solution</summary>
+<p>
+	
+Use the `pinfo evince` command to open straight into evince - note that the man page is displayed instead. The pinfo document viewer looks for relevant man page when no appropriate GNU documentation node exists
+
+![](/images/evinceman.png)
+
+</p>
+</details>
+
 ## Step 8 - Use pinfo to locate and browse all document nodes for the coreutils commands and programs
 
+<details><summary>Solution</summary>
+<p>
+	
+First, open up `pinfo` normally. Then select the `Coreutils: Core GNU` option and press Enter. Then select Introduction. Walk through the Introduction by press n for the next node until node 29
+
+![](/images/tools.png)
+	
+</p>
+</details>
+
 ## Step 9 - Using firefox, open the system's package documentation and browse into the man-db package subdirectory
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply type `firefox /usr/share/doc` to open up the directory in Firefox. Once there, navigate to the man-db page. You can view either the .txt file or the .ps file
+
+![](/images/firefox.png)
+	
+</p>
+</details>
 
 ## Step 10 - Using the open Firefox browser, locate and browser into the initscripts package subdirectory and view the sysconfig.txt file
 
 
+<details><summary>Solution</summary>
+<p>
+	
+Simply navigate to the request directory and view the file sysconfig.txt inside Firefox
+
+![](/images/sysconf.png)
+	
+</p>
+</details>
 
 </p>
 </details>
