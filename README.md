@@ -610,7 +610,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 ![](/images/5.jpg)
 
-## Standard Input, Standard Output and Standard Error <a name="STDID"></a> ([Back to Index](#INDEX3))
+## Standard Input, Standard Output and Standard Error <a name="STDIN"></a> ([Back to Index](#INDEX4))
 
 A running program - or __process__ - needs to read input from somewhere and write output to the screen or to files. A command run from the shell prompt normally reads its input from keyboard and sends output to terminal
 
@@ -622,7 +622,7 @@ A process uses numbered channels called __file descriptors__ to get input and se
 
 If a program opens separate connections to other files, it may use higher-numbered file descriptors
 
-## Redirecting Output to a File <a name="REDIRECT"></a> ([Back to Index](#INDEX3))
+## Redirecting Output to a File <a name="REDIRECT"></a> ([Back to Index](#INDEX4))
 
 __I/O redirection__ replaces the default channel destinations with file names representing output files or devices - process output and error mesages can be captured as file contents, sent to a device or discarded
 
@@ -646,7 +646,7 @@ Some people prefer to use the merging redirection operators
 1. `&>file` __instead of__ `>file 2>&1`
 2. `&>>file` __instead of__ `>>file 2>&1`
 
-## Example For Output Redirection <a name="EXAMPLES"></a> ([Back to Index](#INDEX3))
+## Example For Output Redirection <a name="EXAMPLES"></a> ([Back to Index](#INDEX4))
 
 1. Save a timestamp for later reference
 
