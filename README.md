@@ -598,3 +598,93 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 </p>
 </details>
+
+<details><summary>Module 4 - Creating, Viewing and Editing Text Files </summary>
+<p>
+
+# Table of Contents <a name="INDEX4"></a>
+
+1. [Standard Input, Standard Output and Standard Erro](#STDIN)
+2. [Redirecting Output to a File](#REDIRECT)
+3. [Example for Output Redirection](#EXAMPLES)
+
+![](/images/5.jpg)
+
+## Standard Input, Standard Output and Standard Error <a name="STDID"></a> ([Back to Index](#INDEX3))
+
+A running program - or __process__ - needs to read input from somewhere and write output to the screen or to files. A command run from the shell prompt normally reads its input from keyboard and sends output to terminal
+
+A process uses numbered channels called __file descriptors__ to get input and send output. All processes have three file descriptors:
+
+1. Standard input (0) reads input from the keyboard
+2. Standard output (1) sends normal output to the terminal
+3. Standard error (2) sends error messages to the terminal
+
+If a program opens separate connections to other files, it may use higher-numbered file descriptors
+
+## Redirecting Output to a File <a name="REDIRECT"></a> ([Back to Index](#INDEX3))
+
+__I/O redirection__ replaces the default channel destinations with file names representing output files or devices - process output and error mesages can be captured as file contents, sent to a device or discarded
+
+Redirecting __stdout__ suppresses process output from appearing on the terminal. Redirecting only __stdout__ does not suppress __stderr__ error messages. If the file does not exist, it gets created. The special file __/dev/null__ quietly discards channel output 
+
+Usage | Explanation
+------------ | -------------
+>file | Redirect stdout to overwrite a file
+>>file | Redirect stdout to append to a file
+2>file | Redirect stderr to overwrite a file
+2>/dev/null | Discard stderr messages by redirecting to /dev/null
+>file2>&1 OR &>file | Redirect stdout and stderr to overwrite the same file
+>>file2>&1 OR &>>file | Redirect stdout and stderr to append to the same file 
+
+The order of redirection operations is important. The sequence `> file 2>&1` redirects standard output to file and then redirects standard error to the same place as standard output
+
+The sequence `2>&1 > file` redirects standard error to the default place for standard output and then redirects only standard output to file
+
+Some people prefer to use the merging redirection operators
+
+1. `&>file` __instead of__ `>file 2>&1`
+2. `&>>file` __instead of__ `>>file 2>&1`
+
+## Example For Output Redirection <a name="EXAMPLES"></a> ([Back to Index](#INDEX3))
+
+1. Save a timestamp for later reference
+
+	`date > /tmp/saved-timestamp`
+
+2. Copy the last 100 lines from a log file to another file
+
+	`tail -n 100 /var/log/dmesg > /tmp/last-100-boot-messages`
+
+3. Concatenate four files into one
+
+	`cat file1 file2 file3 file4 > /tmp/all-four-in-one`
+
+4. List the home directory's hidden and regular file names into a file
+
+	`ls -a > /tmp/my-file-names`
+
+5. Append output to an existing file
+
+	`echo "new line of information" >> /tmp/many-lines-of-information`
+	`diff previous-file current-file >> /tmp/tracking-changes-made`
+
+6. Redirecting errors to a file while viewing normal comand output
+
+	`find /etc -name passwd 2> /tmp/errors`
+
+7. Save process output and error messages to separate files
+
+	`find /etc -name passwd > /tmp/output 2> /tmp/errors`
+
+8. Ignore and discard error messages
+
+	`find /etc -name passwd > /tmp/output 2> /dev/null`
+
+9. Store output and generated errors together
+
+	`find /etc -name passwd &> /tmp/save-both`
+
+10. Append output and generated errors to an existing file
+
+	`find /etc -name passwd >> /tmp/save-both 2>&1`
