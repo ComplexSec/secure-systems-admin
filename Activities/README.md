@@ -772,7 +772,7 @@ Press n to move to the next topic directly instead of going up one node and then
 </p>
 </details>
 
-<details><summary>Module 3 - Lab 2 (Research Documentation Under /usr/share/doc)</summary>
+<details><summary>Module 3 - Lab 3 (Research Documentation Under /usr/share/doc)</summary>
 <p>
 	
 ## Step 1 - Where can you find the latest news about the vim project?
@@ -838,7 +838,7 @@ Use `yum` to display only those packages that contain -doc, -docs or -documentat
 </p>
 </details>
 
-<details><summary>Module 3 - Lab 3 (Using __sosreport__ Command to Generate a SoS Report)</summary>
+<details><summary>Module 3 - Lab 4 (Using __sosreport__ Command to Generate a SoS Report)</summary>
 <p>
 	
 ## Step 1 - If currently working as a non-root user, switch to root
@@ -893,7 +893,7 @@ Open files, list directories, and continue to browse to become familiar with the
 </p>
 </details>
 
-<details><summary>Module 3 - Lab 9 (Research Methods Used by Sys Admins)</summary>
+<details><summary>Module 3 - Lab 5 (Research Methods Used by Sys Admins)</summary>
 <p>
 	
 ## Step 1 - Research man(1) to determine how to prepare a man page for printing
@@ -1030,7 +1030,7 @@ Simply navigate to the request directory and view the file sysconfig.txt inside 
 </p>
 </details>
 
-<details><summary>Module 4 - Lab 10 - (Using Vim)</summary>
+<details><summary>Module 4 - Lab 1 - (Using Vim)</summary>
 <p>
 	
 ## Step 1 - Open vimtutor, read the welcome screen and perform lesson 1.1
@@ -1118,7 +1118,7 @@ This lesson talks about editing a file
 </p>
 </details>
 
-<details><summary>Module 4 - Lab 11 (Editing with Gedit)</summary>
+<details><summary>Module 4 - Lab 2 (Editing with Gedit)</summary>
 <p>
 	
 ## Step 1 - Redirect a long listing of all home directory files into a file named gedit_lab.txt
@@ -1178,6 +1178,168 @@ Simply remove them inside gedit like a normal text editor so only the `.<files>`
 	
 ![](/images/finish.png)	
 
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 4 - Lab 3 (Editing a File using Vim's Visual Mode</summary>
+<p>
+	
+## Step 1 - Redirect a long list of all content in student's home directory into a file called editing_final_lab.txt
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply use the `ls -al` option and redirect operators
+
+![](/images/final.png)	
+
+</p>
+</details>
+
+## Step 2 - Edit the file using Vim to take advantage of visual mode
+
+<details><summary>Solution</summary>
+<p>
+	
+Simlpy open the file using Vim
+
+![](/images/visual.png)	
+	
+</p>
+</details>
+
+## Step 3 - Remove the first three lines
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the arrow keys to position the cursor at the first character in the first row and hit `V` to enter line-based visual mode. Move down using the down arrow key three to select the first three rows and delete them with `x`
+
+![](/images/first_three.png)	
+	
+</p>
+</details>
+
+## Step 4 - Remove permission columns for group and other on the first list
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the arrow keys to position the cursor at the first character and enter visual mode with `V`. Then, use the arrow keys to position the cursor at the last character and delete with `x`
+
+![](/images/x.png)	
+	
+</p>
+</details>
+
+## Step 5 - Remove the permission columns for group and other on the remaining lines
+
+<details><summary>Solution</summary>
+<p>
+	
+Again, use the arrow keys to position the cursor at the first character, enter visual mode with the control sequence `CTRL+V` and use the arrow keys to position the cursor at the last character of the column then press x to delete
+
+![](/images/x2.png)	
+	
+</p>
+</details>
+
+## Step 6 - Remove the group owner column leaving only one student column on all lines
+
+<details><summary>Solution</summary>
+<p>
+	
+Do the same thing as step 5 - position the cursor at the start, hit CTRL+V, move to the bottom and delete
+
+![](/images/x3.png)	
+	
+</p>
+</details>
+
+## Step 7 - Remove the time column but leave the month and day on all lines
+
+<details><summary>Solution</summary>
+<p>
+	
+Again, do the same but with the time column this time
+
+![](/images/time.png)
+	
+</p>
+</details>
+
+## Step 8 - Remove the Desktop and Public rows
+
+<details><summary>Solution</summary>
+<p>
+	
+Once more, delete the rows this time with normal visual mode (V) and delete using `x`
+
+![](/images/capital.png)
+	
+</p>
+</details>
+
+## Step 9 - Save and exit and make a backup using the date in seconds to create a unique filename
+
+<details><summary>Solution</summary>
+<p>
+	
+Save and exit vim using `:wq` command. Then, make the backup using the `cp editing_final_lab.txt editing_final_lab_$(date +%s).txt` command
+
+![](/images/seconds.png)
+	
+</p>
+</details>
+
+## Step 10 - Mail the file contents as the message not an attachement to the student user
+
+<details><summary>Solution</summary>
+<p>
+	
+To mail it, simply pipe the `cat` command into the mail command. The `-s` option sets the subject line and `student` is the recipient
+
+![](/images/mail.png)
+	
+</p>
+</details>
+
+## Step 11 - Append a dashed line to the file to recognize the beginning of newer content
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `echo` command to append a dotted line to the end of the file
+
+![](/images/dotted.png)
+	
+</p>
+</details>
+
+## Step 12 - Append a full process listing but only for processes owned by the current user student
+
+<details><summary>Solution</summary>
+<p>
+	
+To list all process use the `ps -f` command (`-f` means full format listing) and then use the `tee -a editing_final_lab.txt` command to append it (`-a` for append)
+
+![](/images/tee.png)
+	
+</p>
+</details>
+
+## Step 13 - Confirm that the process listing is at the bottom
+-
+<details><summary>Solution</summary>
+<p>
+	
+Simply cat out the file to confirm it happened
+
+![](/images/confirm.png)
+	
 </p>
 </details>
 

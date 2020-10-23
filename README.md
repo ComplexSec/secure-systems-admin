@@ -604,7 +604,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 # Table of Contents <a name="INDEX4"></a>
 
-1. [Standard Input, Standard Output and Standard Erro](#STDIN)
+1. [Standard Input, Standard Output and Standard Error](#STDIN)
 2. [Redirecting Output to a File](#REDIRECT)
 3. [Example for Output Redirection](#EXAMPLES)
 4. [Constructing Pipelines](#PIPE)
@@ -618,6 +618,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 12. [Editing Files with GEdit](#GEDIT)
 13. [Copying Text Between Graphical Windows](#COPY)
 14. [Lab 11 - Editing with Gedit](#GEDIT2)
+15. [Lab 12 - Editing a File using Vim's Visual Mode](#VISUAL)
 
 ![](/images/5.jpg)
 
@@ -801,5 +802,9 @@ Text can be copied between documents, text windows and command windows. Selected
 To paste quicker, simply hit the middle mouse button to paste the copied text. The keyoard shortcut method can also be used  -__CTRL+X__ to cut, __CTRL+C__ to copy, __CTRL+V__ to paste and __CTRL+SHIFT+C__ to copy in a terminal
 
 ## Lab 11 - Editing with Gedit <a name="GEDIT2"></a> ([Back to Index](#INDEX4))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Lab 12 - Editing a File using Vim's Visual Mode <a name="VISUAL"></a> ([Back to Index](#INDEX4))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
