@@ -1123,15 +1123,63 @@ This lesson talks about editing a file
 	
 ## Step 1 - Redirect a long listing of all home directory files into a file named gedit_lab.txt
 
-<details><summary></summary></details>
+<details><summary>Solution</summary>
+<p>
+	
+First, use the command `ls -al` to display all files and use the `>` operator to redirect output to a file
+
+![](/images/redirect.png)
+
+</p>
+</details>
 
 ## Step 2 - Open the file with gedit in the background
 
+<details><summary>Solution</summary>
+<p>
+	
+Using the `&` symbol allows us to run files in the background and still be able to use the terminal
+
+![](/images/amper.png)
+	
+</p>
+</details>
+
 ## Step 3 - Insert the date at the top of the file via the date command and copying the reuslts
+
+<details><summary>Solution</summary>
+<p>
+	
+In the terminal, use the `date "+%A", "%B", "%d", "%Y"` to display the current date and copy it into gedit using the shortcuts
+
+![](/images/date5.png)	
+	
+</p>
+</details>
 
 ## Step 4 - Insert a description for this document including your username and host name via the command line and copy
 
+<details><summary>Solution</summary>
+<p>
+	
+To get the username and hostname, you can use the `$USER` and `$(hostname)` options on the command line to generate a sentence
+
+![](/images/echouser.png)	
+	
+</p>
+</details>
+
 ## Step 5 - Remove files that are not hidden configuration files or directories
+
+<details><summary>Solution</summary>
+<p>
+	
+Simply remove them inside gedit like a normal text editor so only the `.<files>` exist
+	
+![](/images/finish.png)	
+
+</p>
+</details>
 
 </p>
 </details>
