@@ -1184,7 +1184,7 @@ Simply remove them inside gedit like a normal text editor so only the `.<files>`
 </p>
 </details>
 
-<details><summary>Module 4 - Lab 3 (Editing a File using Vim's Visual Mode</summary>
+<details><summary>Module 4 - Lab 3 (Editing a File using Vim's Visual Mode)</summary>
 <p>
 	
 ## Step 1 - Redirect a long list of all content in student's home directory into a file called editing_final_lab.txt
@@ -1332,7 +1332,7 @@ To list all process use the `ps -f` command (`-f` means full format listing) and
 </details>
 
 ## Step 13 - Confirm that the process listing is at the bottom
--
+
 <details><summary>Solution</summary>
 <p>
 	
