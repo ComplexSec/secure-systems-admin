@@ -614,6 +614,10 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 8. [Pipeline Knowledge Quiz](#QUIZ)
 9. [Editing Files with Vim](#VIM)
 10. [Rearranging Existing Text](#YANK)
+11. [Lab 10 - Using Vim](#LAB10)
+12. [Editing Files with GEdit](#GEDIT)
+13. [Copying Text Between Graphical Windows](#COPY)
+14. [Lab 11 - Editing with Gedit](#GEDIT2)
 
 ![](/images/5.jpg)
 
@@ -766,3 +770,36 @@ To save or exit, `:w` saves the file and remains in command mode, `:wq` saves an
 
 In Vim, copy and paste is known as __yank__ and __put__ using command characters `y` and `p`. Begin by positioning the cursor on the first character to be selected and enter visual mode. Use the arrow keys to expand the visual selection. When ready, pres `y` to yank the selection into memory. Position the cursor at the new location, then press `p` to put the selection at the cursor
 
+## Lab 10 - Using Vim <a name="LAB10"></a> ([Back to Index](#INDEX4))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+Quick Summary of Lab:
+
+
+1. Cursor is moved using either arrow keys or h, j, k, l keys
+2. Starting vim by typing `vim <filename>`
+3. To exit vim, type `<ESC> :q!` to not save or `<ESC> :wq` to save changes
+4. To delete character at cursor, type `x`
+5. To insert or append text, typing `i <text> <ESC>` to insert before cursor or `A <text> <ESC>` to append after the line
+6. Pressing ESC will place you in Normal mode or cancels an unwanted and partially completed command
+
+## Editing Files with GEdit <a name="GEDIT"></a> ([Back to Index](#INDEX4))
+
+Gedit is a full-featured text editor for GNOME. GNOME Help includes a __gedit help guide__ which is found in __Applications --> Favourites --> Help__ from the GNOME menu
+
+Perform many file management tasks using gedit's menu:
+
+* To create a new file in gedit, click the toolbar icon or hit __CTRL+N__
+* To save a file, hit the floppy disk or __CTRL+S__
+* To open an existing file, click open or hit __CTRL+O__
+
+## Copying Text Between Graphical Windows <a name="COPY"></a> ([Back to Index](#INDEX4))
+
+Text can be copied between documents, text windows and command windows. Selected text is duplicated using __copy and paste__ or moved using __cut and paste__ - whether cut or copiued, the text is held in __memory__ for pasting
+
+To paste quicker, simply hit the middle mouse button to paste the copied text. The keyoard shortcut method can also be used  -__CTRL+X__ to cut, __CTRL+C__ to copy, __CTRL+V__ to paste and __CTRL+SHIFT+C__ to copy in a terminal
+
+## Lab 11 - Editing with Gedit <a name="GEDIT2"></a> ([Back to Index](#INDEX4))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises

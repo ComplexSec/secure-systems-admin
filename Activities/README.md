@@ -1029,3 +1029,109 @@ Simply navigate to the request directory and view the file sysconfig.txt inside 
 
 </p>
 </details>
+
+<details><summary>Module 4 - Lab 10 - (Using Vim)</summary>
+<p>
+	
+## Step 1 - Open vimtutor, read the welcome screen and perform lesson 1.1
+
+<details><summary>Solution</summary>
+<p>
+	
+This lesson talks about navigating via the h, j, k and l keys
+
+![](/images/lessons1_1.png)
+
+</p>
+</details>
+
+## Step 2 - Return to the vimtutor window and perform lesson 1.2
+
+<details><summary>Solution</summary>
+<p>
+	
+This lesson talks about quitting vim
+
+![](/images/lessons1_2.png)
+
+</p>
+</details>
+
+## Step 3 - Return to the vimtutor window and perform lesson 1.3
+
+<details><summary>Solution</summary>
+<p>
+	
+This lesson talks about editing and deletion of text
+
+![](/images/lessons1_3.png)
+
+</p>
+</details>
+
+## Step 4 - Return to the vimtutor window and perform lesson 1.4
+
+<details><summary>Solution</summary>
+<p>
+	
+This lesson talks about inserting text and how to do it
+
+![](/images/lessons1_4.png)
+
+</p>
+</details>
+
+## Step 5 - Return to the vimtutor window and perform lesson 1.5
+
+<details><summary>Solution</summary>
+<p>
+	
+This lessons talks about appending text
+
+![](/images/lessons1_5.png)
+
+</p>
+</details>
+
+## Step 6 - Return to the vimtutor window and perform lesson 1.6
+
+<details><summary>Solution</summary>
+<p>
+	
+This lesson talks about editing a file
+
+![](/images/lessons1_6.png)
+
+</p>
+</details>
+
+## Step 7 - Return to the vimtutor window and read the lesson 1 summary
+
+<details><summary>Solution</summary>
+<p>
+	
+![](/images/lesson_summary.png)
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 4 - Lab 11 (Editing with Gedit)</summary>
+<p>
+	
+## Step 1 - Redirect a long listing of all home directory files into a file named gedit_lab.txt
+
+<details><summary></summary></details>
+
+## Step 2 - Open the file with gedit in the background
+
+## Step 3 - Insert the date at the top of the file via the date command and copying the reuslts
+
+## Step 4 - Insert a description for this document including your username and host name via the command line and copy
+
+## Step 5 - Remove files that are not hidden configuration files or directories
+
+</p>
+</details>
