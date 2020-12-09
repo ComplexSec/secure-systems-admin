@@ -808,3 +808,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 ## Lab 12 - Editing a File using Vim's Visual Mode <a name="VISUAL"></a> ([Back to Index](#INDEX4))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+</p>
+</details>
+
+# Table of Contents <a name="INDEX4"></a>
