@@ -1351,56 +1351,140 @@ Simply cat out the file to confirm it happened
 
 ## Step 1 - View the user and group info and display current directory
 
+<details><summary>Solution</summary>
+<p>
+
 ![](/images/usrgroup.png)
+
+</p>
+</details>
 
 ## Step 2 - View the variables which specify the home directory and locations searched for executable files
 
+<details><summary>Solution</summary>
+<p>
+
 ![](/images/homepath.png)
+
+</p>
+</details>
 
 ## Step 3 - Switch to root without the dash
 
+<details><summary>Solution</summary>
+<p>
+
 ![](/images/nodash.png)
+
+</p>
+</details>
 
 ## Step 4 - View user and group info and display current directory
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/idpwd.png)
+
+</p>
+</details>
 
 ## Step 5 - View variables which specify the home directory and locations searched for executable files
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/pathhome.png)
+
+</p>
+</details>
 
 ## Step 6 - Exit the shell and return to student user
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/exit2.png)
+
+</p>
+</details>
 
 ## Step 7 - Switch to root with the dash
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/withdash.png)
+
+</p>
+</details>
 
 ## Step 8 - View user and group info and display current directory
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/idpwd2.png)
+
+</p>
+</details>
 
 ## Step 9 - View variables which specify the home directory and locations searched for executable files
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/rootid.png)
+
+</p>
+</details>
 
 ## Step 10 - Exit the shell and return to student user
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/exit3.png)
+
+</p>
+</details>
 
 ## Step 11 - View last 5 lines of /var/log/messages
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/varlogmes.png)
+
+</p>
+</details>
 
 ## Step 12 - Make backup of a config file in the /etc directory
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/motd.png)
+
+</p>
+</details>
 
 ## Step 13 - Remove the /etc/motdOLD file
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/rmetc.png)
+
+</p>
+</details>
 
 ## Step 14 - Edit a config file in the /etc directory
 
+<details><summary>Solution</summary>
+<p>
+	
 ![](/images/sudo.png)
+
+</p>
+</details>
