@@ -745,7 +745,7 @@ Send command output to file; errors to different file | >file 2>file2
 Send output and errors to the same new, empty file | &>file
 Send output and errors to the same file, but preserve existing content | >>file 2>&1
 Run a command, but throw away all possible terminal displays | &>/dev/null
-Send command output to both the screen and a file at the same time | "| tee file"
+Send command output to both the screen and a file at the same time | `| tee file1`
 Run command, save output in a file, discard error messages | > file2> /dev/null
 
 ## Editing Files with Vim <a name="VIM"></a> ([Back to Index](#INDEX4))
