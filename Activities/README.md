@@ -1351,7 +1351,7 @@ Simply cat out the file to confirm it happened
 
 ## Step 1 - View the user and group info and display current directory
 
-![](/images/usrgrp.png)
+![](/images/usrgroup.png)
 
 ## Step 2 - View the variables which specify the home directory and locations searched for executable files
 
