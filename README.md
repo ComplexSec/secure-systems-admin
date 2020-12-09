@@ -820,6 +820,12 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 # Table of  Contents <a name="INDEX5"></a>
 
 1. [What Are Users & Groups](#USGRPS)
+2. [Users and Groups Review](#USGRPREV)
+3. [The Root User](#ROOTUSR)
+4. [Switching Users with `su`](#SU)
+5. [Running Commands as Root with `sudo`](#SUDO4)
+6. [Lab 13 - Running Commands as Root](#USESUDO)
+
 
 ![](/images/usgrps2.jpg)
 
@@ -841,10 +847,60 @@ To view process info, use `ps`. Use `ps -a` to view all processes. Use `ps -u` t
 
 Mapping of names to numbers defined in databases of account info. Systems use */etc/passwd* file to store info about local users. The format of /etc/passwd is in order:
 
-1. *username* is mapping of UID to name
-2. *password* is where passwords were kept
-3. *UID* is User ID which identifies the user at the fundamental level
-4. *GID* is the user's primary group ID number
-5. *GECOS* field includes user's real name
-6. */home/dir* is location of user's personal data
-7. *shell* is the program that runs as the user logs in
+1. __username__ is mapping of UID to name
+2. __password__ is where passwords were kept
+3. __UID__ is User ID which identifies the user at the fundamental level
+4. __GID__ is the user's primary group ID number
+5. __GECOS__ field includes user's real name
+6. __/home/dir__ is location of user's personal data
+7. __shell__ is the program that runs as the user logs in
+
+Groups have names and numbers (GID). Groups defined in __/etc/group__. Every user has one primary group defined by the GID. Primary group owns new files created by the user. Primary group of a newly created user is a newly created group with the same name as the user.
+
+Users may be a member of zero or more supplementary groups. Users of these groups are listed in the last field of group's entry in __/etc/group__. For local groups, user membership determined by list of users found in last field of __/etc/group__
+
+Supplementary group membership is used to help ensure users have access perms
+
+## Users and Groups Review <a name="USGRPREV"></a> ([Back to Index](#INDEX5))
+
+Description | Keyword
+------------ | -------------
+Number that identifies the user at fundamental level | UID
+Program that provides user's CLI | login shell
+Location of local group info | /etc/group
+Location of user's personal files | home directory
+Number that identifies group at fundamental level | GID
+Location of local user account information | /etc/passwd
+Fourth field of /etc/passwd | priamry group
+
+## The Root User <a name="ROOTUSR"></a> ([Back to Index](#INDEX5))
+
+Root user has power to override normal privileges and used to manage the system. Root perms needed to install/remove software and manage system files/directories
+
+Removable devices such as USBs are allowed to be controlled by a normal user. Only root is allowed to manage fixed hard drives.
+
+Recommended that admins do NOT login directly as root but escalate only when necessary
+
+## Switching Users with `su` <a name="SU"></a> ([Back to Index](#INDEX5))
+
+The `su` command allows users to switch to a different user. If no user is specified, root is default. 
+
+![](/images/su.png)
+
+The `su <username>` command starts a non-login shell. The command `su - <user>` starts a login shell. In most cases, admins want to run `su -` to get the user's normal settings
+
+## Running Commands as Root with `sudo` <a name="SUDO4"></a> ([Back to Index](#INDEX5))
+
+All users requiring superuse privileges must know the root password. The `sudo` command allows a user to be permitted to run a command as root based on settings in the __/etc/sudoers__ file. Sudo requires users to enter their own password.
+
+One benefit of sudo is all commands using sudo are logged to __/var/log/secure__
+
+In RHEL7, all members of group __wheel__ can use sudo to run commands as any user. In RHEL6, users who were members of __wheel__ did not get this admin access by default
+
+To enable similiar behaviour on earlier versions of RHEL, edit the config file and uncomment the line allowing group __wheel__ to run all commands
+
+![](/images/whell.png)
+
+## Lab 13 - Running Commands as Root <a name="USESUDO"></a> ([Back to Index](#INDEX5))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
