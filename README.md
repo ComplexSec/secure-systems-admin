@@ -600,6 +600,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 </details>
 
 <details><summary>Module 4 - Creating, Viewing and Editing Text Files </summary>
+
 <p>
 
 # Table of Contents <a name="INDEX4"></a>
@@ -811,5 +812,9 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 </p>
 </details>
+
+<details><summary>Module 5</summary>
+	
+<p>
 
 # Table of Contents <a name="INDEX4"></a>
