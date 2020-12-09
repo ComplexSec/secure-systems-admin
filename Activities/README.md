@@ -1345,3 +1345,62 @@ Simply cat out the file to confirm it happened
 
 </p>
 </details>
+
+<details><summary>Module 5 - Lab 1 (Running Commands as Root)</summary>
+<p>
+
+## Step 1 - View the user and group info and display current directory
+
+![](/images/usrgrp.png)
+
+## Step 2 - View the variables which specify the home directory and locations searched for executable files
+
+![](/images/homepath.png)
+
+## Step 3 - Switch to root without the dash
+
+![](/images/nodash.png)
+
+## Step 4 - View user and group info and display current directory
+
+![](/images/idpwd.png)
+
+## Step 5 - View variables which specify the home directory and locations searched for executable files
+
+![](/images/pathhome.png)
+
+## Step 6 - Exit the shell and return to student user
+
+![](/images/exit2.png)
+
+## Step 7 - Switch to root with the dash
+
+![](/images/withdash.png)
+
+## Step 8 - View user and group info and display current directory
+
+![](/images/idpwd2.png)
+
+## Step 9 - View variables which specify the home directory and locations searched for executable files
+
+![](/images/rootid.png)
+
+## Step 10 - Exit the shell and return to student user
+
+![](/images/exit3.png)
+
+## Step 11 - View last 5 lines of /var/log/messages
+
+![](/images/varlogmes.png)
+
+## Step 12 - Make backup of a config file in the /etc directory
+
+![](/images/motd.png)
+
+## Step 13 - Remove the /etc/motdOLD file
+
+![](/images/rmetc.png)
+
+## Step 14 - Edit a config file in the /etc directory
+
+![](/images/sudo.png)
