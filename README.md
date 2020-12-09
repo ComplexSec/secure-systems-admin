@@ -643,12 +643,12 @@ Redirecting __stdout__ suppresses process output from appearing on the terminal.
 
 Usage | Explanation
 ------------ | -------------
->file | Redirect stdout to overwrite a file
->>file | Redirect stdout to append to a file
-2>file | Redirect stderr to overwrite a file
-2>/dev/null | Discard stderr messages by redirecting to /dev/null
->file2>&1 OR &>file | Redirect stdout and stderr to overwrite the same file
->>file2>&1 OR &>>file | Redirect stdout and stderr to append to the same file 
+ ">file" | Redirect stdout to overwrite a file
+">>file" | Redirect stdout to append to a file
+"2>file" | Redirect stderr to overwrite a file
+"2>/dev/null" | Discard stderr messages by redirecting to /dev/null
+">file2>&1 OR &>file | Redirect stdout and stderr to overwrite the same file"
+">>file2>&1 OR &>>file | Redirect stdout and stderr to append to the same file" 
 
 The order of redirection operations is important. The sequence `> file 2>&1` redirects standard output to file and then redirects standard error to the same place as standard output
 
@@ -824,4 +824,8 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 ![](/images/usgrps2.jpg)
 
 ## What Are Users/Groups? <a name="USGRPS"></a> ([Back to Index](#INDEX5))
+
+Access to files and directories are restricted by user. User associated with a running proccess determines the files and directories accesible to that process
+
+The `id` command shows info about current logged-in user
 
