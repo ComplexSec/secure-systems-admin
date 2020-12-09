@@ -829,3 +829,22 @@ Access to files and directories are restricted by user. User associated with a r
 
 The `id` command shows info about current logged-in user
 
+![](/images/idcom.png)
+
+To view user associated with file or directory, use `ls -l` cxommand
+
+![](/images/lsl.png)
+
+To view process info, use `ps`. Use `ps -a` to view all processes. Use `ps -u` to see user associated with process
+
+![](/images/psau.png)
+
+Mapping of names to numbers defined in databases of account info. Systems use */etc/passwd* file to store info about local users. The format of /etc/passwd is in order:
+
+1. *username* is mapping of UID to name
+2. *password* is where passwords were kept
+3. *UID* is User ID which identifies the user at the fundamental level
+4. *GID* is the user's primary group ID number
+5. *GECOS* field includes user's real name
+6. */home/dir* is location of user's personal data
+7. *shell* is the program that runs as the user logs in
