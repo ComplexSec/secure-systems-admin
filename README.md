@@ -813,8 +813,15 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 </p>
 </details>
 
-<details><summary>Module 5</summary>
+<details><summary>Module 5 - Users and Groups</summary>
 	
 <p>
 
-# Table of Contents <a name="INDEX4"></a>
+# Table of  Contents <a name="INDEX5"></a>
+
+1. [What Are Users & Groups](#USGRPS)
+
+![](/images/usgrps2.jpg)
+
+## What Are Users/Groups? <a name="USGRPS"></a> ([Back to Index](#INDEX5))
+
