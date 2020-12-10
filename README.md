@@ -904,3 +904,11 @@ To enable similiar behaviour on earlier versions of RHEL, edit the config file a
 ## Lab 13 - Running Commands as Root <a name="USESUDO"></a> ([Back to Index](#INDEX5))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Managing Local Users <a name-"MNGUSRS"></a> ([Back to Index](#INDEX5))
+
+Number of tools can be used to manage local user accounts:
+
+1. `useradd <user>` sets reasonable defaults for all fields in /etc/passwd if run without options, does not set any valid password and user cannot login until password is set
+2. `useradd --help` displays basic options to override defaults
+3. `usermod --help` displays basic options to modify an account
