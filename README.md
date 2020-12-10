@@ -905,7 +905,7 @@ To enable similiar behaviour on earlier versions of RHEL, edit the config file a
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Managing Local Users <a name-"MNGUSRS"></a> ([Back to Index](#INDEX5))
+## Managing Local Users <a name="MNGUSRS"></a> ([Back to Index](#INDEX5))
 
 Number of tools can be used to manage local user accounts:
 
