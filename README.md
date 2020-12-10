@@ -825,6 +825,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 4. [Switching Users with `su`](#SU)
 5. [Running Commands as Root with `sudo`](#SUDO4)
 6. [Lab 13 - Running Commands as Root](#USESUDO)
+7. [Managing Local Users](#MNGUSRS)
 
 
 ![](/images/usgrps2.jpg)
