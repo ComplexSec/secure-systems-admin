@@ -826,7 +826,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 5. [Running Commands as Root with `sudo`](#SUDO4)
 6. [Lab 13 - Running Commands as Root](#USESUDO)
 7. [Managing Local Users](#MNGUSRS)
-
+8. [Lab 14 - Creating Users](#LAB14)
 
 ![](/images/usgrps2.jpg)
 
@@ -939,4 +939,8 @@ Specific UID numbers and ranges of numbers are used for specific purposes:
 - UID 1-200 is a range of system users assigned statically to system processes
 - UID 201-999 is a range of system users used by system processes that do not own files on the system. Typically assigned dynamically from pool when software is installed that needs them
 - UID 1000+ is the range available for regular users
+
+## Lab 14 - Creating Users <a name="LAB14"></a> ([Back to Index](#INDEX5))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
