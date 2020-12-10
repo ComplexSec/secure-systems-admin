@@ -909,6 +909,33 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 Number of tools can be used to manage local user accounts:
 
-1. `useradd <user>` sets reasonable defaults for all fields in /etc/passwd if run without options, does not set any valid password and user cannot login until password is set
-2. `useradd --help` displays basic options to override defaults
-3. `usermod --help` displays basic options to modify an account
+- `useradd <user>` sets reasonable defaults for all fields in /etc/passwd if run without options, does not set any valid password and user cannot login until password is set
+- `useradd --help` displays basic options to override defaults
+- Some defaults such as range of valid UID numbers & default password aging rules are read from /etc/login.defs
+- `userdel <user>` removes user from /etc/passwd but leaves home directory
+- `userdel -r <user>` removes user and their home directory
+- `passwd <user>` is used to either set initial password or change it
+
+The root user can set a password to any value. A regular user must choose a password which is 8 characters and not based on a dictionary word, the username or previous password
+
+The `usermod --help` displays basic options to modify an account such as:
+
+usermod options | Description
+------------ | -------------
+-c, --comment COMMENT | Adds a value such as full name to the GECOS field
+-g, --gid GROUP | Specify primary group for user
+-G, --groups GROUPS | Specify list of supplementary groups for user
+-a, --append | Used with -G to append user to supplemental groups
+-d, --home HOME_DIR | Specify new home directory for user
+-m, --move-home | Move user home directory to new location (must be used with -d option)
+-s, --shell SHELL | Specify new login shell for user
+-L, --lock | Lock user account
+-U, --unlock | Unlock user account
+
+Specific UID numbers and ranges of numbers are used for specific purposes:
+
+- UID 0 is assigned to root
+- UID 1-200 is a range of system users assigned statically to system processes
+- UID 201-999 is a range of system users used by system processes that do not own files on the system. Typically assigned dynamically from pool when software is installed that needs them
+- UID 1000+ is the range available for regular users
+
