@@ -1488,3 +1488,10 @@ Simply cat out the file to confirm it happened
 
 </p>
 </details>
+
+</p>
+</details>
+
+<details><summary>Module 5 - Lab 2 (Creating Users)</summary>
+<p>
+
