@@ -6,10 +6,6 @@ NB. The `desktopX` machine is referred to as the `Desktop1` machine on NetLab - 
 
 Once done, click [here](https://github.com/ComplexSec/secure-systems-admin) to go back to the notes section
 
-<details><summary>Module 1</summary>
-<p>
-</details>
-
 <details><summary>Module 1 - Lab 1 (Changing Password)</summary>
 <p>
 
@@ -161,9 +157,6 @@ Simply type `date` into the command line
 Simply type `exit` into the shell to exit both the SSH connection and the normal terminal
 
 ![](/images/exit.png)
-
-</p>
-</details>
 
 </p>
 </details>
