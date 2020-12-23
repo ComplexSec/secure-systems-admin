@@ -2258,3 +2258,9 @@ Open the /etc/bashrc and /etc/profile files and edit them with the specific umas
 
 </p>
 </details>
+
+</p>
+</details>
+
+</p>
+</details>

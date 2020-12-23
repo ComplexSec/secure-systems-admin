@@ -1160,3 +1160,6 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 ## Lab 20 - Performance Checklist <a name="LAB20"></a> ([Back to Index](#INDEX6))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+</p>
+</details>
