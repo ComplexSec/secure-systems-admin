@@ -1163,3 +1163,18 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 </p>
 </details>
+
+<details><summary>Module 7 - Processes</summary>
+<p>
+	
+# Table of  Contents <a name="INDEX7"></a>
+
+1. [What Is A Process?](#WHATPROCESS)
+
+![](/images/8.jpg)
+
+## What Is A Process? <a name="WHATPROCESS"></a> ([Back to Index](#INDEX7))
+
+A process is a running instances
+</p>
+</details>
