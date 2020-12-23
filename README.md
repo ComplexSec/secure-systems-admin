@@ -1153,10 +1153,10 @@ Every process on the system has a umask, which is an octal bitmask that is used 
 
 The system default umask values for Bash shell users are defined in the `/etc/profile` and `/etc/bashrc` files. Users can override the system defaults in their `.bash_profile` and `.bashrc` files
 
-## Lab 19 - Controlling Default Permissions <a name="LAB18"></a> ([Back to Index](#INDEX6))
+## Lab 19 - Controlling Default Permissions <a name="LAB19"></a> ([Back to Index](#INDEX6))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Lab 20 - Performance Checklist <a name="LAB18"></a> ([Back to Index](#INDEX6))
+## Lab 20 - Performance Checklist <a name="LAB20"></a> ([Back to Index](#INDEX6))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
