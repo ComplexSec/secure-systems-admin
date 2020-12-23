@@ -320,3 +320,24 @@ Syntax | Description
 
 </p>
 </details>
+
+<details><summary>Beginning with P</summary>
+<p>
+	
+Syntax | Description
+------------ | -------------
+passwd
+passwd -d <username>
+passwd -e username
+passwd -l username
+passwd -u username
+passwd -n username DAYS 
+passwd -x username DAYS
+passwd -w username DAYS
+passwd -S username
+pinfo topic
+
+
+
+</p>
+</details>
