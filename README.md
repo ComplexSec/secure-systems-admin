@@ -827,6 +827,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 6. [Lab 13 - Running Commands as Root](#USESUDO)
 7. [Managing Local Users](#MNGUSRS)
 8. [Lab 14 - Creating Users](#LAB14)
+9. [Managing Supplementary Groups](#SUPPGROUPS)}
 
 ![](/images/usgrps2.jpg)
 
@@ -943,4 +944,56 @@ Specific UID numbers and ranges of numbers are used for specific purposes:
 ## Lab 14 - Creating Users <a name="LAB14"></a> ([Back to Index](#INDEX5))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Managing Supplementary Groups <a name="SUPPGROUPS"></a> ([Back to Index](#INDEX5))
+
+A group MUST exist before a user can be added. The `groupadd <group_name>` command without options uses the next available GID from the range specified in the `/etc/login.defs` file. The `-g <number>` option is used to specify a specific GID. It is generally recommended to set aside a range of GID numbers to be used for supplementary groups
+
+The `-r` option creates a system group using a GID from the range of valid system GID numbers listed in /etc/login.defs
+
+<ins>Groupmod Command</ins>
+
+The `groupmod` command changes a group name to a GID mapping - `-n` specifies a new name
+
+The `-g` option specifies a new GID
+
+<ins>Groupdel Command</ins>
+
+The `groupdel` command removes a group. A group may NOT be removed if it is the primary group of any existing user
+
+The membership of a group is controlled with user management. To change a user's primary group, use the `usermod -g <name>` command
+
+To add a user to a supplementary group, use the `usermod -aG <name> <user>`
+
+## Shadow Passwords and Password Policy <a name="SHADPASS"></a> ([Back to Index](#INDEX5))
+
+Encrypted passwords were stored in __/etc/passwd__ file but has since moved to the __/etc/shadow__ file
+
+There are three pieces of information stored in a modern password hash such as __$1$gCjLa2/Z$6Pu0EK0AzfCjxjv2hoLOB/__:
+
+1. __$1$__ is the hashing algorithm. The number 1 indicates an MD5 hash and the number 6 indicates a SHA-512 hash
+2. __gCjLa2/Z__ is the salt used to encrypt the hash and is chosen as random
+3. __6Pu0EK0AzfCjxjv2hoLOB/__ is the encrypted hash
+
+When a user logs in, the system looks up the entry for the user, combines the salt with the unencrypted password that was typed and encrypts them - if it matches, the user is logged in
+
+The default algorithm can be changed by the root user by running the command `authconfig --passalgo` with one of the arguments `md5`, `sha256`, or `sha512`
+
+<ins>The Shadow File</ins>
+
+The format of the /etc/shadow file follows:
+
+`name:password:lastchange:minage:maxage:warning:inactive:\expire:blank`
+
+1. The login `name` - must be a valid account on the system
+2. The encrypted `password` - password field that starts with an exclamation mark meaning the password is locked
+3. The date of `last change` - represented as the number of days since 1970.01.01
+4. The minimum number of days before change - 0 means no minimum age requirement
+5. The maximum number of days before change
+6. The `warning period` - warning when password is about to expire, 0 means no warning
+7. The number of days an account remains active after expired password - after this number, the account is locked
+8. The account `expiration` - represented as number of days since 1970.01.01
+9. The `blank` field - reserved for future use
+
+<ins>Password Aging</ins>
 

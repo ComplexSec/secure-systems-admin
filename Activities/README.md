@@ -1354,6 +1354,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 
+Simply use the `id` command to view info and `pwd` command to display the current directory
+
 ![](/images/usrgroup.png)
 
 </p>
@@ -1363,6 +1365,8 @@ Simply cat out the file to confirm it happened
 
 <details><summary>Solution</summary>
 <p>
+
+Use the `echo $HOME` and `echo $PATH` to read the $HOME and $PATH variables respectively 
 
 ![](/images/homepath.png)
 
@@ -1374,6 +1378,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 
+Type the `su` command without any arguments to switch to root
+
 ![](/images/nodash.png)
 
 </p>
@@ -1384,6 +1390,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Use the same commands as step 1 - `id` and `pwd`
+
 ![](/images/idpwd.png)
 
 </p>
@@ -1394,6 +1402,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Use the same commands as step 2 - `echo $HOME/$PATH`
+
 ![](/images/pathhome.png)
 
 </p>
@@ -1404,6 +1414,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Simply type the `exit` command
+
 ![](/images/exit2.png)
 
 </p>
@@ -1414,6 +1426,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+To use the dash to switch to root, use the `su -` command
+
 ![](/images/withdash.png)
 
 </p>
@@ -1424,6 +1438,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Use the same commands as step 1 - `id` and `pwd`
+
 ![](/images/idpwd2.png)
 
 </p>
@@ -1434,6 +1450,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Use the same commands as step 2 - `echo $HOME/$PATH`
+
 ![](/images/rootid.png)
 
 </p>
@@ -1444,6 +1462,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Siomply type the `exit` command
+
 ![](/images/exit3.png)
 
 </p>
@@ -1454,6 +1474,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+To view the last 5 lines of a file, use the `tail` command with the `-5` option to specify how many lines up you want to display
+
 ![](/images/varlogmes.png)
 
 </p>
@@ -1464,6 +1486,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+To make a backup, simply copy the file and use a different name as the output via the `cp` command
+
 ![](/images/motd.png)
 
 </p>
@@ -1474,6 +1498,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+To remove a file, simply use the `rm` command on the specified file
+
 ![](/images/rmetc.png)
 
 </p>
@@ -1484,6 +1510,8 @@ Simply cat out the file to confirm it happened
 <details><summary>Solution</summary>
 <p>
 	
+Use the `echo` command to print text to the string and use the `>>` operator to append it to a specified file
+
 ![](/images/sudo.png)
 
 </p>
@@ -1495,3 +1523,62 @@ Simply cat out the file to confirm it happened
 <details><summary>Module 5 - Lab 2 (Creating Users)</summary>
 <p>
 
+## Step 1 - Become the root user at the shell prompt
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `su -` or `su` command to become the root uses (the password is redhat)
+
+![](/images/root3.png)
+
+</p>
+</details>
+
+## Step 2 - Add the user juliet
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `useradd juliet` command to create a new user on the system
+
+![](/images/useradd.png)
+
+</p>
+</details>
+
+## Step 3 - Confirm that juliet was added by examining /etc/passwd
+
+<details><summary>Solution</summary>
+<p>
+
+Simply view the contents of the `/etc/passwd` file to see the new user located at the bottom
+
+![](/images/juliet.png)
+
+</p>
+</details>
+
+## Step 4 - Use the passwd command to initialize juliet's password
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `passwd juliet` command to create a password for the specified user
+
+![](/images/passjuliet.png)
+
+</p>
+</details>
+
+## Step 5 - Continue adding the remaining users and set initial passwords: romeo, hamlet, reba, dolly and elvis
+
+<details><summary>Solution</summary>
+<p>
+
+Using the same commands for juliet, do the same thing for the remaining 5 users
+
+![](/images/5users.png)
+
+</p>
+</details>
