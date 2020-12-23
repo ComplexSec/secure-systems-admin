@@ -1810,7 +1810,7 @@ Use the `date -d "+180 days"` command to find the date. Then, use the `sudo chag
 </p>
 </details>
 
-<details><summary>Module 5 - Lab 4 (Performance Checklist)</summary>
+<details><summary>Module 5 - Lab 5 (Performance Checklist)</summary>
 <p>
 
 ## Step 1 - Ensure that all newly created users have passwords which must be changed every 30 days
