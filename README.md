@@ -1037,17 +1037,55 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 # Table of  Contents <a name="INDEX6"></a>
 
-1. [What Are Users & Groups](#USGRPS)
-2. [Users and Groups Review](#USGRPREV)
-3. [The Root User](#ROOTUSR)
-4. [Switching Users with `su`](#SU)
-5. [Running Commands as Root with `sudo`](#SUDO4)
-6. [Lab 13 - Running Commands as Root](#USESUDO)
-7. [Managing Local Users](#MNGUSRS)
-8. [Lab 14 - Creating Users](#LAB14)
-9. [Managing Supplementary Groups](#SUPPGROUPS)
-10. [Lab 15 - Supplementary Groups](#LAB15)
-11. [Shadow Passwords and Password Policy](#SHADPASS)
-12. [Lab 16 - Setting Unique Password Policies](#LAB16)
+1. [Linux File System Permissions](#SYSPERMS)
+2. [Viewing Permissions and Ownership](#VIEWPERMS)
+3. [Example](#EXAMPLE)
+4. [Changing Permissions](#CHANGEPERMS)
+5. [Changing User or Group Ownership](#CHANGEOWN)
+6. [Lab 18 - Changing Permissions](#LAB18)
+7. [Special Permissions](#SPECPERMS)
+8. [Default Permissions](#DEFPERMS)
+9. [Lab 19 - Controlling Default Permissions](#LAB19)
+10. [Lab 20 - Performance Checklist](#LAB20)
 
 ![](/images/7.png)
+
+## Linux File System Permissions <a name="SYSPERMS"></a> ([Back to Index](#INDEX6))
+
+Access to files by users are controlled by file permissions. Files have three categories of users to which permissions apply. The file is owned by a user - normally the one who created the file. The file is also owned by a single group - usually the primary group of the user who created the file
+
+Different permissions can be set for the owning user, the owning group and for all other users. The most specific permissions apply - user permissions override group permissions which override other permissions
+
+There are three categories of permissions which apply - read, write and execute
+
+Permission | Effect on files | Effect on directories
+------------ | ------------- | -------------
+r (read) | Contents of file can be read | Contents of the directory can be listed
+w (write) | Contents of file can be changed | Any file in the directory may be created/deleted
+x (execute) | File can be executed as commands | Contents of directory can be accessed
+
+Users normally have read/exec on read-only directories - can list directory and access its contents. If user has only read access, the names of the files in it can be listed only. If users has only execute access, they cannot list the names of the files but they can access the contents by specifying the file name.
+
+A file may be removed by anyone who has write permission to the directory regardless of the ownership or permissions on the file itself
+
+## Viewing Permissiosn and Onwership <a name="VIEWPERMS"></a> ([Back to Index](#INDEX6))
+
+The `ls -l` command will expand the file listing to include both the permissions and ownership. The command `ls -l <dir>` will show the expanded listing of all files that reside in the directory - to prevent the descent into the directory, add the `-d` option
+
+Linux permissions ONLY apply to the directory or file that they are set on. Permissions are not inherited automatically by the subdirectories and files within it. All permissions in Linux are set directly on each file or directory
+
+## Example <a name="EXAMPLE"></a> ([Back to Index](#INDEX6))
+
+![](/images/example.png)
+
+Allowed/Denied Behaviour | Controlling Permissions
+------------ | -------------
+lucy is the only person who can change the contents of lfile1 | lucy has write permissions on the file lfile1. No one is listed as a member of the group lucy. The permissions for other do not include write permissions
+ricky can view the contents of lfile2 but cannot modify the contents | ricky is a member of the group ricardo which has read-only permissions on lfile2. Even though other has write permissions, group permissions take precedence
+ricky can delete lfile1 and lfile2 | ricky has write permissions on the directory containing both files
+ethel can change contents of lfile2 | Since ethel is not lucy, and is not a member of the ricardo group, other permissions apply to her and those include write permissions
+lucy can change contents of rfile1 | lucy is a member of the ricardo group which has both read and write permissions on rfile1
+ricky can view and modify the contents of rfile2 | ricky owns the file and has both read and write access
+lucy can view but not modify the contents of rfile2 | lucy is a member of the ricardo group which has read-only access
+ethel and fred do not have any access to rfile2  | other permissions apply to ethel and fred which do not include read/write permissions
+
