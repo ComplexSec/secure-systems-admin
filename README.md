@@ -1170,6 +1170,9 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 # Table of  Contents <a name="INDEX7"></a>
 
 1. [What Is A Process?](#WHATPROCESS)
+2. [Process States](#PROCSTATES)
+3. [Listing Processes](#LISTPROCS)
+4. [Jobs and Sessions](#JOBSESS)
 
 ![](/images/8.jpg)
 
@@ -1211,5 +1214,27 @@ Stopped | T | TASK_TRACED: A process that is being debugged is also temporarily 
 Zombie | Z | EXIT_ZOMBIE: A child process signals its parent as it exits. All resources except for the process identity (PID) are released. 
 Zombie | X | EXIT_DEAD: When the parent cleans up (reaps) the remaining child process structure, the process is now released completely. This state will never be observed in process-listing utilities. 
 
+## Listing Processes <a name="LISTPROCS"></a> ([Back to Index](#INDEX7))
+
+The `ps` command is used for listing current processes. The command can provide detailed process information including:
+
+* The user identification (UID) which determines process privileges 
+* The unique process identification (PID)
+* The CPU and real time already expended
+* How much memory the process has allocated in various locations
+* The location of process STDOUT, known as the controlling terminal
+* The current process state
+
+A common display listing (options aux) displays all processes, with columns in which users will be interested and includes processes without a controlling terminal. A long listing (options lax) provides more technical detail but may display faster by avoiding the username lookup. The similiar UNIX syntax uses the options "-ef" to display all processes
+
+By default, `ps` with NO options selects all processes with the same effective user ID (EUID) as the current user and associated with the same terminal where ps was invoked
+
+* Processes in brackets (usually at the top) are scheduled kernel threads
+* Zombies show up in a ps listing as exiting or defunct
+* `ps` displays once. Use top(1) for a repetitive update process display
+* `ps` can display in tree format to view parent/child relationships
+* Default output is unsorted. Display order matches that of the system process table which reuses table rows as processes die and new ones are created. Output may appear chronological, but is NOT guaranteed unless explicit. `-0` or `--sort` options are used
+
+## Jobs and Sessions <a name="JOBSESS"></a> ([Back to Index](#INDEX7))
 </p>
 </details>
