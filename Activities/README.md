@@ -171,6 +171,10 @@ Simply type `exit` into the shell to exit both the SSH connection and the normal
 </p>
 </details>
 
+<details><summary>Module 2</summary>
+<p>
+	
+
 <details><summary>Module 2 - Lab 1 (File Management)</summary>
 <p>
 	
@@ -470,6 +474,13 @@ Use the `rm -r` command to recursive delete the vacation folder and all files in
 
 </p>
 </details>
+
+</p>
+</details>
+
+<details><summary>Module 3</summary>
+<p>
+	
 
 <details><summary>Module 3 - Lab 1 (Finding Relevant Information Using Man)</summary>
 <p>
@@ -1037,6 +1048,13 @@ Simply navigate to the request directory and view the file sysconfig.txt inside 
 </p>
 </details>
 
+</p>
+</details>
+
+<details><summary>Module 4</summary>
+<p>
+	
+
 <details><summary>Module 4 - Lab 1 - (Using Vim)</summary>
 <p>
 	
@@ -1352,6 +1370,13 @@ Simply cat out the file to confirm it happened
 
 </p>
 </details>
+
+</p>
+</details>
+
+<details><summary>Module 5</summary>
+<p>
+	
 
 <details><summary>Module 5 - Lab 1 (Running Commands as Root)</summary>
 <p>
@@ -1778,6 +1803,12 @@ Use the `su - romeo` command to login and change the password
 Use the `date -d "+180 days"` command to find the date. Then, use the `sudo chage -E 2014-08-02 romeo` and `sudo chage -l romeo` commands to set the accounts to that date
 
 ![](/images/dateexpire.png)
+
+</p>
+</details>
+
+</p>
+</details>
 
 </p>
 </details>
