@@ -1582,3 +1582,195 @@ Using the same commands for juliet, do the same thing for the remaining 5 users
 
 </p>
 </details>
+
+</p>
+</details>
+
+<details><summary>Module 5 - Lab 3 (Supplementary Groups)</summary>
+<p>
+
+## Step 1 - Become root user
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `su -` command
+
+![](/images/becomeroot.png)
+
+</p>
+</details>
+
+## Step 2 - Create supplementary group called shakespeare with a GID of 30000
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `groupadd -g 30000 shakespeare` command
+
+![](/images/addshake.png)
+
+</p>
+</details>
+
+## Step 3 - Create supplementary group called artists
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `groupadd artists` command
+
+![](/images/addart.png)
+
+</p>
+</details>
+
+## Step 4 - Confirm that shakespeare and artists have been added via the /etc/group file
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `tail -5 /etc/group` command
+
+![](/images/shakeconf.png)
+
+</p>
+</details>
+
+## Step 5 - Add juliet user to the shakespeare group as a supplementary group
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `usermod -G shakespeare juliet` command
+
+![](/images/addjuli.png)
+
+</p>
+</details>
+
+## Step 6 - Confirm juliet has been added using the id command
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `id juliet` command
+
+![](/images/julietid.png)
+
+</p>
+</details>
+
+## Step 7 - Add romeo and hamlet to the shakespeare group and add reba, dolly and elvis to the artists group
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the same commands above to add them to the respective groups
+
+![](/images/repeatcomms.png)
+
+</p>
+</details>
+
+## Step 8 - Verify the supplemental group memberships by examining the /etc/group file
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `tail -5 /etc/group` command
+
+![](/images/verifygroups.png)
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 5 - Lab 4 (Setting Unique Password Policies)</summary>
+<p>
+
+## Step 1 - Lock the romeo account
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `sudo usermod -L romeo` command to lock the account
+
+![](/images/romeolock.png)
+
+</p>
+</details>
+
+## Step 2 - Attempt to login as romeo
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `su - romeo` command to switch user to romeo
+
+![](/images/romlog.png)
+
+</p>
+</details>
+
+## Step 3 - Unlock the romeo account
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `sudo usermod -U romeo` command to unlock the account
+
+![](/images/romunlock.png)
+
+</p>
+</details>
+
+## Step 4 - Change password policy for romeo to require a new password every 90 days
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `sudo chage -M 90 romeo` and `sudo chage -l romeo` commands
+
+![](/images/pass90days.png)
+
+</p>
+</details>
+
+## Step 5 - Force a password change on the first login for romeo
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `sudo chage -d 0 romeo` command
+
+![](/images/romforce.png)
+
+</p>
+</details>
+
+## Step 6 - Login as romeo and change the password to forsooth123
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `su - romeo` command to login and change the password
+
+![](/images/romloginpass.png)
+
+</p>
+</details>
+
+## Step 7 - Determine a date 180 days in the future and set accounts to expire on that date
+
+<details><summary>Solution</summary>
+<p>
+	
+Use the `date -d "+180 days"` command to find the date. Then, use the `sudo chage -E 2014-08-02 romeo` and `sudo chage -l romeo` commands to set the accounts to that date
+
+![](/images/dateexpire.png)
+
+</p>
+</details>

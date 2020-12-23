@@ -827,7 +827,10 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 6. [Lab 13 - Running Commands as Root](#USESUDO)
 7. [Managing Local Users](#MNGUSRS)
 8. [Lab 14 - Creating Users](#LAB14)
-9. [Managing Supplementary Groups](#SUPPGROUPS)}
+9. [Managing Supplementary Groups](#SUPPGROUPS)
+10. [Lab 15 - Supplementary Groups](#LAB15)
+11. [Shadow Passwords and Password Policy](#SHADPASS)
+12. [Lab 16 - Setting Unique Password Policies](#LAB16)
 
 ![](/images/usgrps2.jpg)
 
@@ -965,6 +968,10 @@ The membership of a group is controlled with user management. To change a user's
 
 To add a user to a supplementary group, use the `usermod -aG <name> <user>`
 
+## Lab 15 - Supplementary Groups <a name="LAB15"></a> ([Back to Index](#INDEX5))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
 ## Shadow Passwords and Password Policy <a name="SHADPASS"></a> ([Back to Index](#INDEX5))
 
 Encrypted passwords were stored in __/etc/passwd__ file but has since moved to the __/etc/shadow__ file
@@ -996,4 +1003,26 @@ The format of the /etc/shadow file follows:
 9. The `blank` field - reserved for future use
 
 <ins>Password Aging</ins>
+
+Some of the most popular commands to change password settings are:
+
+* `chage -d 0 <user>` will force a password update on next login
+* `chage -l <user>` will list a username's current settings
+* `chage -E YYYY-MM-DD <user>` will expire an account on a specific day
+
+The __date__ command can be used to calculate a date in the future via the `date -d "+45 days"` command for example
+
+<ins>Restricting Access</ins>
+
+With the __chage__ command, an account expiration can be set. Once that date is reached, the user cannot log in interactively - the __usermod__ command can lock an account with the `-L` option
+
+When a user has left the company, the admin may lock and expire an account with a single `usermod` command - the date MUST be given as the number of days since 1970.01.01
+
+<ins>The nologin Shell</ins>
+
+Sometimes a user needs an account with a password to authenticate to a system but does not need an interactive shell. A common solution is to set the user's login shell to `/sbin/nologin` - if the user attempts to login to the system directly, the __nologin shell__ will simply close the connection
+
+## Lab 16 - Setting Unique Password Policies <a name="LAB16"></a> ([Back to Index](#INDEX5))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
