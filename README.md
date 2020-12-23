@@ -1175,6 +1175,41 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 
 ## What Is A Process? <a name="WHATPROCESS"></a> ([Back to Index](#INDEX7))
 
-A process is a running instances
+A process is a running instance of a launched, executable program. A process consists of:
+
+* An address space of allocated memory
+* Security properties including ownership credentials and privileges
+* One or more execution threads of program code
+* The process state
+
+The __environment__ of a process includes:
+
+* Local and global variables
+* A current scheduling context
+* Allocated system resources such as file descriptors and network ports
+
+An existing (__parent__) process duplicates its own address space (__fork__) to create a new (__child__) process structure. Every new process is assigned a unique PID for tracking and security. The PID and PPID are elements of the new process environment. Any process may create a child process. All processes are descendants of the first system process (__systemd__) on RHEL7
+
+Through the fork routine, a child process inheries security identities, previous and current file descriptors, port and resource privileges, environment variables and program code. A child process may then exec its own program code.
+
+Normally, a parent process sleeps while the child process runs, setting a request to be signaled when the child completes. Upon exit, the child process has already closed or discarded its resources and environment - the remainder is referred to as a __zombie__
+
+## Process States <a name="PROCSTATES"></a> ([Back to Index](#INDEX7))
+
+In a multitasking OS, each CPU can be working on one process at a single point in time. As a process runs, its immediate requirements for CPU time and resource allocation change. Processes are assigned a state, which changes as circumstances require
+
+The Linux process states are described as follows:
+
+Name | Flag | Kernel-defined state name and description
+------------ | ------------- | -------------
+Running | R | TASK_RUNNING: The process is either executing on a CPU or waiting to run. Process can be executing user routines or kernel routines (system calls), or be queued and ready when in the Running (or Runnable) state. 
+Sleeping | S | TASK_INTERRUPTIBLE: The process is waiting for some condition: a hardware request, system resource access, or signal. When an event or signal satisfies the condition, the process returns to Running. 
+Sleeping | D | TASK_UNINTERRUPTIBLE: This process is also Sleeping, but unlike S state, will not respond to delivered signals. Used only under specific conditions in which process interruption may cause an unpredictable device state. 
+Sleeping | K | TASK_KILLABLE: Identical to the uninterruptible D state, but modified to allow the waiting task to respond to a signal to be killed (exited completely). Utilities frequently display Killable processes as D state. 
+Stopped | T | TASK_STOPPED: The process has been Stopped (suspended), usually by being signaled by a user or another process. The process can be continued (resumed) by another signal to return to Running. 
+Stopped | T | TASK_TRACED: A process that is being debugged is also temporarily Stopped and shares the same T state flag. 
+Zombie | Z | EXIT_ZOMBIE: A child process signals its parent as it exits. All resources except for the process identity (PID) are released. 
+Zombie | X | EXIT_DEAD: When the parent cleans up (reaps) the remaining child process structure, the process is now released completely. This state will never be observed in process-listing utilities. 
+
 </p>
 </details>
