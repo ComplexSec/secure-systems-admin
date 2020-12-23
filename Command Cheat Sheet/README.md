@@ -154,7 +154,7 @@ Syntax | Description
 `gedit + <file>` | begin editing session at end of file 
 `gedit <file> &` | allow shell prompt to return while gedit running
 `getent hosts <hostname>` | test host name resolution with /etc/hosts file
-`grep "model name" /proc/cpuinfo | wc -l` | determine number of logical CPUs
+`grep "model name" /proc/cpuinfo (pipe) wc -l` | determine number of logical CPUs
 `groupadd <name>` | uses next available GID from range specified in /etc/login.defs
 `groupadd -g GID` | specifies GID
 `groupadd -r` | create system group using GID from range of valid system GID 
