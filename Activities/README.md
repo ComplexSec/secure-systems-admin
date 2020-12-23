@@ -1810,5 +1810,86 @@ Use the `date -d "+180 days"` command to find the date. Then, use the `sudo chag
 </p>
 </details>
 
+<details><summary>Module 5 - Lab 4 (Performance Checklist)</summary>
+<p>
+
+## Step 1 - Ensure that all newly created users have passwords which must be changed every 30 days
+
+<details><summary>Solution</summary>
+<p>
+
+Use a text editor to edit the `/etc/login.defs` file and change the PASS_MAX_DAYS field to 30
+
+![](/images/every30days.png)
+
+</p>
+</details>
+
+## Step 2 - Create a new group named consultants with a GID of 40000
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `groupadd -g 40000 consultants` command to create the new group
+
+![](/images/consultants.png)
+
+</p>
+</details>
+
+## Step 3 - Create three new users (sspade, bboop, dtracy) with a password of __default__ and add them to the consultants group - the primary group should remain as the user private group
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `useradd -G consultants <user>` command to add the three new users to the group and then use the `passwd <user>` command to change all three users passwords
+
+![](/images/add3users.png)
+
+</p>
+</details>
+
+## Step 4 - Determine the date 90 days from now and set each of the three new user accounts to expire then
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `date -d "+90 days"` to determine the date from now and use the `chage -E YYYY-MM-DD <user>` command to set the expiry for the users
+
+![](/images/90days.png)
+
+</p>
+</details>
+
+## Step 5 - Change the password policy for the bboop account to require a new password every 15 days
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chage -M 15 <user>` to change the policy and use the `chage -l <user>` to verify it
+
+![](/images/passpolice.png)
+
+</p>
+</details>
+
+## Step 6 - Force all users to change their password on first login
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chage -d 0 <user>` to make all users change their password upon login
+
+![](/images/uplogins.png)
+
+</p>
+</details>
+
+</p>
+</details>
+
+</p>
+</details>
+
 </p>
 </details>

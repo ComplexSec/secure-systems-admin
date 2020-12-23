@@ -1026,3 +1026,6 @@ Sometimes a user needs an account with a password to authenticate to a system bu
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
+## Lab 17 - Performance Checklist <a name="LAB17"></a> ([Back to Index](#INDEX5))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
