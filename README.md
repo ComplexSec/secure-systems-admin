@@ -813,8 +813,7 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 </p>
 </details>
 
-<details><summary>Module 5 - Users and Groups</summary>
-	
+<details><summary>Module 5 - Users and Groups</summary>	
 <p>
 
 # Table of  Contents <a name="INDEX5"></a>
@@ -1029,3 +1028,26 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 ## Lab 17 - Performance Checklist <a name="LAB17"></a> ([Back to Index](#INDEX5))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+</p>
+</details>
+
+<details><summary>Module 6 - File System Permissions</summary>	
+<p>
+
+# Table of  Contents <a name="INDEX6"></a>
+
+1. [What Are Users & Groups](#USGRPS)
+2. [Users and Groups Review](#USGRPREV)
+3. [The Root User](#ROOTUSR)
+4. [Switching Users with `su`](#SU)
+5. [Running Commands as Root with `sudo`](#SUDO4)
+6. [Lab 13 - Running Commands as Root](#USESUDO)
+7. [Managing Local Users](#MNGUSRS)
+8. [Lab 14 - Creating Users](#LAB14)
+9. [Managing Supplementary Groups](#SUPPGROUPS)
+10. [Lab 15 - Supplementary Groups](#LAB15)
+11. [Shadow Passwords and Password Policy](#SHADPASS)
+12. [Lab 16 - Setting Unique Password Policies](#LAB16)
+
+![](/images/7.png)
