@@ -1542,7 +1542,7 @@ Use the `su -` or `su` command to become the root uses (the password is redhat)
 
 Use the `useradd juliet` command to create a new user on the system
 
-![](/images/useradd.png)
+![](/images/useradd2.png)
 
 </p>
 </details>
