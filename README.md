@@ -1089,3 +1089,74 @@ ricky can view and modify the contents of rfile2 | ricky owns the file and has b
 lucy can view but not modify the contents of rfile2 | lucy is a member of the ricardo group which has read-only access
 ethel and fred do not have any access to rfile2  | other permissions apply to ethel and fred which do not include read/write permissions
 
+## Changing Permissions <a name="CHANGEPERMS"></a> ([Back to Index](#INDEX6))
+
+The command used to change permissions from the command line is `chmod`. The __chmod__ command takes a permission instruction followed by a list of files/directories to change - can be issued either symbolically or numerically
+
+The symbolic method of changing file permissions uses letters to represent the different groups of permissions: `u` for user, `g` for group, `o` for other and `a` for all
+
+With the symbolic method, it is not necessary to set a complete new group of permissions. It is possible to change one or more of the existing permissions - `+` for adding, `-` for removing and `=` to replace the entire set. The permissions themselves are represented by a single letter - `r` for read, `w` for write and `x` for execute
+
+When using `chmod` to change permissions with the symbolic method, using a capital X as the permission flag will add execute permission only if the file is a directory or already has execute set for user, group or other
+
+Using the numeric method, permissions are represented by a three-digit octal number. A single octal digit goes from 0-7. The chmod command supports the `-R` option to recursively set permissions on the files in an entire directory tree
+
+## Changing User or Group Ownership <a name="CHANGEOWN"></a> ([Back to Index](#INDEX6))
+
+A newly created file is owned by the user who creates the file. By default, the new file has a group ownership which is the primary group of the user creating the file - RHEL uses user private groups which only has the single user as a member
+
+File ownership can be changed with the `chown` command. To grant ownership of the file foofile to student, the following command could be used - `chown student foofile`
+
+The chown command can be used with the `-R` option to recursively change the ownership of an entire directory tree. The following command would grant ownership of foodir and all files and subdirectories to student - `chown -R student foodir`
+
+The chown command can also be used to change group ownership of a file by preceding the group name with a colon. For example, the following command will change the group foodir to admins - `chown :admins foodir`
+
+The chown command can also be used to change both owner and group at the same time by using the syntax `onwer:group`. To change the ownership of foodir to visitor and the group to guests, use `chown visitor:guests foodir`
+
+Only root can change the ownership of a file. Group ownership can be set by root or the file's owner. Root can grant ownership to any group while non-root users can grant ownership only to groups they belong to
+
+## Lab 18 - Changing Permissions <a name="LAB18"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Special Permissions <a name="SPECPERMS"></a> ([Back to Index](#INDEX6))
+
+The `setuid` or `setgid` permission on an executable file means that the command will run as the user or group of the file and NOT as the user that ran the command. The `setuid` permission is represented as a `s` where the user `x` permission would normally be located.
+
+The sticky bit for a directory sets a special restriction on deletion of files - only the owner of the file can delete files within the directory. The `sticky bit` permission is represented as a `t` where the other `x` permission would normally be located
+
+Lastly, `setgid` on a directory means that files created in the directory will inherit the group affiliation from the directory rather than inheriting it from the creating user. You can spot the `setgid` permissions by a lowercase `s` where you would normally expect the group execute permissions to be
+
+Special Permissions | Effect on files | Effect on directories
+------------ | ------------- | -------------
+u+s (suid) | File executes as the user that owns the file | No effect
+g+s (sgid) | File executes as the group that owns the file | Files newly created in the directory have their group owner set to match the group owner of the directory
+o+t (sticky) | No effect | Users with write on the directory can only remove files they own
+
+Symbolically:
+
+* setuid (u+s)
+* setgid (g+s)
+* sticky (o+t)
+
+Numerically (fourth digit):
+
+* setuid (4)
+* setgid (2)
+* sticky (1)
+
+## Default Permissions <a name="DEFPERMS"></a> ([Back to Index](#INDEX6))
+
+The default permissions for files are set by the processes that create them. The `umask` command without arguments will display the current value of the shell's umask.
+
+Every process on the system has a umask, which is an octal bitmask that is used to clear the permissions of new files and directories that are created by the process. You can use the `umask` command with a single numerica argument to change the umask of the current shell. The numeric argument should be an octal value corresponding to the new umask value.
+
+The system default umask values for Bash shell users are defined in the `/etc/profile` and `/etc/bashrc` files. Users can override the system defaults in their `.bash_profile` and `.bashrc` files
+
+## Lab 19 - Controlling Default Permissions <a name="LAB18"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Lab 20 - Performance Checklist <a name="LAB18"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises

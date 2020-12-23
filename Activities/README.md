@@ -1891,5 +1891,370 @@ Use the `chage -d 0 <user>` to make all users change their password upon login
 </p>
 </details>
 
+<details><summary>Module 6</summary>
+<p>
+	
+
+<details><summary>Module 6 - Lab 1 (Changing Permissions)</summary>
+<p>
+
+## Step 1 - Become the root user
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `su -` command
+
+![](/images/becameroot.png)
+
+</p>
+</details>
+
+## Step 2 - Run lab permissions setup to create the environment
+
+<details><summary>Solution</summary>
+<p>
+
+Run the `lab permissions setup` command
+
+![](/images/labperms.png)
+
+</p>
+</details>
+
+## Step 3 - Create a directory in /home called ateam-text
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `mkdir ateam-text` command inside the /home directory
+
+![](/images/ateam.png)
+
+</p>
+</details>
+
+## Step 4 - Change the group ownership of the ateam-text directory to atem
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chown :ateam /home/ateam-text` command to change group ownership
+
+![](/images/changegroupa.png)
+
+</p>
+</details>
+
+## Step 5 - Ensure the permissions of ateam-text allows group members to create/delete files
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chmod g+w /home/ateam-text` command to change permissions
+
+![](/images/ensureperms.png)
+
+</p>
+</details>
+
+## Step 6 - Ensure the permissions of ateam-text forbids others from accessing its files
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chmod 770 /home/ateam-text` command to forbid anyone else from accessing it	
+
+![](/images/ensureperms2.png)
+
+</p>
+</details>
+
+## Step 7 - Exit the root shell and switch to andy with a password of password
+
+<details><summary>Solution</summary>
+<p>
+
+Type `exit` and then `su - andy` to swap users
+
+![](/images/changeandy.png)
+
+</p>
+</details>
+
+## Step 8 - Navigate to the /home/ateam-text folder
+
+<details><summary>Solution</summary>
+<p>
+
+Use the cd command to navigate to /home/ateam-text folder
+
+![](/images/navatext.png)
+
+</p>
+</details>
+
+## Step 9 - Create an empty file called andyfile3
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `touch andyfile3` to create a new file
+
+![](/images/andyfile3.png)
+
+</p>
+</details>
+
+## Step 10 - Record the default user and group ownership of the new file
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `ls -l andyfile3` command to check permissions of the file
+
+![](/images/defug.png)
+
+</p>
+</details>
+
+## Step 11 - Change the group ownership of the new file to ateam and record the new ownership and permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chown :ateam andyfile3` to change ownership
+
+![](/images/chgrpown.png)
+
+</p>
+</details>
+
+## Step 12 - Exit the shell and switch to user alice with a password of password
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `exit` and `su - alice` commands to change users to alice
+
+![](/images/alicechange.png)
+
+</p>
+</details>
+
+## Step 13 - Navigate to the /home/ateam-text folder
+
+<details><summary>Solution</summary>
+<p>
+
+Use the cd command to change to the /home/ateam-text folder
+
+![](/images/ateamtext.png)
+
+</p>
+</details>
+
+## Step 14 - Determine alice's privileges to access and/or modify andyfile3
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `echo "text" >> andyfile3` command to write to the file
+
+![](/images/detalice.png)
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 6 - Lab 2 (Controlling Default Permissions)</summary>
+<p>
+
+## Step 1 - Login as alice and use the umask command without arguments to display the default umask value
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `umask` command to view the default value
+
+![](/images/sualice.png)
+
+</p>
+</details>
+
+## Step 2 - Create a new directory /tmp/shared and a new file /tmp/shared/defaults to see how the default umask affects permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `mkdir /tmp/shared` and `touch /tmp/shared/defaults` to create the directory and file. Then, use the `ls -l /tmp/shared/defaults` command to see the default permissions for the file
+
+![](/images/defaults.png)
+
+</p>
+</details>
+
+## Step 3 - Change the group ownership of /tmp/shared to ateam and record the new ownership and permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chown :ateam /tmp/shared` to change ownership of the directory and use the `ls -ld /tmp/shared` to view the permissions
+
+![](/images/ateamshared.png)
+
+</p>
+</details>
+
+## Step 4 - Create a new file in /tmp/shared and record the ownership and permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `touch /tmp/shared/alice3` to create the file and use `ls -l /tmp/shared/alice3` to view the permissions
+
+![](/images/alice3.png)
+
+</p>
+</details>
+
+## Step 5 - Ensure the permissions of /tmp/shared cause files created in that directory to inherit the group ownership of ateam
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chmod g+s /tmp/shared` command to change permissions and the `touch /tmp/shared/alice4` command to create a new file. Then, use the `ls -l /tmp/shared/alice4` to view the permissions
+
+![](/images/alice4.png)
+
+</p>
+</details>
+
+## Step 6 - Change the umask for alice such that new files are created with read-only access for the group and no access for others. Create a new file and record the permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `umask 027` command to change the value of umask and use `touch /tmp/shared/alice5` to create the new file. Then, view the permissions via `ls -l /tmp/shared/alice5`
+
+![](/images/alice5.png)
+
+</p>
+</details>
+
+## Step 7 - Open a new shell and view the umask
+
+<details><summary>Solution</summary>
+<p>
+
+Simply type `umask` to see the value
+
+![](/images/newtab.png)
+
+</p>
+</details>
+
+## Step 8 - Change the default umask for alice to prohibit all access for users not in their group
+
+<details><summary>Solution</summary>
+<p>
+
+Open the `~/.bashrc` file with a text editor and input the line `umask 007` at the bottom 
+
+![](/images/umask007.png)
+
+</p>
+</details>
+
+## Step 9 - Log out and back in as alice and confirm that the umask changes are persistent
+
+<details><summary>Solution</summary>
+<p>
+
+Typing `umask` should reveal the new default umask value
+
+![](/images/changedef.png)
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 6 - Lab 3 (Performance Checklist)</summary>
+<p>
+
+## Step 1 - Open a terminal and change to the root user
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `su -` command with the password redhat
+
+![](/images/redhat.png)
+
+</p>
+</details>
+
+## Step 2 - Create the /home/stooges directory
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `mkdir /home/stooges` command to create the directory
+
+![](/images/stooges.png)
+
+</p>
+</details>
+
+## Step 3 - Change group permissions on the /home/stooges directory so it belongs to the stooges group
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chown :stooges /home/stooges` to change ownership
+
+![](/images/changestoo.png)
+
+</p>
+</details>
+
+## Step 4 - Set permissions on the /home/stooges directory so it is a set GID bit directory, the owner and group have full rwx permissions and other users have no permissions
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `chmod 2770 /home/stooges` command to change permissions
+
+![](/images/setguid.png)
+
+</p>
+</details>
+
+## Step 5 - Check the permissions were set properly
+
+<details><summary>Solution</summary>
+<p>
+
+Simply use the `ls -ld /home/stooges` command to check permissions
+
+![](/images/homestooges.png)
+
+</p>
+</details>
+
+## Step 6 - Modify the global login scripts so that normal users have a umask setting which prevents others from viewing or modifying new files and directories
+
+<details><summary>Solution</summary>
+<p>
+
+Open the /etc/bashrc and /etc/profile files and edit them with the specific umask
+
+![](/images/umask.png)
+
+
 </p>
 </details>
