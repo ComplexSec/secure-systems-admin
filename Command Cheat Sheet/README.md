@@ -533,16 +533,16 @@ Syntax | Description
 	
 Syntax | Description
 ------------ | -------------	
-vim filename | opens file
-virsh | alternative to the graphical virt-manager application
-virsh start | boot an existing configured virtual machine
-virsh destroy | immediately stop a virtual machine
-virsh undefine | delete the configuration for a VM permanently
-virsh create | use an XML configuration to create and boot a VM
-virsh define | use an XML configuration to create a VM
-virsh reboot | gracefully stop and restart a VM
-virsh shutdown | gracefully stop a VM
-visudo | use to edit the config file and uncomment
+`vim filename`| opens file
+`virsh` | alternative to the graphical virt-manager application
+`virsh start` | boot an existing configured virtual machine
+`virsh destroy` | immediately stop a virtual machine
+`virsh undefine` | delete the configuration for a VM permanently
+`virsh create` | use an XML configuration to create and boot a VM
+`virsh define` | use an XML configuration to create a VM
+`virsh reboot` | gracefully stop and restart a VM
+`virsh shutdown` | gracefully stop a VM
+`visudo` | use to edit the config file and uncomment
 
 </p>
 </details>
@@ -552,12 +552,12 @@ visudo | use to edit the config file and uncomment
 	
 Syntax | Description
 ------------ | -------------
-w | display list of users currently logged in
-w -f | who is here and where have they come from
-wc | counts lines, words and characters
-wc -l | display only lines
-wc -w | display only words
-wc -c | display only characters
+`w` | display list of users currently logged in
+`w -f` | who is here and where have they come from
+`wc` | counts lines, words and characters
+`wc -l` | display only lines
+`wc -w` | display only words
+`wc -c` | display only characters
 
 </p>
 </details>
