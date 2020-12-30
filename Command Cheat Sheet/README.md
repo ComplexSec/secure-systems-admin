@@ -326,18 +326,92 @@ Syntax | Description
 	
 Syntax | Description
 ------------ | -------------
-passwd
-passwd -d <username>
-passwd -e username
-passwd -l username
-passwd -u username
-passwd -n username DAYS 
-passwd -x username DAYS
-passwd -w username DAYS
-passwd -S username
-pinfo topic
+`passwd` | change password
+`passwd -d <username>` | delete password
+`passwd -e <username>` | expires password & force reset
+`passwd -l <username>` | lock user
+`passwd -u <username>` | unlock user
+`passwd -n <username> DAYS` | set minimum password lifetime
+`passwd -x <username> DAYS` | set maximum password lifetime
+`passwd -w <username> DAYS` | sets number of days in advanced to notify user of expire
+`passwd -S <username>` | display information about account status
+`pinfo <topic>` | brings up pinfo page of topic
+`ping <host>` | check connectivity
+`ping -c <number> <host>` | ping specified number of times
+`pgrep -l -u <user>` | list running procecss for user
+`pkill -u <user>` | kill everything a user is running
+`pkill -t <terminal-device>` | kill everything running in window
+`pkill -P` | tell parent to kill children
+`pkill command_pattern` | kill processes with a pattern-matched command name
+`pkill -signal command_pattern` | send signal to all process with pattern match
+`pkill -G GID command_pattern` | kill all processes owned by a group
+`pkill -P PPID command_pattern` | kill all child provesses of parent PPID
+`pkill -t terminal-name -U UID command_pattern` | kill all processes on terminal for user ID
+`pkill -SIGKILL -u username` | kill all processes for a user
+`pkill -SIGKILL -t terminal-name` | kill all processes on a terminal 
+`pkill -SIGKILL -P PPID` | kills all child processes of parent PPID
+`pkill -SIGSTOP process` | suspends process
+`pkill -SIGCONT process` | resumes suspended process
+`pkill -SIGTERM process` | terminates process
+`ps` | lists processes with same effective UID as user
+`ps -f` | return full process listing
+`ps a` | returns all processes with a terminal
+`ps u` | view user associated with process
+`ps aux` | displays all processes with columns
+`ps lax` | displays processes in more technical detail 
+`ps -ef` | displays all processes
+`ps -o OR ps --sort` | lists processes in chronological order
+`ps j` | display information relating to jobs
+`pstree -p <user>` | show processes in tree format for user
+`ps -f $(pgrep process-name)` | list process information of specific process
+`ps -up PID` | verify that process is running 
+`pwd` | display full path name of current location
 
+</p>
+</details>
 
+<details><summary>Beginning with R</summary>
+<p>
+	
+Syntax | Description
+------------ | -------------
+rm
+rm -i
+rm -r
+rm -rf
+rm -ri
+rm -f
+rmdir
+rpm
+rpm -q
+rpm -q -a
+rpm -q PACKAGENAME
+rpm -q -p PACKAGEFILE
+rpm -q -f FILENAME
+rpm -q -p PACKAGE -l 
+rpm -q -c
+rpm -q -d
+rpm -q --scripts
+rpm -q -p PACKAGE -i
+rpm -q -p PACKAGE --scripts 
+rpm -q --changelog
+rpm -ivh PACKAGEFILE.rpm
+repoquery 
+rsync 
+rsync -n
+rsync -v
+rsync -a
+rsync -H
+rsync -aA
+rsync -aX
 
+</p>
+</details>
+
+<details><summary>Beginning with S</summary>
+<p>
+	
+
+	
 </p>
 </details>
