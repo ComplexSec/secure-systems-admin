@@ -375,35 +375,35 @@ Syntax | Description
 	
 Syntax | Description
 ------------ | -------------
-rm
-rm -i
-rm -r
-rm -rf
-rm -ri
-rm -f
-rmdir
-rpm
-rpm -q
-rpm -q -a
-rpm -q PACKAGENAME
-rpm -q -p PACKAGEFILE
-rpm -q -f FILENAME
-rpm -q -p PACKAGE -l 
-rpm -q -c
-rpm -q -d
-rpm -q --scripts
-rpm -q -p PACKAGE -i
-rpm -q -p PACKAGE --scripts 
-rpm -q --changelog
-rpm -ivh PACKAGEFILE.rpm
-repoquery 
-rsync 
-rsync -n
-rsync -v
-rsync -a
-rsync -H
-rsync -aA
-rsync -aX
+`rm` | removes files
+`rm -i` | interactively prompt for each deletion
+`rm -r` | removes directories
+`rm -rf` | force removes directories
+`rm -ri` | interactively prompt for each directory deletion
+`rm -f` | removes multiple files
+`rmdir` | removes empty directories
+`rpm` | low-level tool that gets information about contents of package files
+`rpm -q` | lists the package's name and version
+`rpm -q -a` | all installed packages
+`rpm -q PACKAGENAME` | currently installed PACKAGENAME
+`rpm -q -p PACKAGEFILE` | package file named PACKAGEFILE
+`rpm -q -f FILENAME` | what package provides FILENAME
+`rpm -q -p PACKAGE -l` | list of files installed by specific package
+`rpm -q -c`| list just the configuration files
+`rpm -q -d` | list just the documentation files
+`rpm -q --scripts` | list shell scripts that may run before or after the package is installed
+`rpm -q -p PACKAGE -i` | display information
+`rpm -q -p PACKAGE --scripts` | display scripts package contains
+`rpm -q --changelog` | list change information for the package
+`rpm -ivh PACKAGEFILE.rpm` | used to install package files
+`repoquery` | get information about packages and their contents
+`rsync` | securely & efficiently synchronize files with remote location
+`rsync -n` | performs a dry run simulation of what happens when command executes
+`rsync -v` | adds verbose output
+`rsync -a` | stands for archive mode
+`rsync -H` | enables handling of hardlinks
+`rsync -aA` | enable sync of advanced file permissions such as ACLs or SELinux file contexts
+`rsync -aX | sync SELinux contexts from the source files to the target filess`
 
 </p>
 </details>
@@ -411,7 +411,153 @@ rsync -aX
 <details><summary>Beginning with S</summary>
 <p>
 	
+Syntax | Description
+------------ | -------------	
+`scp` | transfers files from remote host to local system or vice versa
+`scp /etc/yum.conf /etc/hosts serverX:/home/student` | copies local files to remote system
+`scp serverX:/etc/hostname /home/student/` | copies files from serverX to localhost
+`scp -r user@server:/directory /directory` | copies a directory recursively
+`sftp` | encrypted FTP 
+`sftp serverX` | establishes an FTP session
+`ss` | utility to investigate sockets
+`ss -t` | display TCP sockets
+`ss -u` | display UDP sockets
+`ss -l` | display only listening sockets
+`ss -a` | display both listening and non-listening sockets
+`ss -n` | show numerical values rather than names for interfaces and ports
+`ss -p` | see process ID using the sockets
+`ssh remotehost` | remote shell as current user
+`ssh remoteuser@remotehost` | connect to a remote shell as a user on selected host
+`ssh remoteuser@remotehost hostname` | execute a single command on a remote host and as a remote user
+`ssh-copy-id` | copy the ~/.ssh/id_rsa.pub file by default 
+`ssh-keygen` | create public-private key pair
+`su` | change to root
+`su - username` | start child login sheel, sets up environment as if a clean login
+`su username` | starts a non-login shell, start shell as user with current settings
+`subscription-manager register --username=yourusername --password=yourpassword` | register system to a RedHat account
+`subscription-manager list --available | less` | view available subscriptions 
+`subscription-manager attach --auto` | auto-attach a subscription
+`subscription-manager list --consumed` | view consumed subscriptions
+`subscription-manager unregister` | unregister a system
+`sudo usermod -L username` | run to lock an account
+`systemctl` | query state of all units to verify a system startup 
+`systemctl --type=service` | query the state of only service units
+`systemctl status rngd.service -l` | investigate any units which are in a failed maintenance state
+`systemctl is-active sshd` | show active status
+`systemctl is-enabled sshd` | show enabled status
+`systemctl list-units --type=service` | list active state of all loaded units
+`systemctl list-units --type=service --all` | list state of all active and inactive loaded units
+`systemctl list-unit-files` | view enabled and disabled settings of all units
+`systemctl list-unit-files --type=service` | limit the type of unit
+`systemctl --failed --type=service` | view only failed services
+`systemctl status name.type` | view status of a service
+`systemctl stop name.type` | stop the process
+`systemctl start name.type` | start a stopped process with new PID
+`systemctl restart name.type` | restart a service
+`systemctl status UNIT` | view detailed information about a unit state
+`systemctl stop UNIT` | stop a service
+`systemctl start UNIT` | start a service
+`systemctl restart UNIT` | restart a service
+`systemctl reload UNIT` | reload configuration file of running service
+`systemctl mask UNIT`  | completely disable a service from being started
+`systemctl umask UNIT` | make a masked service available
+`systemctl enable UNIT` | configure a service to start at boot time
+`systemctl disable UNIT` | disable a service from starting at boot time
+`systemctl list-dependencies UNIT` | list units which are required and wanted by the specified unit
 
+</p>
+</details>
+
+<details><summary>Beginning with T</summary>
+<p>
 	
+Syntax | Description
+------------ | -------------	
+`tail filename` | display last tne lines of the file with no arguments
+`tail -n number filename` | display specified number of lines
+`tar` | list contents of the archives or extract their files
+`tar c` | create an archive
+`tar t` | list contents of archive
+`tar x` | extract an archive
+`tar f filename` | name of archive to operate on
+`tar v` | verbose
+`timedatectl` | overview of current time-related system settings
+`timedatectl list-timezones` | list a database of known time zones
+`timedatectl set-time YYYY-MM-DD hh:mm:ss` | change time and date
+`timedatectl set-ntp true` | turn on NTP synchronization 
+`top` | display dynamic view of system processes
+`touch` | update a file's timestamp the current date and time without modifying it, creates empty file
+`tracepath host` | view path of routers your message flow through
+`traceroute [-T] host` | same as tracepath
+`tty` | determine the name of the device file for a particular terminal 
+`tzselect` | useful for identifying correct zoneinfo time zone names
+
+</p>
+</details>
+
+<details><summary>Beginning with U</summary>
+<p>
+	
+Syntax | Description
+------------ | -------------	
+`umask` | display current value of shell's umask
+`umask digit` | change the umask of current shell
+`umount` | unmount a file
+`uname -r` | view currently running kernel, show only kernel version and release
+`uname -a` | view currently running kernel, show kernel release and additional info
+`updatedb` | root user can update database
+`useradd` | create additional users on the system 
+`useradd --help` | display basic options to override defaults
+`userdel username` | removes the user from passwd but leaves home directory
+`userdel -r username` | removes the user and their home
+`usermod --help` | display basic options used to modify an account
+`usermod -c, --comment COMMENT` | add a value such as full name to GECOS field
+`usermod -g, --gid GROUP` | specify the primary group for the user account
+`usermod -G, --groups GROUPS` | specify list of supplementary groups
+`usermod -a, --append` | append user to supplementary groups
+`usermod -aG` | add user to supplementary group
+`usermod -d, --home HOME_DIR` | specify new home directory for user
+`usermod -m, --move-home` | move user home directory to new location 
+`usermod -s, --shell SHELL` | specify a new login shell for user
+`usermod -s /sbin/nologin username` | specify a no-login shell for user
+`usermod -L, --lock` | lock account
+`usermod -U, --unlock` | unlock account
+`usermod -L -e <expiration date since 1/1/1970> username` | lock and expire an account
+`usermod -U username` | unlock in an account
+
+</p>
+</details>
+
+<details><summary>Beginning with V</summary>
+<p>
+	
+Syntax | Description
+------------ | -------------	
+vim filename | opens file
+virsh | alternative to the graphical virt-manager application
+virsh start | boot an existing configured virtual machine
+virsh destroy | immediately stop a virtual machine
+virsh undefine | delete the configuration for a VM permanently
+virsh create | use an XML configuration to create and boot a VM
+virsh define | use an XML configuration to create a VM
+virsh reboot | gracefully stop and restart a VM
+virsh shutdown | gracefully stop a VM
+visudo | use to edit the config file and uncomment
+
+</p>
+</details>
+
+<details><summary>Beginning with W</summary>
+<p>
+	
+Syntax | Description
+------------ | -------------
+w | display list of users currently logged in
+w -f | who is here and where have they come from
+wc | counts lines, words and characters
+wc -l | display only lines
+wc -w | display only words
+wc -c | display only characters
+
 </p>
 </details>
