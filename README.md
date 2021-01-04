@@ -1235,6 +1235,92 @@ By default, `ps` with NO options selects all processes with the same effective u
 * `ps` can display in tree format to view parent/child relationships
 * Default output is unsorted. Display order matches that of the system process table which reuses table rows as processes die and new ones are created. Output may appear chronological, but is NOT guaranteed unless explicit. `-0` or `--sort` options are used
 
+Description | State 
+------------ | ------------- 
+Process has been stopped (suspended) | T
+Process has released all its resources except its PID | Z
+Process is running or waiting to run on a CPU | R
+Process is sleeping until some condition is met | S
+Process is waiting for I/O or some condition to be met and must not respond to signals | D 
+
 ## Jobs and Sessions <a name="JOBSESS"></a> ([Back to Index](#INDEX7))
+
+__Job control__ is a feature of the shell which allows a single shell instance to run and manage multiple commands. A __job__ is associated with each pipeline entered at a shell prompt. All processes in that pipeline are part of the job and are members of the same process group
+
+Only one job can read input and keyboard-generated signals at a time. Processes that are part of that job are foreground processes of that controlling terminal
+
+A background process of that controlling terminal is a member of any other job associated with that terminal. Background processes of a terminal can NOT read input or receive keyboard-generated interrupts from the terminal, but may be able to write to the terminal. A job in the background may be stopped or it may be running. If a running background job tries to read from the terminal, it will be suspended
+
+The `ps` command will show the device name of the controlling terminal of a process in the TTY column. Some processes, such as system daemons, are started by the system - do NOT have a controlling terminal, are not members of a job and can NOT be brought to the foreground
+
+## Running Jobs in the Background
+
+Any command or pipeline can be started in the background by appending an ampersand (&) to the end of the command. When backgrounding a pipeline with an ampersand, the PID of the last command in the pipeline wioll be the one that is output.
+
+The bash shell tracks jobs, per session, in a table displayed with the `jobs` command. A background job can be brought to the foreground by using the `fg` command with its job ID. To send a foreground process to the background, first press the keyboard-generated suspend request (CTRL+Z) on the terminal - the job is immediately placed in the background and suspended
+
+The `ps j` command displays information relating to jobs. The PGID is the PID of the process group leader - normally the first process in the jobs pipeline. The SID is the PID of the session leader, which for a job is normally the interactive shell that is running on its controlling terminal
+
+To start a suspended process running in the background, use the `bg` command with the same job ID
+
+## Lab 21 - Suspending User Processes <a name="LAB21"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Process Control Using Signals
+
+A __signal__ is a software interrupt delivered to a process. Signals report events to an executing program. Events that generate a signal can be an __error__, __external event__ or by __explicit request__
+
+The following table lists the fundamental signals used by sys admins for routine process management
+
+Signal Number | Short Name | Definition | Purpose 
+------------ | ------------- | ------------- | ------------- 
+1 | HUP | Hangup | Used to report termination of the controlling process of a terminal
+2 | INT | Keyboard interrupt | Causes program termination. Can be blocked or handled. Sent by pressing CTRL+C
+3 | QUIT | Keyboard quit | Similiar to SIGINT, but also produces a process dump at termination
+9 | KILL | Kill, unblockable | Causes abrupt program termination
+15 (default) | TERM | Terminate | Causes program termination. Unlike SIGKILL, can be blocked
+18 | CONT | Continue | Resume if stopped. Cannot be blocked
+19 | STOP | Stop, unblockable | Suspends the process
+20 | TSTP | Keyboard stop | Can be blocked
+
+Each signal has a default action, usually one of the following:
+
+* Term - cause a program to terminate at once
+* Core - cause a program to save memory image then terminate
+* Stop - cause a program to stop executing and wait to continue
+
+<ins>Commands for Sending Signals by Explicit Request</ins>
+
+Users signal their current foreground process by pressing a keyboard control sequence to suspend (CTRL+Z), kil (CTRL+C) or core dump (CTRL+`\`) the process. To signal a background process requires a signal-sending command
+
+Signals can be specified either by name or by number. Users may kill their own process but root privilege is required to kill processes owned by others
+
+The `kill` command sends a signal to a process by ID. Despite its name, the kill command can be used for sending any signal
+
+Use `killall` to send a signal to one or more processes matching selection criteria, such as a command name, processes owned, or all system-wide processes
+
+The `pkill` command can signal multiple processes. It uses advanced selection criteria which can include combinations of:
+
+* Command
+* UID
+* GID
+* Parent
+* Terminal
+
+## Logging Users Out Administratively 
+
+The `w` command views users currently logged in and their activities. All users have a controlling terminal listed as `pts/N` while working in a GUI window or `ttyw` on a system console. Remote users display their connecting system name in the FROM column when using the `-f` option
+
+Processes and sessions can be individually or collectively signaled. To terminal ALL processes for one user, use the `pkill` command. Because the initial process in a login session is designed to handle session termination requests, killing all of a user's processes and login shells requires using the `SIGKILL` signal
+
+When processes requiring attention are in the same login session, it may not be necessary to kill all of a user's processes. Determining the controlling terminal for the session using the `w` command then kill only processes which reference the same terminal ID
+
+The same selective process termination can be applied using parent and child process relationships. Use the `pstree` command to view a process tree for the system or a single user. Use the parent's process PID to kill all children they have created
+
+## Lab 22 - Multiple Shell Processes <a name="LAB22"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
 </p>
 </details>
