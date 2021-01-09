@@ -1322,5 +1322,75 @@ The same selective process termination can be applied using parent and child pro
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
+## Load Average
+
+The Linux kernel calculates a __load average__ metric as an exponential moving average of the load number, a cumulative CPU count of active system resource requests
+
+* Active requests are counted from per-CPU queues for running threads and threads waiting for I/O, as the kernel tracks process resource activity and corresponding process state changes
+* Load number is a calculation routing run every five seconds by default which accumulates and averages the active requests into a single number for all CPUs
+* Exponential moving average is a mathematical formula to smooth out trending data highs and lows, increase current activity significance and decrease aging quality
+* Load average is the load number calculation routing result. Collectively, it refers to the three displayed values of system activity data averaged for the last 1,5 and 15 minutes
+
+## Understanding the Linux Load Average Calculation
+
+The load average represents the __perceived system load__ over a time period. Linux implements the load average calculation as a representation of expected service wait times - for CPU, disk and network I/O
+
+* Linux counts not only processes, but threads individually as separate tasks. CPU request queues for running threads (nr_running) and threads waiting for I/O resources (nr_iowait) reasonably correspond to process states R (Running) and D (Uninterruptable Sleeping)
+* The load number is a global counter calculation which is sum-totaled for all CPUs
+* Linux counts each physical CPU core and microprocessor hyperthread as separate execution units, logically represented and referred to as individual CPUs
+* Some UNIX systems only considered CPU utilization or run queue length to indicate system load. 
+
+The three values represent the weighted values over the last 1,5 and 15 minutes
+
+* top, uptime, w and gnome-system-monitor display load average vaLues
+* Divide the displayed load average values by the number of logical CPUs in the system - value below 1 indicates satisfactory resource utilization and minimal wait times. A value above 1 indicates resource saturation and some amount of service waiting times
+* An idle CPU queue has a load number of 0
+* Processes sleeping for I/O due to a busy disk are included in the count
+* Until resource saturation, a load average will remain below 1
+
+## Real-time Process Monitoring
+
+The __top__ program is a dynamic view of the system processes. It continuously refreshes at a configurable interval. It provides capabilities for column reordering, sorting, and highlighting
+
+Default output columns are recognizable from other resource tools:
+
+* The process ID (PID)
+* User name (USER) is the process owner
+* Virtual memory (VIRT) is all memory the process is using
+* Resident memory (RES) is the physical memory used by the process
+* Process state (S) displays as
+	* D = Uninterruptable Sleeping
+	* R = Running or Runnable
+	* S = Sleeping
+	* T = Stopped or Traced
+	* Z = Zombie
+* CPU time (TIME) is the total processing time since the process started
+* The process command name (COMMAND)
+
+Key | Purpose 
+------------ | ------------- 
+? or h | Help for interactive keystrokes
+l, t, m | Toggles for load, threads and memory header lines
+1 | Toggle showing individual CPUs or a summary for all CPUs in header
+s | Change the refresh rate in decimal seconds
+b | Toggle reverse highlighting for Running processes
+B | Enables use of bold in display, in the header, and for running processes
+H | Toggle threads, show process summary or individual threads
+u, U | Filter for any user name
+M | Sorts process listing by memory usage, in descending order
+P | Sorts process listing by processor utilization, in descending order
+k | Kill a process
+r | Renice a process
+W | Write the current display configuration for use next time
+q | Quit
+
+## Lab 23 - Using the Top Command <a name="LAB23"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
+## Lab 24 - Performance Checklist <a name="LAB24"></a> ([Back to Index](#INDEX6))
+
+Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
+
 </p>
 </details>
