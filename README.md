@@ -1394,11 +1394,11 @@ r | Renice a process
 W | Write the current display configuration for use next time
 q | Quit
 
-## Lab 23 - Using the Top Command <a name="LAB23"></a> ([Back to Index](#INDEX6))
+## Lab 23 - Using the Top Command <a name="LAB23"></a> ([Back to Index](#INDEX7))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Lab 24 - Performance Checklist <a name="LAB24"></a> ([Back to Index](#INDEX6))
+## Lab 24 - Performance Checklist <a name="LAB24"></a> ([Back to Index](#INDEX7))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
