@@ -1173,6 +1173,16 @@ Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/
 2. [Process States](#PROCSTATES)
 3. [Listing Processes](#LISTPROCS)
 4. [Jobs and Sessions](#JOBSESS)
+5. [Running Jobs in the Background](#JOBSBACK)
+6. [Lab 21 - Suspending User Processes](#LAB21)
+7. [Process Control Using Signals](#SIGNALS)
+8. [Logging Users Out Administratively](#GETOUT)
+9. [Lab 22 - Multiple Shell Processes](#LAB22)
+10. [Load Average](#LAVG)
+11. [Understanding the Linux Load Average Calculation](#LOADAVCALC)
+12. [Real-time Process Monitoring](#RTPM)
+13. [Lab 23 - Using the Top Command](#LAB23)
+14. [Lab 24 - Performance Checklist](#LAB24)
 
 ![](/images/8.jpg)
 
@@ -1253,7 +1263,7 @@ A background process of that controlling terminal is a member of any other job a
 
 The `ps` command will show the device name of the controlling terminal of a process in the TTY column. Some processes, such as system daemons, are started by the system - do NOT have a controlling terminal, are not members of a job and can NOT be brought to the foreground
 
-## Running Jobs in the Background
+## Running Jobs in the Background <a name="JOBSBACK"></a> ([Back to Index](#INDEX7))
 
 Any command or pipeline can be started in the background by appending an ampersand (&) to the end of the command. When backgrounding a pipeline with an ampersand, the PID of the last command in the pipeline wioll be the one that is output.
 
@@ -1263,11 +1273,11 @@ The `ps j` command displays information relating to jobs. The PGID is the PID of
 
 To start a suspended process running in the background, use the `bg` command with the same job ID
 
-## Lab 21 - Suspending User Processes <a name="LAB21"></a> ([Back to Index](#INDEX6))
+## Lab 21 - Suspending User Processes <a name="LAB21"></a> ([Back to Index](#INDEX7))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Process Control Using Signals
+## Process Control Using Signals <a name="SIGNALS"></a> ([Back to Index](#INDEX7))
 
 A __signal__ is a software interrupt delivered to a process. Signals report events to an executing program. Events that generate a signal can be an __error__, __external event__ or by __explicit request__
 
@@ -1308,7 +1318,7 @@ The `pkill` command can signal multiple processes. It uses advanced selection cr
 * Parent
 * Terminal
 
-## Logging Users Out Administratively 
+## Logging Users Out Administratively <a name="GETOUT"></a> ([Back to Index](#INDEX7))
 
 The `w` command views users currently logged in and their activities. All users have a controlling terminal listed as `pts/N` while working in a GUI window or `ttyw` on a system console. Remote users display their connecting system name in the FROM column when using the `-f` option
 
@@ -1318,11 +1328,11 @@ When processes requiring attention are in the same login session, it may not be 
 
 The same selective process termination can be applied using parent and child process relationships. Use the `pstree` command to view a process tree for the system or a single user. Use the parent's process PID to kill all children they have created
 
-## Lab 22 - Multiple Shell Processes <a name="LAB22"></a> ([Back to Index](#INDEX6))
+## Lab 22 - Multiple Shell Processes <a name="LAB22"></a> ([Back to Index](#INDEX7))
 
 Please refer to [Activities](https://github.com/ComplexSec/secure-systems-admin/tree/main/Activities) for the lab exercises
 
-## Load Average
+## Load Average <a name="LAVG"></a> ([Back to Index](#INDEX7)) 
 
 The Linux kernel calculates a __load average__ metric as an exponential moving average of the load number, a cumulative CPU count of active system resource requests
 
@@ -1331,7 +1341,7 @@ The Linux kernel calculates a __load average__ metric as an exponential moving a
 * Exponential moving average is a mathematical formula to smooth out trending data highs and lows, increase current activity significance and decrease aging quality
 * Load average is the load number calculation routing result. Collectively, it refers to the three displayed values of system activity data averaged for the last 1,5 and 15 minutes
 
-## Understanding the Linux Load Average Calculation
+## Understanding the Linux Load Average Calculation <a name="LOADAVCALC"></a> ([Back to Index](#INDEX7))
 
 The load average represents the __perceived system load__ over a time period. Linux implements the load average calculation as a representation of expected service wait times - for CPU, disk and network I/O
 
@@ -1348,7 +1358,7 @@ The three values represent the weighted values over the last 1,5 and 15 minutes
 * Processes sleeping for I/O due to a busy disk are included in the count
 * Until resource saturation, a load average will remain below 1
 
-## Real-time Process Monitoring
+## Real-time Process Monitoring <a name="RTPM"></a> ([Back to Index](#INDEX7))
 
 The __top__ program is a dynamic view of the system processes. It continuously refreshes at a configurable interval. It provides capabilities for column reordering, sorting, and highlighting
 
