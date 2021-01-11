@@ -2264,3 +2264,390 @@ Open the /etc/bashrc and /etc/profile files and edit them with the specific umas
 
 </p>
 </details>
+
+<details><summary>Module 7</summary>
+<p>
+	
+<details><summary>Module 7 - Lab 1 (Suspending User Processes)</summary>
+<p>
+
+## Step 1 - Open two terminals side by side
+
+## Step 2 - In the left window, start a process that continously appends the word "rock" and a space to the file `~/outfile` at one second intervals
+
+<details><summary>Solution</summary>
+<p>
+
+Use the following command - `(while true; do echo -n "rock " >> ~/outfile; sleep 1; done)`. The complete command MUST be contained in brackets for job control to interpret the set as a single job
+
+![](/images/while.png)
+
+</p>
+</details>
+
+## Step 3 - In the right window, use tail to confirm the new process is writing to the file
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `tail -f ~/outfile` command to constantly update the tail command in real time
+
+![](/images/rock.png)
+
+</p>
+</details>
+
+## Step 4 - In the left window, suspend the running process
+
+<details><summary>Solution</summary>
+<p>
+
+Hit Ctrl+Z to suspend a running process
+
+![](/images/ctrlz.png)
+
+</p>
+</details>
+
+## Step 5 - In the left window, view the jobs list
+
+<details><summary>Solution</summary>
+<p>
+
+The + denotes the current job. Use the `bg` command to restart the current job
+
+![](/images/jobs.png)
+
+</p>
+</details>
+
+## Step 6 - In the left window, start two more processes to append to the same output file. Replace "rock" with "paper" and then with "scissors"
+
+<details><summary>Solution</summary>
+<p>
+
+Use the same command as the first one but appending an `&` at the end to start it in the background
+
+![](/images/rps.png)
+
+</p>
+</details>
+
+## Step 7 - In the left window, view jobs to seeall three processes
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to see all three processes "Running"
+
+![](/images/jobs3.png)
+
+</p>
+</details>
+
+## Step 8 - Using only commands previously learned, suspend the "rock" process. Then, foreground the job and suspend it using Ctrl+Z. Confirm the "rock" process is stopped
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to get the number. Once you have the number or job ID, use the `CTRL+Z` combination to suspend the process
+
+![](/images/fg.png)
+
+</p>
+</details>
+
+## Step 9 - End the "paper" process. Then, foreground the job, terminate it using Ctrl+C
+
+<details><summary>Solution</summary>
+<p>
+
+Do the same as the previous step except use the CTRL+C combination to end the process instead
+
+![](/images/paper.png)
+
+</p>
+</details>
+
+## Step 10 - In the left window, view the remaining jobs using ps
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `ps j` command to view the remaining jobs. The suspended job has state of "T" while the other background job is sleeping (S)
+
+![](/images/stat.png)
+
+</p>
+</details>
+
+## Step 11 - Stop the remaining two jobs. In the left window, foreground either job. Terminate it using CTRL+C and repeat with the remaining job
+
+<details><summary>Solution</summary>
+<p>
+
+To stop the remaining two jobs, use the same command as in step 9 for the other two jobs using their appropriate job IDs
+
+![](/images/percent.png)
+
+</p>
+</details>
+
+## Step 12 - In the right window, stop the tail command
+
+<details><summary>Solution</summary>
+<p>
+
+Simply use CTRL+C to stop the tail command
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 7 - Lab 2 (Multiple Shell Processes)</summary>
+<p>
+
+## Step 1 - Open two terminals side by side
+
+## Step 2 - In the left, start three processes that append text to an output file at one-second intervals
+
+<details><summary>Solution</summary>
+<p>
+
+Use the following commands to start the three processes - `(while true; do echo -n "game " >> ~/outfile; sleep 1; done) &` and simply replace the word with "set" and "match" for the other two commands
+
+![](/images/3proc.png)
+
+</p>
+</details>
+
+## Step 3 - In the right, use tail to confirm that all three processes are appending to the file
+
+<details><summary>Solution</summary>
+<p>
+
+Simply use the `tail -f ¬/outfile` command to view the file
+
+![](/images/outfile.png)
+
+</p>
+</details>
+
+## Step 4 - Suspend the "game" process using signals. Confirm the game process is stopped
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to get the job ID and then use the `kill -SIGSTOP %1` to suspend the process
+
+![](/images/gamestop.png)
+
+</p>
+</details>
+
+## Step 5 - Terminate the "set" process using signals. Confirm the set process has disappeared
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to get the job ID and then use the `kill -SIGTERM %2` to terminate the process
+
+![](/images/set.png)
+
+</p>
+</details>
+
+## Step 6 - Resume the "game" process using signals. Confirm the game process is running
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to get the job ID and then use the `kill -SIGCONT %1` to continue the process
+
+![](/images/gamestart.png)
+
+</p>
+</details>
+
+## Step 7 - Terminate the remaining two jobs. Confirm that no jobs remain
+
+<details><summary>Solution</summary>
+<p>
+
+Use the `jobs` command to get the job IDs and then use the `kill -SIGTERM %1` and `kill -SIGTERM %3` to terminate the processes
+
+![](/images/kill.png)
+
+</p>
+</details>
+
+## Step 8 - Close your session
+
+<details><summary>Solution</summary>
+<p>
+
+Simply close the terminals
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 7 - Lab 3 (Using the Top Command)</summary>
+<p>
+
+## Step 1 - Open two terminal windows
+
+## Step 2 - In the left, determine the number of logical CPUs on the virtual machine
+
+<details><summary>Solution</summary>
+<p>
+
+Run the `grep "model name" /proc/cpuinfo | wc -l` command to view the logical CPUs
+
+![](/images/cpu.png)
+
+</p>
+</details>
+
+## Step 3 - In the left, run a single instance of the process101 executable
+
+<details><summary>Solution</summary>
+<p>
+
+Simply type `process101`
+
+![](/images/proc1.png)
+
+</p>
+</details>
+
+## Step 4 - In the right, observe the top display (use the single keystrokes `l`, `t` and `m` to toggle the load, threads and memory header lines)
+
+<details><summary>Solution</summary>
+<p>
+
+Run the `top` command and observe
+
+![](/images/top.png)
+
+</p>
+</details>
+
+## Step 5 - Note the PID for process101. View the CPU percentage for the process (25% - 30%)
+
+<details><summary>Solution</summary>
+<p>
+
+Simply observe the top command
+
+![](/images/process1.png)
+
+</p>
+</details>
+
+## Step 6 - In the left, run a second instance of process101
+
+<details><summary>Solution</summary>
+<p>
+
+Run `process101` again
+
+![](/images/proc2.png)
+
+</p>
+</details>
+
+## Step 7 - In top, note the PID of the second process101
+
+<details><summary>Solution</summary>
+<p>
+
+Simply observe the top command
+
+![](/images/process2.png)
+
+</p>
+</details>
+
+## Step 8 - In the left, run a third instance of process101
+
+<details><summary>Solution</summary>
+<p>
+
+Run `process101` again
+
+![](/images/proc3.png)
+
+</p>
+</details>
+
+## Step 9 - In top, note the PID for the third process101
+
+<details><summary>Solution</summary>
+<p>
+
+Simply observe the top command
+
+![](/images/process3.png)
+
+</p>
+</details>
+
+## Step 10 - Terminate each of the process101 process from within top
+
+<details><summary>Solution</summary>
+<p>
+
+First, press `k`. Then type the PID of the process101 instance and press Enter. Finally, press Enter again to use the default SIGTERM signal 15
+
+![](/images/pid.png)
+
+</p>
+</details>
+
+## Step 11 - In the right, press q to exit top
+
+<details><summary>Solution</summary>
+<p>
+
+Simply press `q` inside top
+
+</p>
+</details>
+
+</p>
+</details>
+
+<details><summary>Module 7 - Lab 4 (Performance Checklist)</summary>
+<p>
+
+## Step 1 - Run the top utility
+
+## Step 2 - Observe the top display. What are the processes using the most CPU time?
+
+## Step 3 - Change the display to sort by the amount of memory in use
+
+## Step 4 - What are the processes with the largest memory allocations?
+
+## Step 5 - Turn off the use of bold in the display and save the configuration
+
+## Step 6 - Exit top then restart it again
+
+## Step 7 - Modify the display to again sort by CPU utilization and turn on the use of bold
+
+## Step 8 - Open another terminal and suspend the hippo process. In top, observe the process state is now `T`
+
+## Step 9 - The hippo process disappears. List the process information from the command line to confirm the process state
+
+## Step 10 - Resume execution of the hippo process
+
+## Step 11 - Terminate the extra processes elephant and hippo using the command line
+
+## Step 12 - Check the cleanup is sucessful by running the grading script
+
+## Step 13 - Exit the top display
+
